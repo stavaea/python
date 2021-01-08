@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <style>
+        #avatar{
+            display: none;
+        }
+        .avatar_img{
+            width: 60px;
+            height: 60px;
+            margin-left: 10px;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h3>注册页面</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form>
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="user">用户名</label>
+                    <input type="text" id="user" class="form-control"><span class="error pull-right"></span>
+                </div>
+                 <div class="form-group">
+                    <label for="pwd">密码</label>
+                    <input type="password" id="pwd"  class="form-control"><span class="error pull-right"></span>
+                </div>
+                <div class="form-group">
+                    <label for="repeat_pwd">确认密码</label>
+                    <input type="password" id="repeat_pwd"  class="form-control"><span class="error pull-right"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" id="email"  class="form-control"><span class="error pull-right"></span>
+                </div>
+                 <div class="form-group">
+                     <label for="avatar">头像 <img src="/static/img/default.png" alt="" class="avatar_img"></label>
+
+                     <input type="file" id="avatar"  class="form-control">
+                </div>
+
+                <input type="button" value="submit" class="reg_btn btn btn-default">
+                <span class="error"></span>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    // 头像预览
+   $("#avatar").change(function () {
+
+       var reader=new FileReader();
+
+       var choose_file=$(this)[0].files[0];
+       reader.readAsDataURL(choose_file);
+
+       reader.onload=function(){
+             $(".avatar_img").attr("src",reader.result)
+       };
+
+   })
+
+     // 注册
+    $(".reg_btn").click(function () {
+
+        var formdata=new FormData();
+        formdata.append("user",$("#user").val());
+        formdata.append("pwd",$("#pwd").val());
+        formdata.append("email",$("#email").val());
+        formdata.append("repeat_pwd",$("#repeat_pwd").val());
+        formdata.append("avatar_img",$("#avatar")[0].files[0]);
+
+
+        $.ajax({
+
+             url:"",
+             type:"post",
+             contentType:false,
+             processData:false,
+             data:formdata,
+             success:function (data) {
+                 // console.log(data);
+                 var data=JSON.parse(data);
+
+                 if (data.user){
+                     console.log("OK")
+                 }else{
+                     // 清空操作
+                     $("form span.error").html("");
+
+                     console.log(data.msg);
+                     $.each(data.msg,function (filed,error_list) {
+                         if (filed=="__all__"){
+                             $("#repeat_pwd").next().html(error_list[0])
+                         }
+
+                         $("#"+filed).next().html(error_list[0])
+                     })
+
+                 }
+
+             }
+
+        })
+    })
+
+</script>
+
+
+</body>
+</html>

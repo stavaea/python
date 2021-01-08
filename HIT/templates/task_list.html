@@ -1,0 +1,132 @@
+{% extends  'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block css %}
+    <style type="text/css">
+        p{
+            margin-left:10px;
+            font-size: 16px;
+        }
+        th,td{
+            font-size: 18px;
+        }
+    </style>
+{% endblock %}
+
+<body>
+    {% block content %}
+        <div class="container-fluid" style="margin-top: 100px;margin-left: 20px">
+            <div class="row" style="margin-bottom: 50px">
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <h2>接口任务列表<button style="margin-left: 20px" class="btn btn-info btn-lg">新建任务</button></h2>
+                    <p>在本页面，你可以：编辑、运行、删除测试任务</p>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px">
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                <form class="form-inline">
+                  <div class="form-group">
+                      <input id="kw" style="margin-right: 20px" class="form-control input-lg" type="text" placeholder="任务名称">
+                  </div>
+                  <a id="search" class="btn btn-primary btn-lg">搜索</a>
+                </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    {% if data|length > 0 %}
+                    <table class="table table-striped .table-hover">
+                        <thead>
+                            <th>任务id</th>
+                            <th>任务名称</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody id="content">
+                            {% for d in data %}
+                                <tr>
+                                    <td>{{ d.id }}</td>
+                                    <td>{{ d.name }}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-lg"><i style="margin-right: 3px" class="fa fa-edit fa-lg"></i>编辑</button>
+                                        <button class="btn btn-success btn-lg"><i style="margin-right: 3px" class="fa fa-play fa-lg"></i>运行</button>
+                                        <button class="btn btn-danger btn-lg" data-id="{{ task.id }}" data-toggle="modal" data-target="#myModal" data-name="{{ task.name }}"><i style="margin-right: 3px" class="fa fa-trash-o fa-lg"></i>删除</button>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% else %}
+                        <div style="font-size:18px " align="center" class="alert alert-danger" role="alert">没有找到符合的测试任务</div>
+                    {% endif %}
+                </div>
+            </div>
+            {#        删除确认对话框#}
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">确认删除该任务吗？</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h3 id=taskname-modal">{{ task.name }}</h3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <a href="#" type="button" id="confirm-delete" class="btn btn-primary">确认</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $("#search").click(function(){
+            /*       var kw = $("#kw").val();
+                   window.location.href = '/task/list/?kw=' + kw;
+            */      
+            //ajax
+                    $.get('/task/search?kw='+$("#kw").val(), function (data) {
+                        var tasks = data['tasks'];
+                        if(tasks.length>0){
+                            $("#content").empty();
+                            //$("table").append("<thead><th>任务id</th><th>任务名称</th><th>操作</th></thead><tbody id=\"content\">");
+                            for (var i=0;i<tasks.length;i++){
+                                var name = tasks[i].name;
+                                var id = tasks[i].id;
+                                var text ="<tr><td>"+id+"</td>"+
+                                        "<td>"+name+"</td>"+
+                                        "<td>"+
+                                        "<button class=\"btn btn-primary btn-lg\"><i style=\"margin-right: 3px\" class=\"fa fa-edit fa-lg\"></i>编辑</button>"+
+                                        "<button class=\"btn btn-success btn-lg\"><i style=\"margin-right: 3px\" class=\"fa fa-play fa-lg\"></i>运行</button>"+
+                                        "<button class=\"btn btn-danger btn-lg\"><i style=\"margin-right: 3px\" class=\"fa fa-trash-o fa-lg\"></i>删除</button>"+
+                                        "</td><tr>";
+                                $("#content").append("text");
+
+                            }
+                        }else {
+                            alert('无查询结果')
+                        }
+
+                    })
+               });
+                $('#myModal').on('show.bs.modal', function (event) {
+                    var button = $(event.relatedTarget);
+                    var name = button.data('name');
+                    var id = button.data('id');
+                    var modal = $(this);
+                    $("#taskname-modal").text(name)
+                    $("#confirm-delete").attr('href', '/task/delete?id='+id)
+                    });
+            /*    $("#confirm-delete").click(function () {
+                    $.get('/task/delete?id='+$(this).val().funntion())
+               })*/
+            });
+
+
+        </script>
+
+    {% endblock %}
+</body>
+</html>

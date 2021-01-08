@@ -1,0 +1,93 @@
+day18
+
+    
+	
+	
+跨表查询
+
+    基于对象（子查询）	
+	基于queryset和__ (join查询)
+	
+分组查询
+
+    Publish.objects.all().annotate(c=Count("book"))	
+	
+F与Q
+
+
+Ajax
+    
+	$.ajax({
+	      url:"",
+		  type:"",
+		  data:{a:1,b:2},
+		  success:function(data){
+		        
+			    
+
+			
+		  }
+		    
+	 })
+	 
+
+cookie
+    
+	
+session
+
+
+分页
+
+
+中间件
+
+
+forms组件
+
+       	
+用户认证(cookie session)
+    大前提： 用户表：auth_user
+	
+	from django.contrib import auth	
+	user=auth.authenticate(username=user,password=pwd)
+	auth.login(request,user)  # request.user:当前登录对象
+	auth.logout(request)
+	from django.contrib.auth.models import User
+    User.objects.create_user(username="egon",password="egon1234")
+
+
+
+作业：
+    读源码：
+	
+	django.contrib.sessions.middleware.SessionMiddleware
+	django.contrib.auth.middleware.AuthenticationMiddleware,
+	 
+	
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+	
+

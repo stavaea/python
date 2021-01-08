@@ -1,0 +1,57 @@
+{% extends "bootstrap/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block title %}Dianjing123{% endblock %}
+
+    {% block styles %}
+    {{ super }}
+        <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+    {% endblock %}
+</head>
+<body>
+    {% block navbar %}
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Hello World</span>
+                </button>
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav">
+                        <li class="tab1"><a href="/tab1" onclick="" target="">Tab1</a></li>
+                        <li class="tab2"><a href="/tab2" onclick="" target="">Tab2</a></li>
+                        <li class="help"><a href="/help" onclick="" target="">Help</a></li>
+                    </ul>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-sm">
+                    <li><a href="/logout" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', 'about'])">logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block content %}
+        {% for message in get_flashed_message() %}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+        {% endfor %}
+        <div class="col-md-12">
+            {% block page_content %}{% endblock %}
+        </div>
+        <div>
+            <div class="col-md-5 col-md-offset-5 foot">Copyright ©360安全网址. All Rights Reserved. 京ICP证080047号</div>
+        </div>
+    {% endblock %}
+</body>
+</html>
+
+

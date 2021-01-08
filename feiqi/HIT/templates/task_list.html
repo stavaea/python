@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务列表</title>
+    {% block css %}
+            p{
+                margin-left: 10px;
+                font-size: 16px;
+            }
+            th,td{
+                font-size: 18px;
+            }
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+        <div class="container-fluid" style="margin-top: 100px;margin-left: 20px">
+            <div class="row" style="margin-bottom: 50px">
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <h2>接口任务列表<button style="margin-left: 20px" class="btn btn-info btn-lg">新建任务</button></h2>
+                    <p>在任务接口列表页面，你可以：查询任务信息、编辑或运行测试任务</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 20px">
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <form class="form-inline">
+                      <div class="form-group">
+                          <input id="kw" style="margin-right: 20px" class="input-lg" type="text" placeholder="任务名称">
+                      </div>
+                      <a id="serach" class="btn btn-primary btn-lg">搜索</a>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    {% if data|length > 0 %}
+                        <table class="table table-striped .table-hover">
+                            <thead>
+                                <th>任务id</th>
+                                <th>任务名称</th>
+                                <th>操作</th>
+                            </thead>
+
+                            <tbody>
+                                {% for d in data %}
+                                    <tr>
+                                        <td>{{ d.id }}</td>
+                                        <td>{{ d.name }}</td>
+                                        <td>
+                                            <button class="btn btn-warning"><i class="fa fa-cog fa-lg"></i>编辑</button>
+                                            <button class="btn btn-success"><i class="fa fa-play-circle fa-lg"></i>运行</button>
+                                            <button class="btn btn-danger"><i class="fa fa-trash-o fa-lg"></i>删除</button>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <div style="font-size: 18px" align="center" class="alert alert-danger" role="alert">没有找到符合的测试任务</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+               $("#serach").click(function () {
+                    var kw = $("#kw").val();
+                    window.location.href = '/task/list/?kw=' + kw;
+                })
+            })
+        </script>
+    {% endblock %}
+</body>
+</html>

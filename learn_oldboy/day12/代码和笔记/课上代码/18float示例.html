@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>float示例</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        .nav {
+            background-color: black;
+            /*height: 50px;*/
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul.nav-left>li {
+            float: left;
+            /*width: 100px;*/
+            padding: 15px;
+        }
+        ul.nav-right>li {
+            float: right;
+            /*width: 100px;*/
+            padding: 15px;
+        }
+        ul a {
+            color: #eee;
+            text-decoration: none;
+        }
+        ul a:hover {
+            color: red;
+        }
+        /*清除浮动的副作用*/
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: left; /*我这个标签 左边不能有浮动的元素*/
+        }
+
+        .container {
+            width: 1028px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<!--顶部导航栏 开始-->
+<div class="nav clearfix">
+    <div class="container clearfix">
+        <ul class="nav-left">
+            <li><a href="">玉米商城</a></li>
+            <li><a href="">大米</a></li>
+            <li><a href="">小米</a></li>
+            <li><a href="">黑米</a></li>
+            <li><a href="">红米</a></li>
+        </ul>
+        <!--<div class="c2"></div>-->
+
+        <ul class="nav-right">
+            <li><a href="">购物车</a></li>
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+        </ul>
+    </div>
+</div>
+<!--顶部导航栏 结束-->
+<div></div>
+</body>
+</html>

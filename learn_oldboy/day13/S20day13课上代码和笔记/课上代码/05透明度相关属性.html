@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>透明度相关属性</title>
+    <style>
+        .c {
+            height: 200px;
+            width: 200px;
+
+        }
+        .c1 {
+            /*background-color: red;*/
+            background-color: rgba(255,0,0,0.3);  /*仅限于修改背景的透明度，子标签不会改变透明度*/
+        }
+
+        .c2 {
+            background-color: rgb(255,0,0);
+            opacity: 0.3;  /*本身及子标签都会应用该透明的值*/
+        }
+    </style>
+</head>
+<body>
+
+<div class="c c1">
+ <p>div内部的p标签</p>
+</div>
+
+<div class="c c2">
+     <p>div内部的p标签</p>
+</div>
+</body>
+</html>

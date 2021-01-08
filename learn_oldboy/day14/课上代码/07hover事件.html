@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hover事件</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background-color: #4d4d4d;
+            height: 50px;
+        }
+        .nav ul {
+            list-style-type: none;
+            float: right;
+        }
+        .nav li {
+            line-height: 50px;
+            float: left;
+            padding: 0 10px;
+            color: white;
+            position: relative;
+        }
+
+        .son {
+            height: 100px;
+            width: 200px;
+            background-color: blue;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .hover .son {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav clearfix">
+    <ul class="clearfix">
+        <li>登录</li>
+        <li>注册</li>
+        <li>购物车
+            <p class="son">空空如也~</p>
+        </li>
+    </ul>
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(".nav li").hover(
+        function () {
+            // 鼠标移上去要做的事儿
+            $(this).addClass("hover");
+        },
+        function () {
+            // 鼠标移出来要做的事儿
+            $(this).removeClass("hover");
+        }
+    )
+</script>
+</body>
+</html>

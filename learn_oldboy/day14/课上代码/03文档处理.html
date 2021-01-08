@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文档处理</title>
+</head>
+<body>
+
+<button id="b1">新增</button>
+<table border="1">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>姓名</th>
+        <th>爱好</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Egon</td>
+        <td>喊麦</td>
+        <td>
+            <button class="delete">删除</button>
+            <button>编辑</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    // 找到新增按钮
+    $("#b1").click(function () {
+        // 生成一条数据 --> tr
+        var newTrEle = document.createElement("tr");
+        $(newTrEle).html("<td>2</td> <td>Alex</td> <td>吹牛逼</td> <td><button class='delete'>删除</button> <button>编辑</button></td>");
+
+        // 把新创建的tr追加到tbody的最后
+        $("tbody").append(newTrEle);
+    });
+
+    // 删除按钮绑定事件
+//    $(".delete").click(function () {
+//        // 删除按钮当前行数据
+//        // $(this) 指的是当前被点击的按钮
+//        $(this).parent().parent().remove();
+//    });
+//  $(".delete").on("click", function () {
+//        // 删除按钮当前行数据
+//        // $(this) 指的是当前被点击的按钮
+//        $(this).parent().parent().remove();
+//    })
+    // 使用on方法做事件委派
+    $("tbody").on("click", ".delete", function () {
+        // this指向的是实际触发事件的元素
+//        console.log(this);
+        $(this).parent().parent().remove();
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+{% extends 'intro.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    {% block title %}
+        <div class="row">
+            <h1>接口测试服务平台 <span>用户注册</span></h1>
+        </div>
+        <div class="row">
+            <p style="margin-left: 80px">访问接口平台请先注册用户</p>
+            <p>如果已经注册,请点击下方登录按钮 切换到登录页面</p>
+        </div>
+    {% endblock %}
+
+    {% block form %}
+     <h2>新用户注册 <i style="float: right" class="fa fa-pencil fa-2x"></i></h2>
+     <h3>填写以下资料，完成注册：</h3>
+    <div class="divider"></div>
+    <form action="/signup/submit" method="post">
+      <div class="form-group">
+        <input type="text" class="form-control input-lg" name="username" placeholder="用户名" minlength="5" maxlength="20">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control input-lg" name="email" placeholder="邮箱">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control input-lg" name="password" placeholder="密码">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control input-lg" name="confirm" placeholder="确认密码">
+      </div>
+      <button style="margin-top: 40px" id="signup" type="submit" class="btn btn-success btn-lg btn-block">立即注册</button>
+    </form>
+
+    <script type="text/javascript">
+{#        $(function () {#}
+{#            $("#username").blur(function () {#}
+{#               $(this).parent().removeClass('has-error');#}
+{#               $(this).parent().removeClass('has-success');#}
+{#               $("#user_error").remove();#}
+{#               if($(this).val() == ""){#}
+{#                   $(this).parent().addClass('has-error');#}
+{#                   $(this).parent().prepend("<label id=\"user_error\" class=\"control-label\">用户名不能为空</label>");#}
+{#               }else {#}
+{#                   $.get("/checkuser?username="+$(this).val(), function(data){#}
+{#                       if(data.flag == true) {#}
+{#                           alert('111111');#}
+{#                            $(this).parent().prepend("<label id=\"user_error\" class=\"control-label\">用户名重复</label>");#}
+{#                       }#}
+{#                   });#}
+{##}
+{#               }#}
+{#            });#}
+{#        });#}
+
+        $(function () {
+            $("form").bootstrapValidator({
+                feedbackIcons: {//根据验证结果显示的各种图标
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+				},
+                fields: {
+                    username:{
+                        validators: {
+                            notEmpty: {
+                                message: "用户名不能为空"
+                            },
+                            stringLength: {//检测长度
+                                min: 5,
+                                max: 20,
+                                message: '用户名必须在6-20位之间'
+				            },
+                            remote: {//将内容发送至指定页面验证，返回验证结果，比如查询用户名是否存在
+				                url: '/checkuser/',
+				                message: '用户名重复',
+				                data:function(validator) {
+                                    return {
+                                        username: $("input[name='username']").val()
+                                    };
+                                }
+				            },
+                        }
+                    },
+                    password:{
+                        validators: {
+                            notEmpty: {
+                                message: "密码不能为空"
+                            },
+                            stringLength: {//检测长度
+                                min: 5,
+                                max: 20,
+                                message: '密码必须在6-20位之间'
+                            }
+                        }
+                    },
+                    confirm:{
+                        validators: {
+                            notEmpty: {
+                                message: "密码不能为空"
+                            },
+                            stringLength: {//检测长度
+                                min: 6,
+                                max: 20,
+                                message: '密码必须在6-20位之间'
+                            },
+                            identical: {//与指定控件内容比较是否相同，比如两次密码不一致
+                                field: 'password',//指定控件name
+                                message: '两次输入的密码不一致'
+                            },
+                        }
+
+                    },
+                    email:{
+                        validators: {
+                            notEmpty: {
+                                message: "邮箱不能为空"
+                            },
+                            emailAddress:{
+                                message: "邮箱格式错误"
+                            }
+                        }
+                    }
+
+                }
+            });
+            $("small").css("font-size", "18px");
+            $("i").css("margin-top", "10px");
+
+            $("#signup").click(function () {
+                // $("input[name='password']").val();
+                var password_sign = md5("input[name='password']").val();
+                $("input[name='password']").val(password_sign)
+            })
+
+        });
+
+    </script>
+    {% endblock %}
+</body>
+</html>

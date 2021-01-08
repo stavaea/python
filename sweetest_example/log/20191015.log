@@ -1,0 +1,142 @@
+2019-10-15 10:21:36,514 [INFO]: #  From Excel import testsuite success
+2019-10-15 10:21:39,357 [INFO]: #  ==================================================
+2019-10-15 10:21:39,358 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-15 10:21:39,358 [INFO]: #  --------------------------------------------------
+2019-10-15 10:21:39,358 [INFO]: #  >>> Run the TestCase: HOME_001|打开首页
+2019-10-15 10:21:39,359 [INFO]: #  Run the Step: 1|通用|OPEN|通用-云课首页链接
+2019-10-15 10:21:41,921 [INFO]: #  --- success ---
+2019-10-15 10:21:42,122 [INFO]: #  Run the Step: 2|云课首页|CHECK|通用-页面title
+2019-10-15 10:21:42,129 [INFO]: #  DATA:'云课 - 专业的在线直播教育学习平台 - 云课网'
+2019-10-15 10:21:42,148 [INFO]: #  REAL:'云课 - 专业的在线直播教育学习平台 - 云课网'
+2019-10-15 10:21:42,166 [INFO]: #  --- success ---
+2019-10-15 10:21:42,367 [INFO]: #  ==================================================
+2019-10-15 10:21:42,368 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-15 10:21:42,370 [INFO]: #  --------------------------------------------------
+2019-10-15 10:21:42,371 [INFO]: #  >>> Run the TestCase: YUNKE_001|登陆
+2019-10-15 10:21:42,374 [INFO]: #  Run the Step: 1|云课首页|CLICK|通用-link#登录
+2019-10-15 10:21:43,306 [INFO]: #  --- success ---
+2019-10-15 10:21:43,507 [INFO]: #  Run the Step: 2|云课首页|INPUT|云课首页-用户名#请输入手机号/学号
+2019-10-15 10:21:44,170 [INFO]: #  --- success ---
+2019-10-15 10:21:44,371 [INFO]: #  Run the Step: 3|云课首页|INPUT|云课首页-用户名#请输入密码
+2019-10-15 10:21:44,981 [INFO]: #  --- success ---
+2019-10-15 10:21:45,181 [INFO]: #  Run the Step: 4|云课首页|CLICK|云课首页-登陆按钮
+2019-10-15 10:21:45,775 [INFO]: #  --- success ---
+2019-10-15 10:21:45,976 [INFO]: #  Run the Step: 5|云课首页|CHECK|云课首页-span#张俊宝
+2019-10-15 10:21:46,040 [INFO]: #  DATA:'张俊宝'
+2019-10-15 10:21:46,041 [INFO]: #  REAL:'张俊宝'
+2019-10-15 10:21:46,042 [INFO]: #  --- success ---
+2019-10-15 10:21:46,244 [INFO]: #  ==================================================
+2019-10-15 10:21:46,244 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-15 10:21:46,245 [INFO]: #  --------------------------------------------------
+2019-10-15 10:21:46,247 [INFO]: #  >>> Run the TestCase: YUNKE_002|进入机构管理
+2019-10-15 10:21:46,248 [INFO]: #  Run the Step: 1|云课首页|CLICK|云课首页-上课提醒关闭按钮
+2019-10-15 10:21:46,857 [INFO]: #  --- success ---
+2019-10-15 10:21:47,058 [INFO]: #  Run the Step: 2|云课首页|HOVER|通用-link#机构管理
+2019-10-15 10:21:47,698 [INFO]: #  --- success ---
+2019-10-15 10:21:47,899 [INFO]: #  Run the Step: 3|云课首页|CLICK|通用-link#直播测试机构555
+2019-10-15 10:21:48,619 [INFO]: #  --- success ---
+2019-10-15 10:21:48,821 [INFO]: #  Run the Step: 4|云课首页|CHECK|云课首页-span#运营管理
+2019-10-15 10:21:49,930 [INFO]: #  DATA:'运营管理'
+2019-10-15 10:21:49,931 [INFO]: #  REAL:'运营管理'
+2019-10-15 10:21:49,932 [INFO]: #  --- success ---
+2019-10-15 10:21:50,132 [INFO]: #  ==================================================
+2019-10-15 10:21:50,133 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-15 10:21:50,134 [INFO]: #  --------------------------------------------------
+2019-10-15 10:21:50,136 [INFO]: #  >>> Run the TestCase: YUNKE_003|新建课程
+2019-10-15 10:21:50,139 [INFO]: #  Run the Step: 1|云课首页|CLICK|云课首页-span#教务教学
+2019-10-15 10:21:51,331 [INFO]: #  --- success ---
+2019-10-15 10:21:51,532 [INFO]: #  Run the Step: 2|云课首页|CLICK|云课首页-span#课程管理
+2019-10-15 10:21:52,658 [INFO]: #  --- success ---
+2019-10-15 10:21:52,859 [INFO]: #  Run the Step: 3|云课首页|CLICK|通用-link#新建课程
+2019-10-15 10:21:53,647 [INFO]: #  --- success ---
+2019-10-15 10:21:53,847 [INFO]: #  Run the Step: 4|云课首页|CLICK|云课首页-p#直播课
+2019-10-15 10:21:55,794 [INFO]: #  --- success ---
+2019-10-15 10:21:55,995 [INFO]: #  Run the Step: 5|云课首页|INPUT|云课首页-用户名#请输入课程名称最多输入50个字符
+2019-10-15 10:21:56,733 [INFO]: #  --- success ---
+2019-10-15 10:21:56,934 [INFO]: #  Run the Step: 6|云课首页|CLICK|云课首页-span#请选择
+2019-10-15 10:21:57,629 [INFO]: #  --- success ---
+2019-10-15 10:21:57,830 [INFO]: #  Run the Step: 7|云课首页|CLICK|通用-link#大学/考研
+2019-10-15 10:21:58,514 [INFO]: #  --- success ---
+2019-10-15 10:21:58,716 [INFO]: #  Run the Step: 8|云课首页|CLICK|云课首页-span#请选择
+2019-10-15 10:21:59,337 [INFO]: #  --- success ---
+2019-10-15 10:21:59,538 [INFO]: #  Run the Step: 9|云课首页|CLICK|通用-link#英语考级
+2019-10-15 10:22:00,231 [INFO]: #  --- success ---
+2019-10-15 10:22:00,432 [INFO]: #  Run the Step: 10|云课首页|CLICK|云课首页-span#请选择
+2019-10-15 10:22:01,093 [INFO]: #  --- success ---
+2019-10-15 10:22:01,294 [INFO]: #  Run the Step: 11|云课首页|CLICK|通用-link#四级
+2019-10-15 10:22:01,983 [INFO]: #  --- success ---
+2019-10-15 10:22:02,184 [INFO]: #  Run the Step: 12|云课首页|CLICK|云课首页-span#添加老师
+2019-10-15 10:22:02,856 [INFO]: #  --- success ---
+2019-10-15 10:22:03,057 [INFO]: #  Run the Step: 13|云课首页|CLICK|云课首页-li#张俊宝
+2019-10-15 10:22:03,720 [INFO]: #  --- success ---
+2019-10-15 10:22:03,921 [INFO]: #  Run the Step: 14|云课首页|CLICK|通用-link#添加 》
+2019-10-15 10:22:04,612 [INFO]: #  --- success ---
+2019-10-15 10:22:04,813 [INFO]: #  Run the Step: 15|云课首页|CLICK|通用-id#course_add
+2019-10-15 10:22:05,462 [INFO]: #  --- success ---
+2019-10-15 10:22:05,662 [INFO]: #  Run the Step: 16|云课首页|CLICK|通用-button#下一步
+2019-10-15 10:22:06,260 [INFO]: #  --- success ---
+2019-10-15 10:22:06,461 [INFO]: #  Run the Step: 17|云课首页|CLICK|通用-id#img_p_label
+2019-10-15 10:22:07,442 [INFO]: #  --- success ---
+2019-10-15 10:22:07,644 [INFO]: #  Run the Step: 18|云课首页|UPLOAD|通用-button#上传图片
+2019-10-15 10:22:17,386 [INFO]: #  --- success ---
+2019-10-15 10:22:17,587 [INFO]: #  Run the Step: 19|云课首页|CLICK|通用-button#保存
+2019-10-15 10:22:18,251 [INFO]: #  --- success ---
+2019-10-15 10:22:18,452 [INFO]: #  Run the Step: 20|云课首页|CLICK|通用-button#下一步
+2019-10-15 10:22:19,095 [INFO]: #  --- success ---
+2019-10-15 10:22:19,296 [INFO]: #  Run the Step: 21|云课首页|CLICK|通用-link#保存
+2019-10-15 10:22:20,228 [INFO]: #  --- success ---
+2019-10-15 10:22:20,429 [INFO]: #  Run the Step: 22|云课首页|CLICK|通用-link#批量添加课时
+2019-10-15 10:22:21,080 [INFO]: #  --- success ---
+2019-10-15 10:22:21,280 [INFO]: #  Run the Step: 23|云课首页|INPUT|云课首页-tra#批量添加章节，每行输入一个章节名称，章节按顺序自动排序
+2019-10-15 10:22:25,739 [INFO]: #  --- success ---
+2019-10-15 10:22:25,941 [INFO]: #  Run the Step: 24|云课首页|CLICK|云课首页-inputc#开课时间
+2019-10-15 10:22:26,604 [INFO]: #  --- success ---
+2019-10-15 10:22:26,805 [INFO]: #  Run the Step: 25|云课首页|DOUBLE_CLICK|云课首页-buttcla#xdsoft_today_button
+2019-10-15 10:22:27,423 [INFO]: #  --- success ---
+2019-10-15 10:22:27,624 [INFO]: #  Run the Step: 26|云课首页|CLICK|云课首页-span#请选择
+2019-10-15 10:22:28,321 [INFO]: #  --- success ---
+2019-10-15 10:22:28,522 [INFO]: #  Run the Step: 27|云课首页|CLICK|通用-link#每天
+2019-10-15 10:22:29,183 [INFO]: #  --- success ---
+2019-10-15 10:22:29,384 [INFO]: #  Run the Step: 28|云课首页|CLICK|云课首页-span#请选择
+2019-10-15 10:22:30,081 [INFO]: #  --- success ---
+2019-10-15 10:22:30,282 [INFO]: #  Run the Step: 29|云课首页|CLICK|通用-link#0.5小时
+2019-10-15 10:22:30,933 [INFO]: #  --- success ---
+2019-10-15 10:22:31,134 [INFO]: #  Run the Step: 30|云课首页|CLICK|通用-button#确认
+2019-10-15 10:22:31,845 [INFO]: #  --- success ---
+2019-10-15 10:22:32,046 [INFO]: #  Run the Step: 31|云课首页|CLICK|通用-link#完成创建
+2019-10-15 10:22:33,788 [INFO]: #  --- success ---
+2019-10-15 10:22:33,989 [INFO]: #  Run the Step: 32|云课首页|CLICK|云课首页-sf#暂时先是测试<c.today()>#上架
+2019-10-15 10:22:34,655 [INFO]: #  --- success ---
+2019-10-15 10:22:34,856 [INFO]: #  Run the Step: 33|云课首页|CLICK|通用-link#首页
+2019-10-15 10:23:06,048 [INFO]: #  --- success ---
+2019-10-15 10:23:06,249 [INFO]: #  Run the Step: 34|云课首页|CLICK|云课首页-divf#暂时先是测试<c.today()>
+2019-10-15 10:23:32,812 [ERROR]: #  +++ failure +++
+Traceback (most recent call last):
+  File "F:\python3\lib\site-packages\sweetest\locator.py", line 33, in locating_element
+    (getattr(By, el['by'].upper()), value)))
+  File "F:\python3\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\python3\lib\site-packages\sweetest\locator.py", line 38, in locating_element
+    (getattr(By, el['by'].upper()), value)))
+  File "F:\python3\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\python3\lib\site-packages\sweetest\testcase.py", line 135, in run
+    element = getattr(web, step['keyword'].lower())(step)
+  File "F:\python3\lib\site-packages\sweetest\keywords\web.py", line 175, in click
+    element_location = locating_element(element, 'CLICK')
+  File "F:\python3\lib\site-packages\sweetest\locator.py", line 40, in locating_element
+    raise Exception('Locating the element:%s is Failure: Timeout' % element)
+Exception: Locating the element:云课首页-divf#暂时先是测试2019101510 is Failure: Timeout
+2019-10-15 10:23:35,433 [INFO]: #  --- Quit th Driver: Chrome

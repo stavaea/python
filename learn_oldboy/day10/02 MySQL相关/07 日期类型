@@ -1,0 +1,16 @@
+create table student(
+    id int,
+    name char(16),
+    born_year year,
+    birth_date date,
+    class_time time,
+    reg_time datetime
+);
+
+insert into student values
+(1,'egon',now(),now(),now(),now())
+;
+
+insert into student values
+(2,'alex','1999','1999-11-11','11:11:11',"1999-11-11 11:11:11")
+;

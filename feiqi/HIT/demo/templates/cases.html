@@ -1,0 +1,43 @@
+{#{% extends 'base.html' %}#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block context %}
+    {% include 'base.html' %}
+    {% if cases %}
+    <table>
+
+        <thead>
+            <th>序号</th>
+            <th>用例id</th>
+            <th>用例名</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+            {% for c in cases %}
+            <tr>
+                {# 每个学生序号 #}
+                <td>{{ forloop.counter }}</td>
+                <td>{{ s.id}}</td>{# 变量加对应值 #}
+                <td>{{ s.name}}</td>{# 按字符单位截取字符串 #}
+                <form>
+                    <input name="edit"/><input name="del"/>
+                </form>
+            </tr>
+            {% empty %}
+            <tr>
+                <td>无用例信息,请先添加{% url '' %}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{#    {% else %}#}
+{#        <p>无用例信息,请先添加{% url '' %}</p>#}
+    {% endif %}
+    {% endblock %}
+</body>
+</html>

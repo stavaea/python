@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+     <h3 class="text-center">{{ article_obj.title }}</h3>
+    <div>
+        {{ article_obj.articledetail.content|safe }}
+    </div>
+{% endblock %}

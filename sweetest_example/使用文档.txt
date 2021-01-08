@@ -1,0 +1,34 @@
+1.执行命令 pip install sweetest 安装所需库
+2.修改case中的图片地址 testcase/yunke-TestCase.xlsx 文件中file=图片地址
+3.修改start.py中executable_path的浏览器驱动路径
+4.执行 python start.py
+
+注意 如果上传图片无法执行或者报错  在路径Lib\site-packages\sweetest\keywords 下修改web.py的upload方法为：
+ import win32com.client
+    import win32gui
+    import win32con
+    data = step['data']
+    element = step['element']
+    element_location = locating_element(element)
+    file_path = data.get('text', '') or data.get('file', '')
+    element_location.click()
+    sleep(3)
+    window=win32gui.GetForegroundWindow ()
+    # shell = win32com.client.Dispatch("WScript.Shell")
+    # shell.Sendkeys(file_path)
+    # sleep(2)
+    # shell.Sendkeys("{ENTER}")
+    # sleep(2)
+    windeostext=win32gui.GetWindowText(window)
+    dialog = win32gui.FindWindow ('#32770',windeostext)
+    # if dialog!=1:
+    #     dialog = win32gui.FindWindow ('#32770', u'上传文件')
+    ComboBoxEx = win32gui.FindWindowEx (dialog, 0, 'ComboBoxEx32', None)
+    ComboBox = win32gui.FindWindowEx (ComboBoxEx, 0, 'ComboBox', None)
+    Edit = win32gui.FindWindowEx (ComboBox, 0, 'Edit', None)
+    button = win32gui.FindWindowEx (dialog, 0, 'Button', None)
+    sleep (2)
+    win32gui.SendMessage (Edit, win32con.WM_SETTEXT, 0, file_path)
+    sleep (2)
+    win32gui.SendMessage (dialog, win32con.WM_COMMAND, 1, button)
+    sleep (2)

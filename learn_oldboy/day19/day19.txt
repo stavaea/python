@@ -1,0 +1,81 @@
+
+
+博客园
+
+1 设计表关系
+  登陆与注册 ：User  blog
+  系统首页：  article article_detail
+  个人站点：  标签表，分类表
+  文章详细页：文章点赞踩灭表  评论表
+
+
+2 基于ajax和认证组件实现的登陆验证
+  
+3 基于ajax和forms组件实现的注册功能
+  ---- forms组件钩子
+  ---- 上传文件
+
+4 系统首页
+
+5 个人站点页面(ORM)
+
+6 文章详细页的设计
+
+7 点赞与评论
+
+8 文本编辑器与bs模块防止xss攻击（对于文章的增删改查）
+
+
+
+content-Type：
+
+	if POST:
+
+		forms
+		   name="alex"
+		   age=122
+		ajax
+		   data:{
+			 name="alex"
+			 age=122
+			}
+
+
+		"GET http/1.1 url? \r\n请求头\r\n\r\n	请求体"
+		
+		
+		if urlencoded:
+			
+			"GET http/1.1 url? \r\n请求头\r\n\r\n name=alex&age=122"
+
+		if json:
+		
+			"GET http/1.1 url? \r\n请求头\r\n\r\n '{"name":"alex","age":122}'"
+
+
+        if formdata:
+		   
+		   
+		   在ajax：
+		           $.ajax({
+
+					 url:"",
+					 type:"post",
+                     contentType:false,
+                     processData:false,
+					 data:formdata,
+					 success:function (data) {
+						 console.log(data)
+					 }
+
+				})
+
+
+今日作业：
+
+    1 加入钩子验证：
+	     1 校验用户名是否存在
+		 2 校验两次密码是否一致
+		 
+    2 校验成功，添加记录
+

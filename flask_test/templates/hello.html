@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flask小站</title>
+</head>
+<body>
+{#    <h2 style="color: red">hello {{ text }}</h2>#}
+    <h2 style="color: red">中奖名单</h2>
+
+    <table>
+        {% for people in peoples %}
+        <tr><td>{{ people }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

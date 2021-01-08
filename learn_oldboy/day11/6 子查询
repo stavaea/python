@@ -1,0 +1,60 @@
+1 带IN关键字的子查询
+#查询平均年龄在25岁以上的部门名
+select name from dep where id in
+(select dep_id from emp group by dep_id having avg(age) > 25);
+
+#查看技术部员工姓名
+select
+    emp.name
+from emp
+inner join dep on emp.dep_id = dep.id
+where dep.name = '技术'
+;
+select name from emp where dep_id =(select id from dep where name='技术');
+
+
+#查看不足1人的部门名
+select name from dep where id not in (
+select dep_id from emp group by dep_id having count(id) >= 1);
+
+select name from dep where id not in (
+select distinct dep_id from emp);
+
+
+
+#查询大于所有人平均年龄的员工名与年龄
+select name,age from emp where age > (
+select avg(age) from emp);
+
+#查询大于部门内平均年龄的员工名、年龄
+select
+    t1.*
+from emp as t1
+inner join
+(select dep_id,avg(age) as avg_age from emp group by dep_id) as t2
+on t1.dep_id = t2.dep_id
+where t1.age > t2.avg_age
+;
+
+# 统计每个部门最新入职的员工名，入职日期
+
+select
+    t1.name,t1.hire_date
+from emp as t1
+inner join
+(select post,max(hire_date) max_date from emp group by post) as t2
+on t1.post = t2.post
+where t1.hire_date = t2.max_date
+;
+
+
+
+select name from emp where name='egon';
+select name from emp where id > 1000;
+select name from emp where id > 1000 and id < 1005;
+select name from emp where id = 1000;
+
+select name from emp where salary = 20000/12;
+
+
+select * from emp;

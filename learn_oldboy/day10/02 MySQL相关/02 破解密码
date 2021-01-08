@@ -1,0 +1,18 @@
+C:\Users\Administrator> mysqladmin -uroot -p password "123"
+
+#重置密码
+net stop MySQL
+mysqld --skip-grant-tables
+mysql -uroot -p
+    update mysql.user set password=password("") where user='root' and host="localhost";
+    flush privileges;
+
+C:\Users\Administrator>tasklist |findstr mysql
+mysqld.exe                    6316 Console                    1    454,544 K
+
+C:\Users\Administrator>taskkill /F /PID 6316
+成功: 已终止 PID 为 6316 的进程。
+
+C:\Users\Administrator>net start MySQL
+MySQL 服务正在启动 .
+MySQL 服务已经启动成功。

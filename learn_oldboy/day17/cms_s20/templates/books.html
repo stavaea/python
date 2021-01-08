@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            margin-top: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <a href="/addbook/"><button class="btn btn-primary">添加数据</button></a>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                         <tr>
+                              <th>序号</th>
+                              <th>书名</th>
+                              <th>价格</th>
+                              <th>出版时间</th>
+                              <th>出版社</th>
+                              <th>作者</th>
+                              <th>操作</th>
+                              <th>操作</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                         {% for book in book_list %}
+                         <tr>
+                             <td>{{ forloop.counter }}</td>
+                             <td>{{ book.title }}</td>
+                             <td>{{ book.price }}</td>
+                             <td>{{ book.create_time|date:"Y-m-d" }}</td>
+                             <td>{{ book.publish.name }}</td>
+                             <td>
+                                 {% for author in book.author.all %}
+                                 {{ author.name }}
+                                     {% if not forloop.last %}
+                                     ,
+                                     {% endif %}
+                                 {% endfor %}
+                             </td>
+                         <td>
+                             <a href="/del/{{ book.pk }}">删除</a>
+                         </td>
+                         <td>
+                             <a href="/edit/{{ book.pk }}">编辑</a>
+                         </td>
+                         </tr>
+                         {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

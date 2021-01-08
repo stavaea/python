@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite disabled="0" errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="yunke" name="yunke" skipped="0" tests="4" time="54.325" timestamp="2019-10-12T14:22:15.086600">
+		<testcase classname="HOME_001" name="打开首页" priority="H" time="3.148"/>
+		<testcase classname="YUNKE_001" name="登陆" priority="H" time="4.159"/>
+		<testcase classname="YUNKE_002" name="进入机构管理" priority="M" time="3.895"/>
+		<testcase classname="YUNKE_003" name="新建课程" priority="M" time="39.389">
+			<failure message="step-31|CLICK|通用-link#完成创建: Message: unknown error: Element &lt;a class=&quot;btn btn-theme&quot; id=&quot;create-success&quot; href=&quot;javascript:;&quot;&gt;...&lt;/a&gt; is not clickable at point (1005, 386). Other element would receive the click: &lt;textarea class=&quot;col-xs-12 more-txt-content&quot; id=&quot;plan-add-desc&quot; placeholder=&quot;批量添加章节，每行输入一个章节名称，章节按顺序自动排序&quot; style=&quot;height:160px;&quot;&gt;&lt;/textarea&gt;
+  (Session info: chrome=72.0.3626.109)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64)
+" type="Failure"/>
+		</testcase>
+	</testsuite>
+</testsuites>

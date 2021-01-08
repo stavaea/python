@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>组合选择器示例</title>
+    <style>
+        /*后代选择器*/
+        /*div a {*/
+            /*color: red;*/
+        /*}*/
+        /*儿子选择器*/
+        /*div>a {*/
+            /*color: green;*/
+        /*}*/
+        /*毗邻选择器*/
+        /*a+span {*/
+            /*color: blue;*/
+        /*}*/
+
+        /*弟弟选择器*/
+        a~span {
+            color: chocolate;
+        }
+
+        .c1 a {
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="d1" class="c1">
+    <p>
+        <a>我是孙子a标签</a>
+    </p>
+    <span>我是a前面的span标签</span>
+    <a>我是儿子a标签</a>
+    <span>我是span标签1号</span>
+    <span>我是span标签2号</span>
+</div>
+</body>
+</html>

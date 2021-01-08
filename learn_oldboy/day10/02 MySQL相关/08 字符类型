@@ -1,0 +1,26 @@
+char:定长
+varchar：变长
+
+#宽度代表的是字符的个数
+create table t16(name char(5));
+create table t17(name varchar(5));
+
+insert into t16 values('李杰 '); #'李杰   '
+insert into t17 values('李杰 '); #'李杰 '
+
+select char_length(name) from t16; #5
+select char_length(name) from t17; #3
+
+mysql> set sql_mode='PAD_CHAR_TO_FULL_LENGTH';
+
+select * from t16 where name='李杰';
+select * from t17 where name='李杰';
+
+select * from t16 where name like '李杰';
+
+name char(5)
+egon |alex |wxx  |
+
+
+name varchar(5)
+1bytes+egon|1bytes+alex|1bytes+wxx|

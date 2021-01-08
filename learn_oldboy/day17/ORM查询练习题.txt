@@ -1,0 +1,41 @@
+
+		class Book(models.Model):
+		
+			title = models.CharField(max_length=32)
+			publishDate = models.DateField()
+			price = models.DecimalField(max_digits=5, decimal_places=2)   #  999.99
+
+			# 创建一对多的关联字段    :    是与某个书籍对象关联的出版社对象(注意，只有一个对象)
+			publish=models.ForeignKey("Publish")
+
+			# 创建的多对多的关系
+			authors=models.ManyToManyField("Author")
+
+		class Publish(models.Model):
+			nid = models.AutoField(primary_key=True)
+			name=models.CharField( max_length=32)
+			email=models.EmailField()
+
+		class Author(models.Model):
+			name=models.CharField(max_length=32)
+			age=models.IntegerField()
+            
+
+		class AuthorDetail(models.Model):
+			addr=models.CharField(max_length=32)
+			email=models.EmailField()
+			author=models.OneToOneField("Author")
+
+
+基于图书管理系统的表关系与数据，进行如下查询
+  要求：1-5查询分别基于对象查询，双下划线查询，以及找到对应翻译的sql语句
+   
+
+  1、查询人民出版社出版过的价格大于100的书籍的作者的email
+  2、查询alex出版过的所有书籍的名称以及书籍的出版社的名称
+  3、查询2011年出版社过的所有书籍的作者名字以及出版社名称
+  4、查询住在沙河并且email以123开头的作者写过的所有书籍名称以及书籍的出版社名称
+  5、查询年龄大于20岁的作者在哪些出版社出版过书籍
+  6、查询每一个出版社的名称以及出版过的书籍个数
+  7、查询每一个作者的名字以及出版过的所有书籍的最高价格
+  8、查询每一本书的名字，对应出版社名称以及作者的个数

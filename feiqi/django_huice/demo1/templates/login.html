@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <h2>请登录</h2>
+    <form action="/demo1/login/" method="post">
+        {% csrf_token %}
+        用户名:<br>
+        <input type="text" name="username">
+        <br>
+        密码:<br>
+        <input type="text" name="password">
+        <br><br>
+        <input type="checkbox" name="isSave">
+        保存登录信息
+        <br><br>
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>

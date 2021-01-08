@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>上周作业讲解</title>
+</head>
+<body>
+
+<p><input type="checkbox">1</p>
+<p><input type="checkbox">2</p>
+<p><input type="checkbox">3</p>
+<p><input type="checkbox">4</p>
+<p><input type="checkbox">5</p>
+
+
+<button id="selectAll">全选</button>
+<button id="reverse">反选</button>
+<button id="cancel">取消</button>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $("#selectAll").click(function () {
+        // 全选按钮点击后要做的事儿
+        // 找到所有的checkbox
+//        $("input[type='checkbox']")
+        $(":checkbox").prop("checked", true);
+    });
+
+// 取消按钮
+        $("#cancel").click(function () {
+        // 取消按钮点击后要做的事儿
+        // 找到所有的checkbox
+//        $("input[type='checkbox']")
+        $(":checkbox").prop("checked", false);
+    });
+
+        // 反选按钮
+    $("#reverse").click(function () {
+        // 点击反选按钮要做的事儿
+        var $checkboxEles = $(":checkbox");
+        for (var i=0;i<$checkboxEles.length;i++){
+            var currentEle = $checkboxEles[i];
+            if ($(currentEle).prop("checked")){
+                $(currentEle).prop("checked", false);
+            }else {
+                $(currentEle).prop("checked", true);
+            }
+        }
+
+        // 先把所有选中的找出来，保存到一个变量
+        // 把没有选中的找出来，保存在一个变量
+
+    });
+
+</script>
+</body>
+</html>

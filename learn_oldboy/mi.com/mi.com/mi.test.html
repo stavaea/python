@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <style>
+        .item {
+            width: 220px;
+            height: 320px;
+            position: relative;
+        }
+
+        .item>* {
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .info-more {
+            height: 0;
+            width: 220px;
+            background-color: #ff6700;
+            position: absolute;
+            bottom: 0;
+            transition: height 200ms linear;
+            margin: 0;
+
+        }
+
+        .info-more>a {
+            display: block;
+            color:white;
+            text-decoration: none;
+        }
+
+        .item-active .info-more {
+            height: 60px;
+            padding: 15px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <div class="img-wrapper">
+            <a href="">
+                <img src="https://i1.mifile.cn/a1/pms_1488338229.6467773!220x220.jpg" alt="">
+            </a>
+        </div>
+        <h3>我是标题</h3>
+        <p>我是介绍</p>
+        <p>99.99</p>
+        <div class="info-more">
+            <a href="">哈哈，我是商品介绍。</a>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(".item").on("mouseover", function () {
+            $(this).addClass("item-active");
+        });
+        $(".item").on("mouseout", function () {
+            $(this).removeClass("item-active");
+        })
+
+    </script>
+</body>
+
+</html>

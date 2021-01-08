@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>阻止后续事件的执行</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+//        alert($("#b1").val());
+        // 当文档树读完（渲染完）之后触发执行
+        $(document).ready(function () {
+            alert($("#b1").val());
+        })
+    </script>
+</head>
+<body>
+
+<form action="">
+    <p>姓名：
+        <input id="username" type="text">
+    </p>
+    <p>密码：
+        <input id="pwd" type="password">
+    </p>
+    <p>
+        <input id="b1" type="submit" value="提交">
+    </p>
+</form>
+
+<script>
+    $("#b1").on("click", function () {
+        var flag;
+        // 点击提交按钮，对用户的输入内容做校验，校验通过才提交
+        if ($("#username").val().length === 0){
+            // 没有填用户名，不让提交
+            flag = false;
+        }
+        return flag;
+    })
+</script>
+</body>
+</html>

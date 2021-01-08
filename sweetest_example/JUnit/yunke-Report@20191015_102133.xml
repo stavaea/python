@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite disabled="0" errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="yunke" name="yunke" skipped="0" tests="4" time="116.359" timestamp="2019-10-15T10:21:36.513000">
+		<testcase classname="HOME_001" name="打开首页" priority="H" time="3.01"/>
+		<testcase classname="YUNKE_001" name="登陆" priority="H" time="3.877"/>
+		<testcase classname="YUNKE_002" name="进入机构管理" priority="M" time="3.888"/>
+		<testcase classname="YUNKE_003" name="新建课程" priority="M" time="102.74">
+			<failure message="step-34|CLICK|云课首页-divf#暂时先是测试2019101510: Locating the element:云课首页-divf#暂时先是测试2019101510 is Failure: Timeout" type="Failure"/>
+		</testcase>
+	</testsuite>
+</testsuites>

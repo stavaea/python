@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>伪类和伪元素选择器</title>
+    <style>
+        a:link {
+            color: green;
+        }
+        a:visited {
+            color: black;
+        }
+        a:active {
+            color: deeppink;
+        }
+        #d1:hover {
+            color: chocolate;
+        }
+
+        input:focus {
+          outline: none;
+          background-color: red;
+        }
+        p:before {
+            content: "*";  /*使用CSS添加的内容*/
+            color: red;  /*该内容应用的样式*/
+        }
+        p:after {
+            content: "[?]";
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<a href="http://www.sogo.com">sogo</a>
+<a href="http://www.sogoba.com">sogoba</a>
+
+<div id="d1">div</div>
+
+<input type="text">
+
+<p>海燕，在苍茫的大海上，狂风卷积着乌云，在乌云和大海之间</p>
+<p>海燕，在苍茫的大海上，狂风卷积着乌云，在乌云和大海之间</p>
+<p>海燕，在苍茫的大海上，狂风卷积着乌云，在乌云和大海之间</p>
+<p>高傲的飞翔。。。</p>
+</body>
+</html>

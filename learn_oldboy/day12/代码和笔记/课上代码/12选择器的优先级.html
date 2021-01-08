@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>选择器的优先级</title>
+
+    <style>
+        body {
+            color: chocolate;
+        }
+        /*我的权重是100＋１*/
+        div#d1 {
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="12.css">
+
+</head>
+<body>
+
+<div id="d1" class="c1">我是div标签</div>
+<p class="c1">我是p标签</p>
+</body>
+</html>

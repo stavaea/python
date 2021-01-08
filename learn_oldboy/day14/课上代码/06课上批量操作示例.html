@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>课上批量操作示例</title>
+</head>
+<body>
+<table border="1">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>姓名</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>Egon</td>
+    <td>
+      <select>
+        <option value="1">上线</option>
+        <option value="2">下线</option>
+        <option value="3">停职</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>Alex</td>
+    <td>
+      <select>
+        <option value="1">上线</option>
+        <option value="2">下线</option>
+        <option value="3">停职</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>Yuan</td>
+    <td>
+      <select>
+        <option value="1">上线</option>
+        <option value="2">下线</option>
+        <option value="3">停职</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>EvaJ</td>
+    <td>
+      <select>
+        <option value="1">上线</option>
+        <option value="2">下线</option>
+        <option value="3">停职</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td><input type="checkbox"></td>
+    <td>Gold</td>
+    <td>
+      <select>
+        <option value="1">上线</option>
+        <option value="2">下线</option>
+        <option value="3">停职</option>
+      </select>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<input type="button" id="b1" value="全选">
+<input type="button" id="b2" value="取消">
+<input type="button" id="b3" value="反选">
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+  var flag = false;
+  // shift按键按下的时候 把flag 设置 true
+  $(window).keydown(function (event) {
+      // e就代表事件本身
+      if (event.keyCode === 16){
+          flag = true;
+      }
+  });
+    // shift按键抬起来的时候 把flag设置成 false
+  $(window).keyup(function (event) {
+      if (event.keyCode === 16 ){
+          flag = false;
+      }
+  });
+
+    // 给 select 绑定 change 示例
+    $("select").change(function () {
+      // 判断当前select 这一行的 checkbox有没有被选中
+        var currentCheckbox  = $(this).parent().parent().find(":checkbox").prop("checked");
+        if (flag && currentCheckbox){
+             // 只有在批量操作模式下才进行后续操作
+        // 取到当前select被选中的值
+        var selectValue = $(this).val();
+        // 把所有checkbox被选中的那些行的select设置成相同值
+        // 对多个jQuery对象做相同的操作时，可以直接写，内部帮我们实现循环
+        $("input[type='checkbox']:checked").parent().parent().find("select").val(selectValue);
+        }
+    });
+</script>
+</body>
+</html>

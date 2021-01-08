@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<body>
+    {% block content %}
+        <script type="text/javascript">
+            var data = {{ data|safe }}
+            if (data['flag'] == 0) {
+                x0p(data['message'], '', 'ok',
+                    function () {
+                        window.location.href = data['url']
+                    });
+            }else {
+                x0p(data['message'], '', 'error',
+                    function () {
+                        window.location.href = data['url']
+                    });
+            }
+        </script>
+    {% endblock %}
+</body>
+</html>

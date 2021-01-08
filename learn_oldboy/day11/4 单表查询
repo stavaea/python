@@ -1,0 +1,139 @@
+单表语法：
+    select
+        distinct
+        字段1,
+        字段2,...
+    from
+        表名
+    where 约束条件
+    group by 分组条件
+    having 过滤条件
+    order by 排序字段
+    limit n;
+
+#1、简单查询
+        select * from emp;
+        select id,name from emp;
+
+    # 去除重复
+        select distinct post from emp;
+    # 四则运算
+        select name,salary*12 as annual_salary from emp;
+        select name,salary*12 annual_salary from emp;
+
+    # 定义显示格式
+        select
+            concat('姓名: ',name) as new_name,
+            concat('年薪: ',salary*12) as annual_salary
+        from
+            emp;
+
+        select concat(name,'_SB') as new_name from emp;
+
+        select concat(name,'_SB') as new_name from emp where name != 'egon';
+
+        select
+            (
+                case
+                when name = 'egon' then
+                    name
+                when name = 'alex' then
+                    concat(name,'_BIGSB')
+                else
+                    concat(name,'_SB')
+                end
+            ) as new_name
+        from
+            emp;
+
+        select concat(name,':',salary,':',sex) from emp;
+        select concat_ws(':',name,salary,sex) from emp;
+
+ 2、where约束
+    select id,name,age from emp where age > 20;
+    select id,name,age from emp where age >= 20 and age <= 38;
+    select id,name,age from emp where age between 20 and 38;
+    select id,name,age from emp where age <= 20 or age >= 38;
+    select id,name,age from emp where age not between 20 and 38;
+
+    select * from emp where age=18 or age=28 or age=38;
+    select * from emp where age in (18,28,38);
+
+    select * from emp where age=18 or sex='male';
+
+    select * from emp where name like 'jin%';
+    select * from emp where name like '__';
+
+3、group by分组
+    分组依据应该找重复度比较高的字段
+
+    分组之后只能查到分组字段，或者聚合的结果
+    set global sql_mode='strict_trans_tables,only_full_group_by';
+    select post,max(salary) from emp group by post;
+    select post,min(salary) from emp group by post;
+    select post,sum(salary) from emp group by post;
+    select post,avg(salary) from emp group by post;
+    select post,count(id) from emp group by post;
+    select post,group_concat(name) from emp group by post;
+
+    select count(id) from emp;
+    select count(id) from emp where max(salary) > 1;
+
+4: having 过滤条件
+    select post,avg(salary) from emp group by post having avg(salary) > 20000;
+
+5: order by排序
+    select *　from emp order by age asc; # 默认升序，从小到大
+    select *　from emp order by age desc; #从大到小
+
+    select * from emp order by age asc,id desc;
+
+    select post,avg(salary) from emp group by post order by avg(salary);
+
+6、limit n
+    select * from emp limit 3;
+    select * from emp limit 0,5;
+    select * from emp limit 5,5;
+    select * from emp limit 10,5;
+    select * from emp limit 15,5;
+
+
+def from(db,table):
+    f=open(filepath,'r')
+    return f
+
+def where(f,pattern):
+    for line in f:
+        if pattern:
+            yield line
+
+def group():
+    pass
+
+def having():
+    pass
+
+def distinct():
+    pass
+
+def order():
+    pass
+
+def limit():
+    pass
+
+
+
+def select():
+    f=from(db,table)
+    lines=where(f,'id > 1')
+    group_res=group(lines)
+    having_res=having(group_res)
+    distinct_res=distinct(having_res)
+    order_res=order(distinct_res)
+    res=limit(order_res)
+    print(res)
+
+
+# 正则
+    select * from emp where name regexp '^jin.*$';

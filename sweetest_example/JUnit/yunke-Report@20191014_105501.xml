@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite disabled="0" errors="0" errors_detail="H:0 M:0 L:0" failures="0" failures_detail="H:0 M:0 L:0" hostname="yunke" name="yunke" skipped="0" tests="4" time="108.136" timestamp="2019-10-14T10:55:03.403300">
+		<testcase classname="HOME_001" name="打开首页" priority="H" time="11.29"/>
+		<testcase classname="YUNKE_001" name="登陆" priority="H" time="4.067"/>
+		<testcase classname="YUNKE_002" name="进入机构管理" priority="M" time="3.941"/>
+		<testcase classname="YUNKE_003" name="新建课程" priority="M" time="74.261"/>
+	</testsuite>
+</testsuites>

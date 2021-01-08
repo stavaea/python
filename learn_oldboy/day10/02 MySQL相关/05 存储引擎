@@ -1,0 +1,6 @@
+show engines;
+
+create table t1(id int)engine=innodb;
+create table t2(id int)engine=myisam;
+create table t3(id int)engine=memory;
+create table t4(id int)engine=blackhole;

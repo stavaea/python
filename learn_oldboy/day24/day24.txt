@@ -1,0 +1,26 @@
+
+day24
+
+CRM：
+
+	1 权限
+	2 stark组件
+		
+		--- action
+		--- search
+		--- 添加和编辑 （ModelForm）
+		--- 删除
+	3 crm逻辑
+	  
+	 
+	   1 考勤
+	   2 录入成绩   
+	   3 查看成绩
+	   
+day25
+    
+    爬虫（reqeust，bs4）
+	示例+ ....
+	
+
+  

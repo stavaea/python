@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>本周作业分解</title>
+</head>
+<body>
+<table id="t1" border="1">
+    <thead>
+    <th>序号</th>
+    <th>内容1</th>
+    <th>内容2</th>
+    </thead>
+    <tbody>
+    <tr>
+      <td><input type="checkbox" id="c1"></td>
+      <td>123</td>
+      <td>346</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" id="c2"></td>
+      <td>123</td>
+      <td>346</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" id="c3"></td>
+      <td>123</td>
+      <td>346</td>
+    </tr>
+    </tbody>
+  </table>
+  <input id="b1" type="button" value="全选" >
+  <input id="b2" type="button" value="反选" >
+  <input id="b3" type="button" value="取消" >
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    // 点击全选 把所有的checkbox设置成选中
+    // 找到全选按钮，给它绑定事件
+    // 事件处理函数中要做的事儿：
+    // 1. 找到所有的checkbox
+    // 2. 选中--> prop("checked", true)
+
+    // 取消
+       // 找到取消按钮，给它绑定事件
+    // 事件处理函数中要做的事儿：
+    // 1. 找到所有的checkbox
+    // 2. 选中--> prop("checked", false)
+
+    // 反选（根据checkbox不同的状态 来分别处理）
+    // 找到所有选中的，让它们取消选中
+
+    // 找到所有未选中的，让它们选中
+</script>
+</body>
+</html>

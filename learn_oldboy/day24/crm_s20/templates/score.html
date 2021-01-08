@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="/static/Highcharts-6.1.0/code/highcharts.js"></script>
+</head>
+<body>
+<h2>查看{{ student }}成绩</h2>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-1">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>班级</th>
+                    <th>班主任</th>
+                    <th>成绩柱状图</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {% for cls in  class_list %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ cls.course }}({{ cls.semester }})</td>
+                        <td>{{ cls.tutor }}</td>
+                        <td><a class="chart_score" cid="{{ cls.pk }}">成绩柱状图</a></td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+<div id="container" style="width: 600px"></div>
+<script>
+
+                $(".chart_score").click(function () {
+                    var cid=$(this).attr("cid");
+
+                    $.ajax({
+                        url:"",
+                        type:"get",
+                        data:{
+                            sid:"{{ student.pk }}",
+                            cid:cid
+                        },
+                        success:function (data) {
+                             var chart = Highcharts.chart('container', {
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: '个人成绩分布图'
+                        },
+                        subtitle: {
+                            text: '数据截止 2017-03，来源: <a href="https://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+                        },
+                        xAxis: {
+                            type: 'category',
+                            labels: {
+                                rotation: -45  // 设置轴标签旋转角度
+                            }
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: '分数'
+                            }
+                        },
+                        legend: {
+                            enabled: false
+                        },
+                        tooltip: {
+                            pointFormat: '分数: <b>{point.y:.2f} 百万</b>'
+                        },
+                        series: [{
+                            name: '总人口',
+                            data: data,
+                            dataLabels: {
+                                enabled: true,
+                                rotation: -90,
+                                color: 'red',
+                                align: 'right',
+                                format: '{point.y:.1f}', // :.1f 为保留 1 位小数
+                                y: 10
+                            }
+                        }]
+                    });
+                        }
+                    })
+                    
+
+
+
+                })
+            </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+*** Settings ***
+Library    Selenium2Library
+*** Test Cases ***
+case01
+    Open Browser    http://www.baidu.com    Chrome
+    Input Text    id:kw    慧测

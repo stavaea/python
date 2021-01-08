@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite disabled="0" errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="yunke" name="yunke" skipped="0" tests="4" time="61.032" timestamp="2019-10-09T17:05:02.629200">
+		<testcase classname="HOME_001" name="打开首页" priority="H" time="3.308"/>
+		<testcase classname="YUNKE_001" name="登陆" priority="H" time="4.354"/>
+		<testcase classname="YUNKE_002" name="进入机构管理" priority="M" time="3.936"/>
+		<testcase classname="YUNKE_003" name="新建课程" priority="M" time="46.906">
+			<failure message="step-19|CLICK|通用-button#保存: Message: element not interactable
+  (Session info: chrome=72.0.3626.109)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64)
+" type="Failure"/>
+		</testcase>
+	</testsuite>
+</testsuites>

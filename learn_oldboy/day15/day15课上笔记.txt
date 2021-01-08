@@ -1,0 +1,193 @@
+day15  2018-03-31
+
+1. 上午重在理解
+
+	1. 用户浏览器      --> socket 客户端
+		4. 发送消息给服务端
+		
+		7. 收到回复消息
+	
+		断开
+	
+	2. 博客园的server  --> socket 服务端
+		1. 启动服务，
+		2. 绑定IP和端口，等待连接
+		3. 监听
+		
+		while 1:
+			5. 服务端要接收消息
+			6. 返回消息
+			
+			8。 断开
+			
+		
+	PUT|xxx.avi|1024
+	
+	
+	浏览器和web服务端 互相通信 要以来一个统一的规则（标准）
+	本质上就是互发的消息要有一个格式的要求
+	
+	HTTP协议
+	
+		浏览器往服务端发的消息叫：请求（request）
+			请求行  GET /index/ HTTP/1.1
+			请求头  k1:v1
+			\r\n
+			请求体
+		
+		服务端回复给浏览器的消息叫：响应（response）
+			响应行  HTTP/1.1 200 OK\r\n 
+			响应头  Content-Type: text/html; charset=utf-8\r\n
+					k2：v2\r\n
+					...
+			\r\n
+			响应体  我们在浏览器上看到的内容
+			
+		
+	总结：
+		a. 接收浏览器发送的消息
+		b. 根据不同的路径返回不同的内容
+		c. 通过字符串替换 实现 动态网页
+		
+		
+		Python Web框架分类：
+			1. 框架自带 a,b,c                  Tornado
+			2. 框架自带b，c 使用第三方a        Django
+			3. 框架自带b,使用第三方的a和c      Flask
+			
+		另外一个维度的分类：
+			1. Django    --> 大而全 
+			2. 其他     
+
+	Django:
+		1. 安装
+			pip install django==1.11.9
+		2. 新建Django项目
+			1. django-admin startproject 项目名
+			
+		3. Django 设置 settings.py文件中
+			1. 注释掉 csrf相关的那一行（大概是46行！）
+			2. 配置html文件相关
+			3. 配置静态文件相关  /static/
+			
+		4. 基础必备的三件套
+			1. HttpResponse   --> 字符串
+			2. render()       --> HTML文件  --> 打开HTML文件并且完成字符串的替换 
+			3. redirect(“/book_list/”)     --> 跳转
+	
+	
+		5. HTML页面中form表单提交数据三个要点：
+			1. input一定要放在form表单里面，并且 input 要有name属性
+			2. form表单里面触发提交操作 一定要有submit按钮!!! <input type="submit" value="提交">
+			3. 要指定form表单提交的URL（action属性） 并且指定提交的方法（method属性）
+			
+		{"email": "alex@1.com", "pwd": "alexdsb"}
+			
+
+2. ORM 对象关系映射    SQLAlchemy
+	
+	连接数据库
+	
+	类    -->     数据表
+	
+	属性  -->     字段
+	
+	
+	对象  -->    数据行
+	
+	
+	让程序员不用自己写SQL语句，而是利用程序自动翻译的SQL语句
+	
+	$("#i1")        document.getElementById("i1")
+	
+	
+	
+	特殊的语法      SQL语句
+	
+	
+	ORM不能操作数据库，所以才要自己建数据库！！！
+	
+	Django中操作MySQL数据库的准备工作：
+		1. 自己用SQL语句建个数据库   --> create database s20；
+		2. 告诉Django去哪儿连数据库
+			在settings.py文件中设置：
+				DATABASES = {
+					'default': {
+						'ENGINE': 'django.db.backends.mysql',  # 告诉Django连接数据库的类型
+						'NAME': 's20',
+						'HOST': "127.0.0.1",
+						'PORT': 3306,  # 不要加引号
+						'USER': "root",
+						"PASSWORD": "123456",  # 要加引号
+					}
+				}
+		3. MySQLdb、pymysql，告诉Django使用pymysql连接MySQL数据库
+		
+			project/__init__.py文件中：
+				import pymysql
+				pymysql.install_as_MySQLdb()
+			
+		4. 在app/models.py文件中，根据特定的语法  创建类
+			class Book(models.Model):
+				# 定义一个自增的ID主键
+				id = models.AutoField(primary_key=True)
+				# 定义一个最大长度为32的varchar字段
+				title = models.CharField(max_length=32)
+		
+		5. 执行两个命令
+			1. python manage.py makemigrations   --> 用小本本记录 app/models.py文件的任何改动
+			2. python manage.py migrate          --> 把上面的改动翻译成SQL语句，然后去数据库中执行
+
+			
+				
+	
+	1. 操作数据表
+		
+	
+	
+	
+	2. 操作数据行
+		1. 增
+			Book.objects.create(title="书名")
+		2. 删
+			models.Book.objects.get(id=2).delete()
+		3. 改
+			obj = models.Book.objects.get(id=1)
+			obj.title = "番茄物语 第二版"
+			obj.save()   --> 把改动同步到数据库中！！！
+		4. 查
+			查单个：
+				obj = models.Book.objects.get(id=1)
+				
+			查所有：
+				objs = models.Book.objects.all()
+
+
+	书管理系统：
+		1. /book_list/   在页面展示所有的书
+		
+		
+	
+	ORM外键关联
+		
+		主机表                                     主机组表
+		
+		id  name ip memo  group  				id       name
+		
+		
+
+3. 作业
+	1. 把课上我们写的书管理系统，用Bootstrp写完
+	2. 把外键关联的增删改查自己写一遍！
+	
+	
+	
+	
+	
+	
+	
+	
+
+3. 作业
+	1. 主机表
+	

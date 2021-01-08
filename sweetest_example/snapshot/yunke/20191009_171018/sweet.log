@@ -1,0 +1,125 @@
+2019-10-09 17:10:18,937 [INFO]: #  From Excel import testsuite success
+2019-10-09 17:10:21,609 [INFO]: #  ==================================================
+2019-10-09 17:10:21,609 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:10:21,609 [INFO]: #  --------------------------------------------------
+2019-10-09 17:10:21,609 [INFO]: #  >>> Run the TestCase: HOME_001|打开首页
+2019-10-09 17:10:21,609 [INFO]: #  Run the Step: 1|通用|OPEN|通用-云课首页链接
+2019-10-09 17:10:24,422 [INFO]: #  --- success ---
+2019-10-09 17:10:24,623 [INFO]: #  Run the Step: 2|云课首页|CHECK|通用-页面title
+2019-10-09 17:10:24,625 [INFO]: #  DATA:'云课 - 专业的在线直播教育学习平台 - 云课网'
+2019-10-09 17:10:24,639 [INFO]: #  REAL:'云课 - 专业的在线直播教育学习平台 - 云课网'
+2019-10-09 17:10:24,657 [INFO]: #  --- success ---
+2019-10-09 17:10:24,858 [INFO]: #  ==================================================
+2019-10-09 17:10:24,858 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:10:24,859 [INFO]: #  --------------------------------------------------
+2019-10-09 17:10:24,859 [INFO]: #  >>> Run the TestCase: YUNKE_001|登陆
+2019-10-09 17:10:24,859 [INFO]: #  Run the Step: 1|云课首页|CLICK|通用-link#登录
+2019-10-09 17:10:25,873 [INFO]: #  --- success ---
+2019-10-09 17:10:26,073 [INFO]: #  Run the Step: 2|云课首页|INPUT|云课首页-用户名#请输入手机号/学号
+2019-10-09 17:10:26,735 [INFO]: #  --- success ---
+2019-10-09 17:10:26,935 [INFO]: #  Run the Step: 3|云课首页|INPUT|云课首页-用户名#请输入密码
+2019-10-09 17:10:27,550 [INFO]: #  --- success ---
+2019-10-09 17:10:27,750 [INFO]: #  Run the Step: 4|云课首页|CLICK|云课首页-登陆按钮
+2019-10-09 17:10:28,433 [INFO]: #  --- success ---
+2019-10-09 17:10:28,633 [INFO]: #  Run the Step: 5|云课首页|CHECK|云课首页-span#张俊宝
+2019-10-09 17:10:28,728 [INFO]: #  DATA:'张俊宝'
+2019-10-09 17:10:28,728 [INFO]: #  REAL:'张俊宝'
+2019-10-09 17:10:28,729 [INFO]: #  --- success ---
+2019-10-09 17:10:28,929 [INFO]: #  ==================================================
+2019-10-09 17:10:28,929 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:10:28,929 [INFO]: #  --------------------------------------------------
+2019-10-09 17:10:28,930 [INFO]: #  >>> Run the TestCase: YUNKE_002|进入机构管理
+2019-10-09 17:10:28,930 [INFO]: #  Run the Step: 1|云课首页|CLICK|云课首页-上课提醒关闭按钮
+2019-10-09 17:10:29,550 [INFO]: #  --- success ---
+2019-10-09 17:10:29,750 [INFO]: #  Run the Step: 2|云课首页|HOVER|通用-link#机构管理
+2019-10-09 17:10:30,361 [INFO]: #  --- success ---
+2019-10-09 17:10:30,561 [INFO]: #  Run the Step: 3|云课首页|CLICK|通用-link#直播测试机构555
+2019-10-09 17:10:31,311 [INFO]: #  --- success ---
+2019-10-09 17:10:31,512 [INFO]: #  Run the Step: 4|云课首页|CHECK|云课首页-span#运营管理
+2019-10-09 17:10:32,613 [INFO]: #  DATA:'运营管理'
+2019-10-09 17:10:32,613 [INFO]: #  REAL:'运营管理'
+2019-10-09 17:10:32,613 [INFO]: #  --- success ---
+2019-10-09 17:10:32,813 [INFO]: #  ==================================================
+2019-10-09 17:10:32,813 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:10:32,814 [INFO]: #  --------------------------------------------------
+2019-10-09 17:10:32,814 [INFO]: #  >>> Run the TestCase: YUNKE_003|新建课程
+2019-10-09 17:10:32,814 [INFO]: #  Run the Step: 1|云课首页|CLICK|云课首页-span#教务教学
+2019-10-09 17:10:34,056 [INFO]: #  --- success ---
+2019-10-09 17:10:34,256 [INFO]: #  Run the Step: 2|云课首页|CLICK|云课首页-span#课程管理
+2019-10-09 17:10:35,434 [INFO]: #  --- success ---
+2019-10-09 17:10:35,634 [INFO]: #  Run the Step: 3|云课首页|CLICK|通用-link#新建课程
+2019-10-09 17:10:36,492 [INFO]: #  --- success ---
+2019-10-09 17:10:36,692 [INFO]: #  Run the Step: 4|云课首页|CLICK|云课首页-p#直播课
+2019-10-09 17:10:38,754 [INFO]: #  --- success ---
+2019-10-09 17:10:38,955 [INFO]: #  Run the Step: 5|云课首页|INPUT|云课首页-用户名#请输入课程名称最多输入50个字符
+2019-10-09 17:10:39,662 [INFO]: #  --- success ---
+2019-10-09 17:10:39,862 [INFO]: #  Run the Step: 6|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:10:40,528 [INFO]: #  --- success ---
+2019-10-09 17:10:40,728 [INFO]: #  Run the Step: 7|云课首页|CLICK|通用-link#大学/考研
+2019-10-09 17:10:41,361 [INFO]: #  --- success ---
+2019-10-09 17:10:41,562 [INFO]: #  Run the Step: 8|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:10:42,189 [INFO]: #  --- success ---
+2019-10-09 17:10:42,390 [INFO]: #  Run the Step: 9|云课首页|CLICK|通用-link#英语考级
+2019-10-09 17:10:43,044 [INFO]: #  --- success ---
+2019-10-09 17:10:43,244 [INFO]: #  Run the Step: 10|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:10:43,892 [INFO]: #  --- success ---
+2019-10-09 17:10:44,092 [INFO]: #  Run the Step: 11|云课首页|CLICK|通用-link#四级
+2019-10-09 17:10:44,756 [INFO]: #  --- success ---
+2019-10-09 17:10:44,956 [INFO]: #  Run the Step: 12|云课首页|CLICK|云课首页-span#添加老师
+2019-10-09 17:10:45,620 [INFO]: #  --- success ---
+2019-10-09 17:10:45,820 [INFO]: #  Run the Step: 13|云课首页|CLICK|云课首页-li#张俊宝
+2019-10-09 17:10:46,434 [INFO]: #  --- success ---
+2019-10-09 17:10:46,635 [INFO]: #  Run the Step: 14|云课首页|CLICK|通用-link#添加 》
+2019-10-09 17:10:47,317 [INFO]: #  --- success ---
+2019-10-09 17:10:47,517 [INFO]: #  Run the Step: 15|云课首页|CLICK|通用-id#course_add
+2019-10-09 17:10:48,130 [INFO]: #  --- success ---
+2019-10-09 17:10:48,330 [INFO]: #  Run the Step: 16|云课首页|CLICK|通用-button#下一步
+2019-10-09 17:10:48,968 [INFO]: #  --- success ---
+2019-10-09 17:10:49,168 [INFO]: #  Run the Step: 17|云课首页|CLICK|通用-id#img_p_label
+2019-10-09 17:10:50,444 [INFO]: #  --- success ---
+2019-10-09 17:10:50,644 [INFO]: #  Run the Step: 18|云课首页|UPLOAD|通用-button#上传图片
+2019-10-09 17:10:59,872 [INFO]: #  --- success ---
+2019-10-09 17:11:00,072 [INFO]: #  Run the Step: 19|云课首页|CLICK|通用-button#保存
+2019-10-09 17:11:00,708 [INFO]: #  --- success ---
+2019-10-09 17:11:00,908 [INFO]: #  Run the Step: 20|云课首页|CLICK|通用-button#下一步
+2019-10-09 17:11:01,533 [INFO]: #  --- success ---
+2019-10-09 17:11:01,734 [INFO]: #  Run the Step: 21|云课首页|CLICK|通用-link#保存
+2019-10-09 17:11:02,737 [INFO]: #  --- success ---
+2019-10-09 17:11:02,938 [INFO]: #  Run the Step: 22|云课首页|CLICK|通用-link#批量添加课时
+2019-10-09 17:11:03,595 [INFO]: #  --- success ---
+2019-10-09 17:11:03,795 [INFO]: #  Run the Step: 23|云课首页|INPUT|云课首页-tra#批量添加章节，每行输入一个章节名称，章节按顺序自动排序
+2019-10-09 17:11:04,543 [INFO]: #  --- success ---
+2019-10-09 17:11:04,744 [INFO]: #  Run the Step: 24|云课首页|CLICK|云课首页-inputc#开课时间
+2019-10-09 17:11:05,449 [INFO]: #  --- success ---
+2019-10-09 17:11:05,650 [INFO]: #  Run the Step: 25|云课首页|DOUBLE_CLICK|云课首页-buttcla#xdsoft_today_button
+2019-10-09 17:11:06,223 [INFO]: #  --- success ---
+2019-10-09 17:11:06,423 [INFO]: #  Run the Step: 26|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:11:07,060 [INFO]: #  --- success ---
+2019-10-09 17:11:07,260 [INFO]: #  Run the Step: 27|云课首页|CLICK|通用-link#每天
+2019-10-09 17:11:07,920 [INFO]: #  --- success ---
+2019-10-09 17:11:08,121 [INFO]: #  Run the Step: 28|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:11:08,761 [INFO]: #  --- success ---
+2019-10-09 17:11:08,961 [INFO]: #  Run the Step: 29|云课首页|CLICK|通用-link#0.5小时
+2019-10-09 17:11:09,709 [INFO]: #  --- success ---
+2019-10-09 17:11:09,910 [INFO]: #  Run the Step: 30|云课首页|CLICK|通用-button#确认
+2019-10-09 17:11:10,554 [INFO]: #  --- success ---
+2019-10-09 17:11:10,754 [INFO]: #  Run the Step: 31|云课首页|CLICK|通用-link#完成创建
+2019-10-09 17:11:11,312 [ERROR]: #  +++ failure +++
+Traceback (most recent call last):
+  File "F:\python3\lib\site-packages\sweetest\testcase.py", line 135, in run
+    element = getattr(web, step['keyword'].lower())(step)
+  File "F:\python3\lib\site-packages\sweetest\keywords\web.py", line 178, in click
+    element_location.click()
+  File "F:\python3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "F:\python3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "F:\python3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "F:\python3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: Element <a class="btn btn-theme" id="create-success" href="javascript:;">...</a> is not clickable at point (1005, 386). Other element would receive the click: <textarea class="col-xs-12 more-txt-content" id="plan-add-desc" placeholder="批量添加章节，每行输入一个章节名称，章节按顺序自动排序" style="height:160px;"></textarea>
+  (Session info: chrome=72.0.3626.109)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+2019-10-09 17:11:13,637 [INFO]: #  --- Quit th Driver: Chrome

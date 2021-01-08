@@ -1,0 +1,24 @@
+2019-10-09 16:44:42,337 [INFO]: #  From Excel import testsuite success
+2019-10-09 16:44:42,345 [ERROR]: #  *** Init global object failure ***
+Traceback (most recent call last):
+  File "F:\python3\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
+    stdin=PIPE)
+  File "F:\python3\lib\subprocess.py", line 709, in __init__
+    restore_signals, start_new_session)
+  File "F:\python3\lib\subprocess.py", line 997, in _execute_child
+    startupinfo)
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\python3\lib\site-packages\sweetest\autotest.py", line 105, in run
+    g.set_driver()
+  File "F:\python3\lib\site-packages\sweetest\globals.py", line 97, in set_driver
+    chrome_options=options, executable_path=self.executable_path)
+  File "F:\python3\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
+    self.service.start()
+  File "F:\python3\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
+    os.path.basename(self.path), self.start_error_message)
+selenium.common.exceptions.WebDriverException: Message: 'Application.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+

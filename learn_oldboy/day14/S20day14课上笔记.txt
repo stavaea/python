@@ -1,0 +1,86 @@
+day14 2018-03-24
+
+jQuery：http://www.cnblogs.com/liwenzhou/p/8178806.html 
+
+Bootstrap:http://www.cnblogs.com/liwenzhou/p/8214637.html 
+
+1. 今日内容
+
+	jQuery:
+	
+		1. 创建标签
+			使用原生DOM的：
+				document.createElement("tr")
+		2. 设置标签的内容
+			.html()
+			.text()
+			
+		3. 文档操作
+			
+			append
+			appentTo
+			
+			prepend
+			prependTo
+			
+			after
+			insertAfter
+			
+			before
+			insertBefore
+		
+		4. 常用事件
+		
+		5. 事件委派（利用事件冒泡 给一个未来的元素 绑定事件）
+		
+		jQuery绑定时间唯一需要记住的一个方法:
+			$("...").on("click", function(){....})
+			
+			$("tbody").on("click", ".delete", function(){....})
+		
+	2. Bootstrap
+		http://www.cnblogs.com/liwenzhou/p/8214637.html
+		https://v3.bootcss.com/
+			
+		1. 常用样式
+			栅格系统
+				1. row表示一行，通常要放在container里面
+				2. 列必须放在row中，一行被均分成12列
+				3. 只有列能做row的直接子元素
+				
+				col-xx-** 
+					xx取值范围：xs sm md lg
+					**取值范围：1-12
+			按钮组
+			
+			输入框组
+			
+			进度条
+			
+			面板
+			
+			... 其他见文档
+		
+		2. 常用组件
+			1. 字体图标
+				https://fontawesome.com/v4.7.0/
+				https://fontawesome.com/v4.7.0/examples/
+				
+			2. 模态框
+			
+			3. 轮播图
+				
+		3. 练习
+			1. 修改dashboard
+			2. adminLTE  --> https://adminlte.io/
+	
+2. 本周作业
+	1. jQuery 表格增删改查的练习题
+	2. 后台管理页面自己写一下
+	3. 自己尝试修改adminLTE 模板
+
+
+
+		
+		
+		

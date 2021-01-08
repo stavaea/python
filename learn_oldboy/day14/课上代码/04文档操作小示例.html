@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文档操作小示例</title>
+</head>
+<body>
+
+<ul id="u1">
+    <li>111</li>
+    <li id="li2">222</li>
+    <li>333</li>
+</ul>
+
+<button class="btn">屠龙宝刀，点击就送！</button>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(".btn").click(function () {
+        $(this).clone(true).insertAfter($(this));
+//        $(this).after($(this).clone());
+    });
+</script>
+</body>
+</html>

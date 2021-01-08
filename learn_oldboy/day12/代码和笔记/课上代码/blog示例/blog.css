@@ -1,0 +1,115 @@
+/*
+这是blog页面的CSS样式文件
+*/
+
+/*通用的样式*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*左边 样式*/
+.left {
+    width: 20%;
+    float: left;
+    background-color: #4d4d4d;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/*头像*/
+.head-img {
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    border: 3px solid white;
+    overflow: hidden;
+    margin: 15px auto;
+}
+
+.head-img img {
+    max-width: 100%;
+}
+
+.blog-name,
+.introduce,
+.blog-links,
+.blog-tags{
+    text-align: center;
+    color: white;
+}
+
+.introduce {
+    margin-top: 20px;
+
+}
+
+.blog-links a,
+.blog-tags a{
+    color: black;
+}
+
+.blog-links a:hover,
+.blog-tags a:hover {
+    color: white;
+}
+
+.blog-links,
+.blog-tags {
+    margin-top: 25px;
+}
+
+
+/*右边的样式*/
+.right {
+    width: 80%;
+    float: right;
+    background-color: #eeeeee;
+}
+
+.article-list {
+    width: 85%;
+    margin-left: 20px;
+}
+
+.head {
+    border-left: 5px solid red;
+    padding: 15px;
+}
+.article-date {
+    float: right;
+}
+
+.article-title {
+    display: inline-block;
+}
+
+.article {
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.content,
+.tag-list {
+    margin-top: 20px;
+}
+
+.content {
+    padding: 15px;
+}
+
+
+.tag-list {
+    margin-left: 15px;
+    padding: 15px 15px 15px 0;
+    border-top: 1px solid #4d4d4d;
+}
+
+.tag-list span:before {
+    content: "#";
+}

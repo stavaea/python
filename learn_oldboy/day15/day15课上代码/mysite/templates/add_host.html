@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>添加主机</title>
+</head>
+<body>
+
+<form action="/add_host/" method="post">
+    <p>
+        主机名：
+        <input type="text" name="host_name">
+    </p>
+    <p>
+        IP:
+        <input type="text" name="ip">
+    </p>
+    <p>
+        备注：
+        <input type="text" name="memo">
+    </p>
+    <p>
+        主机组：
+        <select name="group">
+            {% for group in group_list %}
+            <option value="{{ group.id }}">{{ group.name }}</option>
+            {% endfor %}
+        </select>
+    </p>
+
+    <p>
+        <input type="submit" value="提交">
+    </p>
+</form>
+</body>
+</html>

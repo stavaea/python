@@ -1,0 +1,17 @@
+#1、笛卡尔积
+select * from emp,dep;
+select * from emp,dep where emp.dep_id=dep.id;
+
+#2、内连接inner join：取两张表的共同部分
+select * from emp inner join dep on emp.dep_id=dep.id;
+
+#3、左连接left join：在内连接的基础上保留左表的记录
+select * from emp left join dep on emp.dep_id=dep.id;
+
+#4、右连接right join：在内连接的基础上保留右表的记录
+select * from emp right join dep on emp.dep_id=dep.id;
+
+#5、全外连接full join：在内连接的基础上保留左、右表的记录
+select * from emp left join dep on emp.dep_id=dep.id
+union
+select * from emp right join dep on emp.dep_id=dep.id;

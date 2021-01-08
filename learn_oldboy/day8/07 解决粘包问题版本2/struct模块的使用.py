@@ -1,0 +1,26 @@
+import struct
+
+
+# headers=struct.pack('q',13233322222222222)
+# print(headers,len(headers))
+
+# res=struct.unpack('i',headers)
+# print(res[0])
+
+import json
+
+headers={
+    'filepath' : 'a.txt',
+    'md5' : '123sxd123x123',
+    'total_size' : 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111213123123123123123123111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+}
+
+headers_json=json.dumps(headers)
+headers_bytes=headers_json.encode('utf-8')
+
+# print(len(headers_bytes))
+res=struct.pack('i',len(headers_bytes))
+print(res,len(res))
+
+
+

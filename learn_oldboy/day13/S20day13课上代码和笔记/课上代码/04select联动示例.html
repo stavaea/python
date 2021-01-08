@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>select联动</title>
+</head>
+<body>
+<select id="s1">
+  <option>请选择省:</option>
+</select>
+
+<select id="s2">
+  <option>请选择市:</option>
+</select>
+
+<script>
+  data = {"河北省": ["廊坊", "邯郸"], "北京": ["朝阳区", "海淀区"], "山东": ["威海市", "烟台市"]};
+
+  var p = document.getElementById("s1");
+  var c = document.getElementById("s2");
+  // 将省市信息从数据库中提取出来，写到第一个select中
+    for (var i in data){
+        console.log(i);
+        // 创建option标签
+        var optionEle = document.createElement("option");
+        optionEle.innerText=i;
+        p.appendChild(optionEle);
+    }
+    // 给s1绑定事件，值发生变化触发的时间(onchange事件)
+    p.onchange=function () {
+        // 先清空c下面的option
+        c.innerHTML="";
+        // 取到用户选中的值
+        var pValue = this.options[this.selectedIndex].innerText;
+        var citys = data[pValue];
+        // 遍历数组
+        for (var i=0;i<citys.length;i++){
+        // 创建option标签
+        var optionEle = document.createElement("option");
+        optionEle.innerText=citys[i];
+        c.appendChild(optionEle);
+    }
+
+    }
+
+</script>
+</body>
+</html>

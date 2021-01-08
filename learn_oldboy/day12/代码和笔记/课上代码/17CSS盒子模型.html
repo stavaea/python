@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS盒子模型</title>
+    <style>
+        .c1 {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border: 5px solid green;
+            /*padding-top: 5px;*/
+            /*padding-right: 10px;*/
+            /*padding-bottom: 15px;*/
+            /*padding-left: 20px;*/
+
+            /*同时设置多个值 推荐使用简写*/
+            /*padding: 5px 10px 15px 20px; !*上 右  下 左*!*/
+            /*padding: 5px 10px 20px;  !* 上 左右 下*!*/
+            /*padding: 10px 20px; !*上下 左右*!*/
+            padding: 20px;  /*上下左右*/
+
+            /*padding: 20px;*/
+            /*margin-top: 100px;*/
+            margin: 5px 10px 15px 20px;
+        }
+        button {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="c1"></div>
+<div class="c1"></div>
+<button>按钮</button>
+</body>
+</html>

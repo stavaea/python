@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>属性选择器</title>
+    <style>
+        /*[s20] {*/
+            /*color: red;*/
+        /*}*/
+        /*[s20="hao"] {*/
+            /*color: red;*/
+        /*}*/
+
+        #d3,
+        p {
+            color: red;
+        }
+
+        /*p {*/
+            /*color: red;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+<div s20>111</div>
+<div s20="hao">222</div>
+<div id="d3">333</div>
+
+<p>第1个p标签</p>
+<p>第2个p标签</p>
+</body>
+</html>

@@ -1,0 +1,88 @@
+2019-10-09 17:01:38,301 [INFO]: #  From Excel import testsuite success
+2019-10-09 17:01:40,720 [INFO]: #  ==================================================
+2019-10-09 17:01:40,720 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:01:40,720 [INFO]: #  --------------------------------------------------
+2019-10-09 17:01:40,720 [INFO]: #  >>> Run the TestCase: HOME_001|打开首页
+2019-10-09 17:01:40,720 [INFO]: #  Run the Step: 1|通用|OPEN|通用-云课首页链接
+2019-10-09 17:01:45,608 [INFO]: #  --- success ---
+2019-10-09 17:01:45,808 [INFO]: #  Run the Step: 2|云课首页|CHECK|通用-页面title
+2019-10-09 17:01:45,810 [INFO]: #  DATA:'云课 - 专业的在线直播教育学习平台 - 云课网'
+2019-10-09 17:01:45,823 [INFO]: #  REAL:'云课 - 专业的在线直播教育学习平台 - 云课网'
+2019-10-09 17:01:45,837 [INFO]: #  --- success ---
+2019-10-09 17:01:46,037 [INFO]: #  ==================================================
+2019-10-09 17:01:46,037 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:01:46,037 [INFO]: #  --------------------------------------------------
+2019-10-09 17:01:46,038 [INFO]: #  >>> Run the TestCase: YUNKE_001|登陆
+2019-10-09 17:01:46,038 [INFO]: #  Run the Step: 1|云课首页|CLICK|通用-link#登录
+2019-10-09 17:01:47,025 [INFO]: #  --- success ---
+2019-10-09 17:01:47,226 [INFO]: #  Run the Step: 2|云课首页|INPUT|云课首页-用户名#请输入手机号/学号
+2019-10-09 17:01:47,864 [INFO]: #  --- success ---
+2019-10-09 17:01:48,064 [INFO]: #  Run the Step: 3|云课首页|INPUT|云课首页-用户名#请输入密码
+2019-10-09 17:01:48,675 [INFO]: #  --- success ---
+2019-10-09 17:01:48,875 [INFO]: #  Run the Step: 4|云课首页|CLICK|云课首页-登陆按钮
+2019-10-09 17:01:49,531 [INFO]: #  --- success ---
+2019-10-09 17:01:49,731 [INFO]: #  Run the Step: 5|云课首页|CHECK|云课首页-span#张俊宝
+2019-10-09 17:01:49,794 [INFO]: #  DATA:'张俊宝'
+2019-10-09 17:01:49,794 [INFO]: #  REAL:'张俊宝'
+2019-10-09 17:01:49,795 [INFO]: #  --- success ---
+2019-10-09 17:01:49,995 [INFO]: #  ==================================================
+2019-10-09 17:01:49,995 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:01:49,996 [INFO]: #  --------------------------------------------------
+2019-10-09 17:01:49,996 [INFO]: #  >>> Run the TestCase: YUNKE_002|进入机构管理
+2019-10-09 17:01:49,997 [INFO]: #  Run the Step: 1|云课首页|CLICK|云课首页-上课提醒关闭按钮
+2019-10-09 17:01:50,611 [INFO]: #  --- success ---
+2019-10-09 17:01:50,811 [INFO]: #  Run the Step: 2|云课首页|HOVER|通用-link#机构管理
+2019-10-09 17:01:51,454 [INFO]: #  --- success ---
+2019-10-09 17:01:51,654 [INFO]: #  Run the Step: 3|云课首页|CLICK|通用-link#直播测试机构555
+2019-10-09 17:01:52,399 [INFO]: #  --- success ---
+2019-10-09 17:01:52,599 [INFO]: #  Run the Step: 4|云课首页|CHECK|云课首页-span#运营管理
+2019-10-09 17:01:53,726 [INFO]: #  DATA:'运营管理'
+2019-10-09 17:01:53,726 [INFO]: #  REAL:'运营管理'
+2019-10-09 17:01:53,726 [INFO]: #  --- success ---
+2019-10-09 17:01:53,927 [INFO]: #  ==================================================
+2019-10-09 17:01:53,927 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:01:53,928 [INFO]: #  --------------------------------------------------
+2019-10-09 17:01:53,928 [INFO]: #  >>> Run the TestCase: YUNKE_003|新建课程
+2019-10-09 17:01:53,928 [INFO]: #  Run the Step: 1|云课首页|CLICK|云课首页-span#教务教学
+2019-10-09 17:01:55,089 [INFO]: #  --- success ---
+2019-10-09 17:01:55,289 [INFO]: #  Run the Step: 2|云课首页|CLICK|云课首页-span#课程管理
+2019-10-09 17:01:56,467 [INFO]: #  --- success ---
+2019-10-09 17:01:56,668 [INFO]: #  Run the Step: 3|云课首页|CLICK|通用-link#新建课程
+2019-10-09 17:01:57,522 [INFO]: #  --- success ---
+2019-10-09 17:01:57,723 [INFO]: #  Run the Step: 4|云课首页|CLICK|云课首页-p#直播课
+2019-10-09 17:01:59,793 [INFO]: #  --- success ---
+2019-10-09 17:01:59,993 [INFO]: #  Run the Step: 5|云课首页|INPUT|云课首页-用户名#请输入课程名称最多输入50个字符
+2019-10-09 17:02:00,714 [INFO]: #  --- success ---
+2019-10-09 17:02:00,915 [INFO]: #  Run the Step: 6|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:02:01,622 [INFO]: #  --- success ---
+2019-10-09 17:02:01,822 [INFO]: #  Run the Step: 7|云课首页|CLICK|通用-link#大学/考研
+2019-10-09 17:02:02,481 [INFO]: #  --- success ---
+2019-10-09 17:02:02,682 [INFO]: #  Run the Step: 8|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:02:03,296 [INFO]: #  --- success ---
+2019-10-09 17:02:03,496 [INFO]: #  Run the Step: 9|云课首页|CLICK|通用-link#英语考级
+2019-10-09 17:02:04,114 [INFO]: #  --- success ---
+2019-10-09 17:02:04,314 [INFO]: #  Run the Step: 10|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:02:04,957 [INFO]: #  --- success ---
+2019-10-09 17:02:05,157 [INFO]: #  Run the Step: 11|云课首页|CLICK|通用-link#四级
+2019-10-09 17:02:05,765 [INFO]: #  --- success ---
+2019-10-09 17:02:05,965 [INFO]: #  Run the Step: 12|云课首页|CLICK|云课首页-span#添加老师
+2019-10-09 17:02:06,593 [INFO]: #  --- success ---
+2019-10-09 17:02:06,794 [INFO]: #  Run the Step: 13|云课首页|CLICK|云课首页-li#张俊宝
+2019-10-09 17:02:07,431 [INFO]: #  --- success ---
+2019-10-09 17:02:07,631 [INFO]: #  Run the Step: 14|云课首页|CLICK|通用-link#添加 》
+2019-10-09 17:02:08,274 [INFO]: #  --- success ---
+2019-10-09 17:02:08,474 [INFO]: #  Run the Step: 15|云课首页|CLICK|通用-id#course_add
+2019-10-09 17:02:09,079 [INFO]: #  --- success ---
+2019-10-09 17:02:09,279 [INFO]: #  Run the Step: 16|云课首页|CLICK|通用-button#下一步
+2019-10-09 17:02:09,885 [INFO]: #  --- success ---
+2019-10-09 17:02:10,087 [INFO]: #  Run the Step: 17|云课首页|CLICK|通用-id#img_p_label
+2019-10-09 17:02:11,484 [INFO]: #  --- success ---
+2019-10-09 17:02:11,684 [INFO]: #  Run the Step: 18|云课首页|UPLOAD|通用-button#上传图片
+2019-10-09 17:02:15,631 [ERROR]: #  +++ failure +++
+Traceback (most recent call last):
+  File "F:\python3\lib\site-packages\sweetest\testcase.py", line 135, in run
+    element = getattr(web, step['keyword'].lower())(step)
+  File "F:\python3\lib\site-packages\sweetest\keywords\web.py", line 331, in upload
+    Edit = win32gui.FindWindowEx(ComboBox, 0, 'Edit', None)
+NameError: name 'ComboBox' is not defined
+2019-10-09 17:02:18,295 [INFO]: #  --- Quit th Driver: Chrome

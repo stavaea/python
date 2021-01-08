@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {#{% block title %}Hello World{% endblock %}#}
+    {% block scripts %}
+    {{ super() }}
+    {% endblock %}
+</head>
+<body>
+    {% block page_content %}
+        <div class="row clearfix" style="padding: 10px">
+            <div class="col-md-12 column" style="padding: 12px">
+                Hello World
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>

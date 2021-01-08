@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script src="/static/js/jquery-3.2.1.min.js"></script>
+
+    <script src="/static/kindeditor/kindeditor-all.js"></script>
+</head>
+<body>
+
+
+<h3>添加文章</h3>
+<form action="" method="post">
+        {% csrf_token %}
+        <p>标题</p>
+        <input type="text" name="title">
+        <p>内容(TinyMCE编辑器，支持拖放/粘贴上传图片) </p>
+        <div>
+            <textarea name="article_content" id="article" cols="30" rows="10"></textarea>
+        </div>
+    <input type="submit">
+</form>
+
+<script>
+        KindEditor.ready(function(K) {
+                window.editor = K.create('#article',{
+
+                    width:"900px",
+                    height:"500px",
+                    uploadJson:"/upload/",
+                    extraFileUploadParams:{
+                        "csrfmiddlewaretoken":$("[name='csrfmiddlewaretoken']").val()
+                    },
+                    filePostName:"upload_img"
+
+
+
+                });
+        });
+</script>
+</body>
+</html>

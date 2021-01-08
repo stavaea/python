@@ -1,0 +1,101 @@
+2019-10-09 17:05:02,630 [INFO]: #  From Excel import testsuite success
+2019-10-09 17:05:05,157 [INFO]: #  ==================================================
+2019-10-09 17:05:05,157 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:05:05,157 [INFO]: #  --------------------------------------------------
+2019-10-09 17:05:05,157 [INFO]: #  >>> Run the TestCase: HOME_001|打开首页
+2019-10-09 17:05:05,157 [INFO]: #  Run the Step: 1|通用|OPEN|通用-云课首页链接
+2019-10-09 17:05:08,032 [INFO]: #  --- success ---
+2019-10-09 17:05:08,233 [INFO]: #  Run the Step: 2|云课首页|CHECK|通用-页面title
+2019-10-09 17:05:08,235 [INFO]: #  DATA:'云课 - 专业的在线直播教育学习平台 - 云课网'
+2019-10-09 17:05:08,248 [INFO]: #  REAL:'云课 - 专业的在线直播教育学习平台 - 云课网'
+2019-10-09 17:05:08,265 [INFO]: #  --- success ---
+2019-10-09 17:05:08,465 [INFO]: #  ==================================================
+2019-10-09 17:05:08,465 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:05:08,466 [INFO]: #  --------------------------------------------------
+2019-10-09 17:05:08,466 [INFO]: #  >>> Run the TestCase: YUNKE_001|登陆
+2019-10-09 17:05:08,466 [INFO]: #  Run the Step: 1|云课首页|CLICK|通用-link#登录
+2019-10-09 17:05:09,731 [INFO]: #  --- success ---
+2019-10-09 17:05:09,931 [INFO]: #  Run the Step: 2|云课首页|INPUT|云课首页-用户名#请输入手机号/学号
+2019-10-09 17:05:10,601 [INFO]: #  --- success ---
+2019-10-09 17:05:10,801 [INFO]: #  Run the Step: 3|云课首页|INPUT|云课首页-用户名#请输入密码
+2019-10-09 17:05:11,416 [INFO]: #  --- success ---
+2019-10-09 17:05:11,616 [INFO]: #  Run the Step: 4|云课首页|CLICK|云课首页-登陆按钮
+2019-10-09 17:05:12,214 [INFO]: #  --- success ---
+2019-10-09 17:05:12,414 [INFO]: #  Run the Step: 5|云课首页|CHECK|云课首页-span#张俊宝
+2019-10-09 17:05:12,619 [INFO]: #  DATA:'张俊宝'
+2019-10-09 17:05:12,619 [INFO]: #  REAL:'张俊宝'
+2019-10-09 17:05:12,619 [INFO]: #  --- success ---
+2019-10-09 17:05:12,819 [INFO]: #  ==================================================
+2019-10-09 17:05:12,819 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:05:12,819 [INFO]: #  --------------------------------------------------
+2019-10-09 17:05:12,820 [INFO]: #  >>> Run the TestCase: YUNKE_002|进入机构管理
+2019-10-09 17:05:12,820 [INFO]: #  Run the Step: 1|云课首页|CLICK|云课首页-上课提醒关闭按钮
+2019-10-09 17:05:13,487 [INFO]: #  --- success ---
+2019-10-09 17:05:13,689 [INFO]: #  Run the Step: 2|云课首页|HOVER|通用-link#机构管理
+2019-10-09 17:05:14,275 [INFO]: #  --- success ---
+2019-10-09 17:05:14,476 [INFO]: #  Run the Step: 3|云课首页|CLICK|通用-link#直播测试机构555
+2019-10-09 17:05:15,219 [INFO]: #  --- success ---
+2019-10-09 17:05:15,419 [INFO]: #  Run the Step: 4|云课首页|CHECK|云课首页-span#运营管理
+2019-10-09 17:05:16,554 [INFO]: #  DATA:'运营管理'
+2019-10-09 17:05:16,555 [INFO]: #  REAL:'运营管理'
+2019-10-09 17:05:16,555 [INFO]: #  --- success ---
+2019-10-09 17:05:16,755 [INFO]: #  ==================================================
+2019-10-09 17:05:16,756 [INFO]: #  ...No SETUP testcase need to run...
+2019-10-09 17:05:16,756 [INFO]: #  --------------------------------------------------
+2019-10-09 17:05:16,757 [INFO]: #  >>> Run the TestCase: YUNKE_003|新建课程
+2019-10-09 17:05:16,757 [INFO]: #  Run the Step: 1|云课首页|CLICK|云课首页-span#教务教学
+2019-10-09 17:05:18,357 [INFO]: #  --- success ---
+2019-10-09 17:05:18,557 [INFO]: #  Run the Step: 2|云课首页|CLICK|云课首页-span#课程管理
+2019-10-09 17:05:19,726 [INFO]: #  --- success ---
+2019-10-09 17:05:19,927 [INFO]: #  Run the Step: 3|云课首页|CLICK|通用-link#新建课程
+2019-10-09 17:05:20,758 [INFO]: #  --- success ---
+2019-10-09 17:05:20,959 [INFO]: #  Run the Step: 4|云课首页|CLICK|云课首页-p#直播课
+2019-10-09 17:05:23,039 [INFO]: #  --- success ---
+2019-10-09 17:05:23,240 [INFO]: #  Run the Step: 5|云课首页|INPUT|云课首页-用户名#请输入课程名称最多输入50个字符
+2019-10-09 17:05:24,050 [INFO]: #  --- success ---
+2019-10-09 17:05:24,251 [INFO]: #  Run the Step: 6|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:05:24,943 [INFO]: #  --- success ---
+2019-10-09 17:05:25,143 [INFO]: #  Run the Step: 7|云课首页|CLICK|通用-link#大学/考研
+2019-10-09 17:05:25,870 [INFO]: #  --- success ---
+2019-10-09 17:05:26,071 [INFO]: #  Run the Step: 8|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:05:26,736 [INFO]: #  --- success ---
+2019-10-09 17:05:26,936 [INFO]: #  Run the Step: 9|云课首页|CLICK|通用-link#英语考级
+2019-10-09 17:05:27,654 [INFO]: #  --- success ---
+2019-10-09 17:05:27,854 [INFO]: #  Run the Step: 10|云课首页|CLICK|云课首页-span#请选择
+2019-10-09 17:05:28,511 [INFO]: #  --- success ---
+2019-10-09 17:05:28,711 [INFO]: #  Run the Step: 11|云课首页|CLICK|通用-link#四级
+2019-10-09 17:05:29,321 [INFO]: #  --- success ---
+2019-10-09 17:05:29,522 [INFO]: #  Run the Step: 12|云课首页|CLICK|云课首页-span#添加老师
+2019-10-09 17:05:30,159 [INFO]: #  --- success ---
+2019-10-09 17:05:30,359 [INFO]: #  Run the Step: 13|云课首页|CLICK|云课首页-li#张俊宝
+2019-10-09 17:05:30,971 [INFO]: #  --- success ---
+2019-10-09 17:05:31,171 [INFO]: #  Run the Step: 14|云课首页|CLICK|通用-link#添加 》
+2019-10-09 17:05:31,869 [INFO]: #  --- success ---
+2019-10-09 17:05:32,070 [INFO]: #  Run the Step: 15|云课首页|CLICK|通用-id#course_add
+2019-10-09 17:05:32,692 [INFO]: #  --- success ---
+2019-10-09 17:05:32,892 [INFO]: #  Run the Step: 16|云课首页|CLICK|通用-button#下一步
+2019-10-09 17:05:33,497 [INFO]: #  --- success ---
+2019-10-09 17:05:33,697 [INFO]: #  Run the Step: 17|云课首页|CLICK|通用-id#img_p_label
+2019-10-09 17:05:35,032 [INFO]: #  --- success ---
+2019-10-09 17:05:35,232 [INFO]: #  Run the Step: 18|云课首页|UPLOAD|通用-button#上传图片
+2019-10-09 17:05:42,493 [INFO]: #  --- success ---
+2019-10-09 17:05:42,693 [INFO]: #  Run the Step: 19|云课首页|CLICK|通用-button#保存
+2019-10-09 17:06:03,600 [ERROR]: #  +++ failure +++
+Traceback (most recent call last):
+  File "F:\python3\lib\site-packages\sweetest\testcase.py", line 135, in run
+    element = getattr(web, step['keyword'].lower())(step)
+  File "F:\python3\lib\site-packages\sweetest\keywords\web.py", line 178, in click
+    element_location.click()
+  File "F:\python3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "F:\python3\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "F:\python3\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "F:\python3\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotVisibleException: Message: element not interactable
+  (Session info: chrome=72.0.3626.109)
+  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+2019-10-09 17:06:06,958 [INFO]: #  --- Quit th Driver: Chrome

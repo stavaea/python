@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Bootstrap示例1</title>
+    <style>
+        .row div {
+            border: 1px solid black;
+            border-bottom: 1px solid green;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="row c1">
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-2 col-xs-2"></div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-xs-3"></div>
+        <div class="col-md-4 col-xs-4"></div>
+        <div class="col-md-5 col-xs-5"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6"></div>
+    </div>
+
+    <p>海燕，在苍茫的大海上，狂风卷积着乌云！</p>
+    <p class="lead">海燕，在苍茫的大海上，狂风卷积着乌云！</p>
+    <p class="lead">
+        <mark>海燕</mark>
+        ，
+        <small>在苍茫的大海上</small>
+        ，狂风卷积着乌云！
+    </p>
+
+    <b>加粗吗？<i>不约！</i></b>
+
+    <p>Alex dashabi</p>
+    <p class="text-lowercase">Alex dashabi</p>
+    <p class="text-uppercase">Alex dashabi</p>
+    <p class="text-capitalize">Alex dashabi</p>
+
+
+    <address>
+        <strong>老男孩教育, Inc.</strong><br>
+        北京市昌平区<br>
+        汇德商厦 402<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+
+    <address>
+        <strong>Alex</strong><br>
+        <a href="mailto:#">alex@oldboyedu.com</a>
+    </address>
+
+    <blockquote>
+        <p>技术的提升只是凉的积累，思想的提升才是指的飞跃。</p>
+        <footer>老男孩思想</footer>
+    </blockquote>
+
+
+    <ul class="list-unstyled">
+        <li>111</li>
+        <li>222</li>
+    </ul>
+
+    <ul class="list-inline">
+        <li>111</li>
+        <li>222</li>
+    </ul>
+
+    按下<kbd>shift</kbd>,点击select即可实现批量操作！
+
+    <pre>print("hello world!")</pre>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>姓名</th>
+            <th>爱好</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Alex</td>
+            <td>吹牛逼</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Egon</td>
+            <td>太长</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-bordered table-striped table-hover table-condensed">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>姓名</th>
+            <th>爱好</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="success">
+            <td>1</td>
+            <td>Alex</td>
+            <td>吹牛逼</td>
+        </tr>
+        <tr>
+            <td class="info">2</td>
+            <td class="success">Egon</td>
+            <td class="danger">太长</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Alex</td>
+            <td>吹牛逼</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Egon</td>
+            <td>太长</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Alex</td>
+            <td>吹牛逼</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Egon</td>
+            <td>太长</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+            <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Check me out
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+
+    <form>
+        <div class="form-group has-error">
+            <label for="inputHelpBlock">用户名</label>
+            <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="helpBlock">
+                <span id="helpBlock" class="help-block">用户名必须大于12位，并且只能是字母数字下划线组成。</span>
+        </div>
+    </form>
+
+
+    <img src="./lp.png" alt="..." class="img-rounded">
+    <img src="./lp.png" alt="..." class="img-circle">
+    <img src="./lp.png" alt="..." class="img-thumbnail">
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

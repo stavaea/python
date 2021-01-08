@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bs/css/bootstrap.css">
+    <style>
+        .search {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h3>查看数据</h3>
+
+<a href="add/" class="btn btn-primary">添加数据</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+
+
+            <form action="" class="search pull-right" method="get">
+                <input type="text" name="q" class="form-control" style="width: 300px;display: inline-block">
+                <button class="btn btn-danger">search</button>
+            </form>
+
+            <form action="" method="post">
+                {% csrf_token %}
+                <select name="action" id="" class="form-control" style="width: 200px;display: inline-block">
+                       {% for action_dict in sl.get_new_actions %}
+                           <option value="{{ action_dict.name }}">{{ action_dict.desc }}</option>
+                       {% endfor %}
+
+                </select>
+                <button type="submit" class="btn btn-success">Go</button>
+
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                    <tr>
+                        {% for foo in sl.get_header %}
+                            <th>{{ foo }}</th>
+                        {% endfor %}
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for new_data in sl.get_body %}
+                        <tr>
+                            {% for foo in new_data %}
+                                <td>{{ foo }}</td>
+                            {% endfor %}
+
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

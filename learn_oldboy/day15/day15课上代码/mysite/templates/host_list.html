@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>主机列表页</title>
+</head>
+<body>
+
+<a href="/add_host/">添加主机</a>
+<table border="1">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>主机名</th>
+        <th>IP</th>
+        <th>备注</th>
+        <th>主机组</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for host in host_list %}
+            <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ host.name }}</td>
+            <td>{{ host.ip}}</td>
+            <td>{{ host.memo}}</td>
+            <td>{{ host.group.name }}</td>
+            </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+</body>
+</html>

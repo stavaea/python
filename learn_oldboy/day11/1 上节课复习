@@ -1,0 +1,99 @@
+1、数据库管理软件
+    本质就是套接字
+
+2、基本概念
+    数据库服务器：运行数据库管理软件的计算机
+    数据库管理软件：MySQL，Oracle，DB2，SQL SERVER
+    库：文件夹
+    表：文件
+    记录：1，egon，19，male，oldboy
+
+3、基本的SQL语句
+    文件夹（库）
+        增
+            create database db1 charset utf8;
+        改
+            alter database db1 charset gbk;
+        查
+            select database();
+            show databases;
+            show create database db1;
+        删
+            drop database db1;
+
+    文件（表）
+        use db1; # 切换文件夹
+        增
+            create table t1(id int,name char(16))engine=innodb;
+        改
+            alter table t1 add age int;
+            alter table t1 drop age;
+            alter table t1 modify name char(10);
+            alter table t1 change name NAME char(10);
+        查
+            show tables;
+            show create table t1;
+            desc t1;
+        删
+            drop table t1;
+
+    文件的内容（记录）
+        增
+            insert into t1(id,name) values(...),(...),(...);
+        改
+            update t1 set name='EGON' where name='egon';
+        查
+            select id,name from t1;
+        删
+            delete from t1 where id > 3;
+            truncate t1;
+
+4、数据类型
+    数值类型
+        整型：
+            int
+            create table t1(id int unsigned)
+
+            强调：对于整型类型宽度指的是显示宽度
+        浮点型：
+            float(255,30)
+            double(255,30)
+            decimal(65,30)
+            区别：精度依次增高
+
+    日期类型：
+        date：1990-01-03
+        time：11:11:11
+        datetime（timestamp）：1990-01-03 11:11:11
+        year：1990
+
+    字符类型(宽度指的是字符的宽度)
+        char：定长
+            egon |alex |wxx  |
+        varchar：变长
+            1bytes+egon|1bytes+alex|1bytes+wxx|
+
+        create table t2(x char(4),y varchar(4));
+        insert into t2 values('','');
+
+
+    补充SQL_MODE:
+    set sql_mode='strict_trans_tables';
+
+5、枚举类型
+    单选：enum(1,2,3)
+    多选：set(1,2,3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

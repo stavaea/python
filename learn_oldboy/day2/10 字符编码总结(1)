@@ -1,0 +1,12 @@
+1、存取文件不乱码的法则：用什么编码存的，就要用什么编码读
+2、
+    unicode-----encode----->gbk
+    gbk-------->decode----->unicode
+
+3、
+    python3解释器默认使用的字符编码是utf-8
+    python2解释器默认使用的字符编码是ascii
+4
+    python2的str就是python3的bytes
+    python2的unicode就是python3的str
+

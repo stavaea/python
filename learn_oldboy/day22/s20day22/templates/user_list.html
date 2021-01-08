@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+    {% if '/userinfo/add/' in permission_list %}
+      <a href="/userinfo/add/" class="btn btn-warning addbtn">添加用户</a>
+    {% endif %}
+
+
+    <table class="table table-bordered">
+        {% for user in user_list %}
+        <tr>
+            <td>{{ user.name }}</td>
+
+            {% if "/userinfo/(\d+)/delete/"  in permission_list %}
+               <td><a href="/userinfo/{{ user.pk }}/delete/">删除</a></td>
+            {% endif %}
+
+            {% if "/userinfo/(\d+)/change/"  in permission_list %}
+               <td><a href="/userinfo/{{ user.pk }}/change/">编辑</a></td>
+            {% endif %}
+
+        </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}

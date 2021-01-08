@@ -1,0 +1,42 @@
+{% load my_filters_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>变量</h3>
+<p>{{ l }}</p>
+<p>{{ l.1 }}</p>
+<p>{{ dic }}</p>
+<p>{{ dic.name }}</p>
+<p>{{ alex.age }}</p>
+
+<hr>
+<h3>过滤器</h3>
+<p>{{ l.1|add:100 }}</p>
+<p>{{ now|date:"Y-m-d" }}</p>
+<p>{{ file_size|filesizeformat }}</p>
+<p>{{ content|truncatechars:12 }}</p>
+<p>{{ content|truncatewords:2 }}</p>
+<p>{{ s|safe }}</p>
+
+<hr>
+<h3>标签</h3>
+{% for person in person_list %}
+   <p>{{ forloop.counter0 }} {{ person.name }}:{{ person.age }} --- {{ person.learning }}</p>
+{% endfor %}
+
+{% if l.0 > 100 %}
+    <p>100</p>
+ {% else %}
+    <p>{{ l.0 }}</p>
+{% endif %}
+
+<h4>自定义过滤器或者标签</h4>
+
+{{ l.0|multi_filter:2 }}
+{% multi_tag l.0|add:12 10 %}
+</body>
+</html>

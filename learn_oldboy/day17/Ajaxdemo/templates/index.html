@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h4>hi {{ username }}</h4>
+<p>ajax请求</p>
+<button class="s1">send_ajax</button>
+<p class="con"></p>
+<hr>
+
+{% csrf_token %}
+
+<p>用户名：<input type="text" id="user"><span class="error"></span></p>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+
+<script>
+    $(".s1").click(function () {
+
+            $.ajax({
+                url:"/send_ajax/",
+                type:"get",
+                data:{},
+                success:function (data) {
+                    $(".con").html(data)
+                }
+            })
+
+    });
+
+    $("#user").blur(function () {
+
+         $.ajax({
+                url:"/user/valid",
+                type:"post",
+                data:{
+                    "name":$("#user").val(),
+                    'csrfmiddlewaretoken':$("[name='csrfmiddlewaretoken']").val(),
+                },
+                success:function (data) {
+
+                    var data=JSON.parse(data);
+                    console.log(data);
+                    console.log(typeof data);
+
+                    if (!data.state){
+                        $('.error').html(data.msg).css("color","red");
+                        // location.href="http://www.baidu.com"
+                    }
+                }
+            })
+
+
+    })
+</script>
+
+</body>
+</html>

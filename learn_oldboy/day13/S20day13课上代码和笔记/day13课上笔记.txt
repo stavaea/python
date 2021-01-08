@@ -1,0 +1,181 @@
+day13 Python S20 2018-03-17
+
+Blog链接：
+JS语法基础：http://www.cnblogs.com/liwenzhou/p/8004649.html
+
+BOM和DOM:http://www.cnblogs.com/liwenzhou/p/8011504.html
+
+jQuery：http://www.cnblogs.com/liwenzhou/p/8178806.html
+
+
+# 今日内容
+
+1. JavaScript  
+
+	1. JS基础语法
+		1. 如何在网页中引入JS?
+		
+		2. 变量
+		
+		3. 数据类型
+			1. Number
+			2. String
+			3. Boolean
+			4. undefined
+			5. null
+			6. Object
+		
+		4. 运算符
+			强等于 和 弱等于 *****
+			强等于： === 既判断值相不相等还判断类型相不相等
+			
+			弱等于： == 只判断值相不相等
+			
+			
+		5. 流程控制
+			1. if else
+			2. while
+			3. for循环
+			4. switch
+		
+			三元运算   *****
+			
+		6. 函数  *****
+			1. 函数的定义（3种）
+			2. 函数的返回值和参数
+			3. 分析变量作用域
+			4. 词法分析（了解即可）
+		7. 对象 
+			1. JSON.parse()/JSON.stringify() *****
+			2. RegExp  ***** regObj.test()
+			
+	
+	2. BOM (browser object model)
+		
+		1. location
+		
+		2. setTimeout和clearTimeout
+		3. setInterval和clearInterval
+	
+	3. DOM （document object model）
+	
+		通过JS代码 操纵 HTML
+		
+		1. 找标签
+			1. 基本查找
+				1. 通过标签名找
+				2. 通过ID找
+				3. 通过class类找
+		
+		2. 做操作
+			1. 创建标签
+				document.createElement("p")     *****
+			
+			2. 修改标签的属性
+				1. 设置属性值：imgEle.setAttribute("属性", "具体的属性值")
+				2. 获取属性值：imgEle.getAttribute("id")
+				3. 删除属性：  divEle.removeAttribute("age")
+			
+			3. 修改标签的内容
+			4. 把标签插入文档树中
+				
+	4. jQuery
+		类库，本质上就是JS文件，文件里面定义好了一些现成的方法，直接拿来用就可以了。
+		
+		JS里面涉及到 DOM操作的时候，都要确保DOM树生成之后再执行。
+		
+		1. 先导入 
+			自己写的JS文件要放在jQuery引用的下面
+		
+		2. jQuery查找标签
+			0. 注意：jQuery对象和DOM对象的区别
+			
+			1. 基本选择器
+				1. ID
+				2. 标签
+				3. class
+				4. 配合使用       --> $("div.c1")
+				5. 所有元素选择器 --> $("*")
+				6. 组合选择器     --> $("div,p,.c1")
+				
+				7. 层级选择器
+					1. 后代
+					2. 儿子
+					3. 毗邻
+					4. 弟弟
+			2. 基本筛选器
+				:first // 第一个
+				:last // 最后一个
+				:eq(index)// 索引等于index的那个元素
+				:even // 匹配所有索引值为偶数的元素，从 0 开始计数
+				:odd // 匹配所有索引值为奇数的元素，从 0 开始计数
+				:gt(index)// 匹配所有大于给定索引值的元素
+				:lt(index)// 匹配所有小于给定索引值的元素
+				:not(元素选择器)// 移除所有满足not条件的标签
+				:has(元素选择器)// 选取所有包含一个或多个标签在其内的标签(指的是从后代元素找)
+
+			3. 属性选择器
+				$("input[type='checkbox']")
+			4. 表单筛选器
+				:text
+				:password
+				:file
+				:radio
+				:checkbox
+
+				:submit
+				:reset
+				:button
+				
+			5. 表单状态选择器
+				:enabled
+				:disabled
+				:checked
+				:selected
+				
+			6. 筛选器
+				1. 下一个
+				2. 上一个
+				3. 父标签
+				4. 儿子
+				5. 兄弟
+				6. 查找
+				
+		3. 操作
+			1. 样式操作
+				1. 操作样式类
+					addClass();// 添加指定的CSS类名。
+					removeClass();// 移除指定的CSS类名。
+					hasClass();// 判断样式存不存在
+					toggleClass();// 切换CSS类名，如果有就移除，如果没有就添加。
+				2. 操作CSS属性
+					$("p").css("color", "red"); //将所有p标签的字体设置为红色
+				
+			2. 位置
+				offset()// 获取匹配元素在当前窗口的相对偏移或设置元素位置
+				position()// 获取匹配元素相对父元素的偏移
+				scrollTop()// 获取匹配元素相对滚动条顶部的偏移
+				scrollLeft()// 获取匹配元素相对滚动条左侧的偏移
+						
+			3. 文本操作
+				1. html 	
+					html()// 取得第一个匹配元素的html内容
+					html(val)// 设置所有匹配元素的html内容
+				2. text
+					text()// 取得所有匹配元素的内容
+					text(val)// 设置所有匹配元素的内容
+					
+				3.  val()// 取得第一个匹配元素的当前值
+					val(val)// 设置所有匹配元素的值
+
+			
+			4. 属性操作
+				1. 普通的文本属性
+					.attr()
+				2. checkbox和radio
+					.prop()
+
+					
+作业：
+	1. 整理博客，重点是jQuery部分的内容
+	2. 全选反选取消的作业

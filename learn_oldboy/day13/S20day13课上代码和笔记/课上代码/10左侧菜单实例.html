@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>左侧菜单实例</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-title">菜单一</div>
+<div class="menu-items hide">
+    <p>111</p>
+    <p>222</p>
+    <p>333</p>
+</div>
+<div class="menu-title">菜单二</div>
+<div class="menu-items hide">
+    <p>111</p>
+    <p>222</p>
+    <p>333</p>
+</div>
+<div class="menu-title">菜单三</div>
+<div class="menu-items hide">
+    <p>111</p>
+    <p>222</p>
+    <p>333</p>
+</div>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    // 绑定事件，点击事件，给.menu-title绑定点击事件
+    // 1. 先找标签
+    var $titleEles = $(".menu-title");
+    $titleEles.on("click", function () {
+        // 2. 写事件触发之后要做的事儿
+        // 2.1 把我下面的子标签显示出来，具体就是removeClass("hide");
+        // console.log(this);  // this指的是触发当前事件的标签,是DOM对象
+        $(this).next().toggleClass("hide");
+        // 2.2 把其他的.menu-items隐藏
+        $(this).next().siblings(".menu-items").addClass("hide");
+    });
+
+
+</script>
+</body>
+</html>

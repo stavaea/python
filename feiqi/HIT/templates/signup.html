@@ -1,0 +1,168 @@
+{% extends 'intro.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+
+</head>
+<body>
+    {% block title %}
+        <div class="row">
+            <h1>接口测试服务平台 <span>用户注册</span></h1>
+        </div>
+
+        <div class="row">
+            <p style="margin-left: 75px">访问接口平台请先注册用户</p>
+            <p>如果已经注册，请点击下方登录按钮 切换到登录页面</p>
+        </div>
+
+    {% endblock %}
+
+    {% block form %}
+    <h2>新用户注册<i style="float: right" class="fa fa-pencil fa-2x"></i></h2>
+    <h3>填写以下资料，完成注册:</h3>
+    <div class="divider"></div>
+    <form action="/index/signup/">
+        <div class="form-group">
+            <input type="text" class="form-control input-lg" name="username" placeholder="用户名" maxlength="20" minlength="5">
+        </div>
+
+        <div class="form-group">
+            <input type="email" class="form-control input-lg" name="email" placeholder="邮箱">
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control input-lg" name="password" placeholder="密码">
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control input-lg" name="confirm" placeholder="确认密码">
+        </div>
+
+        <button id="signup" type="submit" style="margin-top: 30px" class="btn btn-success input-lg btn-block">立即注册</button>
+    </form>
+
+    <script type="text/javascript">
+        /*
+            $(function () {
+                $("#username").blur(function () {
+                    $(this).parent().removeClass("has-error");
+                    $(this).parent().removeClass("has-success");
+                    $("#user_error").remove();
+                    if ($(this).val() == ""){
+                        $(this).parent().addClass("has-error");
+                        $(this).parent().prepend("<label id=\"user_error\"class=\"control-label\" for=\"inputError1\">用户名不能为空</label>")
+                    }else {
+                        $(this).parent().removeClass("has-success");
+                        $.get("/checkuser?username="+$(this).val(), function (data) {
+                            if (data.flag == true){
+                                $(this).parent().removeClass("has-error");
+                                $(this).parent().removeClass("has-success");
+                                $("#user_error").remove();
+
+                                $(this).parent().addClass("has-error");
+                                $(this).parent().prepend("<label id=\"pwd_error\"class=\"control-label\" for=\"inputError1\">用户名已存在</label>")
+                            }
+
+                    });
+                };
+        */
+        /*
+                $("#password").blur(function () {
+                    $(this).parent().removeClass("has-error");
+                    $(this).parent().removeClass("has-success");
+                    $("#pwd_error").remove();
+                    if ($(this).val() == ""){
+                        $(this).parent().addClass("has-error");
+                        $(this).parent().prepend("<label id=\"pwd_error\"class=\"control-label\" for=\"inputError1\">密码不能为空</label>")
+                    }else {
+                        $(this).parent().removeClass("has-success");
+                    }
+                });
+            })
+        */
+        $(function () {
+            $("form").bootstrapValidator({
+                feedbackIcons: {//根据验证结果显示的各种图标
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields:{
+                    username:{
+                        validators: {
+                            notEmpty: {
+                                message: "用户名不能为空"
+                            },
+                            stringLength: {//检测长度
+                                min: 6,
+                                max: 20,
+                                message: '长度必须在6-20之间'
+                            },
+                            remote: {
+                                /*
+                              将内容发送至指定页面验证，返回验证结果，比如查询用户名是否存在
+
+                              这里需要说明的是bootstrap的remote验证器需要的返回结果一定是json格式的数据 :
+                                {"valid":false} //表示不合法，验证不通过
+                                {"valid":true} //表示合法，验证通过
+                                */
+                                url: '/checkuser/',
+                                message: '用户名重复',
+                                data: function(validator) {
+                                    return {
+                                        username: $("input[name='username']").val()
+                                    };
+                                }
+                            }
+                        }
+                    },
+                    password:{
+                        validators:{
+                            notEmpty: {
+                                message: "密码不能为空"
+                            },
+                            stringLength: {//检测长度
+                                min: 6,
+                                max: 20,
+                                message: '长度必须在6-20之间'
+                            }
+                        }
+                    },
+                    confirm:{
+                        validators: {
+                            notEmpty: {
+                                message: "密码不能为空"
+                            },
+                            stringLength: {//检测长度
+                                min: 6,
+                                max: 20,
+                                message: '长度必须在6-20之间'
+                            },
+                            identical: {//与指定控件内容比较是否相同，比如两次密码不一致
+                                field: 'password',//指定控件name
+                                message: '输入的密码不一致'
+                            }
+                        }
+                    },
+                    email:{
+                        validators:{
+                            notEmpty: {
+                                message: "邮箱不能为空"
+                            },
+                            emailAddress: {//验证email地址
+                                message: '不是正确的email地址'
+                            }
+                        }
+                    }
+                }
+            });
+            $("small").css("font-size", "18px");
+            $("i").css("margin-top", "10px");
+        });
+    </script>
+    {% endblock %}
+</body>
+</html>

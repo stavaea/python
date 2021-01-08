@@ -1,0 +1,75 @@
+上节课复习：
+    1、安装python解释器
+        python C:\test.py
+
+        1 启动python解释器
+        2 把文件内容读入内存
+        3 解释执行
+    2 变量
+        age=18
+
+        id:id(age)
+        type:type(age)
+        value:age
+
+        is:比较id
+        ==：比较value
+        强调：id不同，value可以相同
+
+    3 数据类型
+        整形int
+        浮点型float
+        字符串str
+        列表list
+        字典dict
+
+    4 用户与程序交互
+        python3
+            input：把任何输入的内容都存成字符串
+
+        python2
+            raw_input:把任何输入的内容都存成字符串
+            input:必须输入一个明确的数据类型的值
+
+    5 格式化输出
+        %s：接收字符串和整型
+        %d：只能接收整型
+
+    6 基本运算符
+        算数运算符
+            + * ：字符串，列表
+        比较运算符
+        逻辑运算符
+            and，or，not
+        赋值运算
+            x+=1
+            x=y=z=1
+
+            m=1
+            n=2
+            m,n=n,m
+
+            a,b,c=[1,2,3]
+        身份运算符：
+            is，is not
+
+    7 if判断
+        if 条件1：
+            pass
+        elif 条件2：
+            pass
+        elif 条件3：
+            pass
+        else:
+            pass
+
+    8 while
+        while 条件：
+            pass
+
+        while+break
+        while+continue
+
+1 数据类型与内置方法
+2 字符编码
+3 文件处理

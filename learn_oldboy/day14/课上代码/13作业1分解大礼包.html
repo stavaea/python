@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>作业1分解大礼包</title>
+  <style>
+    .hide {
+      display: none;
+    }
+
+    /*遮罩层*/
+    .cover {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: black;
+      opacity: 0.8;
+      z-index: 999;
+    }
+
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      height: 200px;
+      width: 400px;
+      margin-top: -100px;
+      margin-left: -200px;
+      background-color: white;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+<button id="add">新增</button>
+<table border="1">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>姓名</th>
+    <th>爱好</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>Egon</td>
+    <td>街舞</td>
+    <td>
+      <button class="edit-btn">编辑</button>
+      <button class="delete-btn">删除</button>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Alex</td>
+    <td>烫头</td>
+    <td>
+      <button class="edit-btn">编辑</button>
+      <button class="delete-btn">删除</button>
+    </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>苑局</td>
+    <td>日天</td>
+    <td>
+      <button class="edit-btn">编辑</button>
+      <button class="delete-btn">删除</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<div id="myCover" class="cover hide"></div>
+<div id="myModal" class="modal hide">
+  <div>
+    <p>
+      <label for="modal-name">姓名</label>
+      <input type="text" id="modal-name">
+    </p>
+    <p>
+      <label for="modal-habit">爱好</label>
+      <input type="text" id="modal-habit">
+    </p>
+    <p>
+      <button id="modal-submit">提交</button>
+      <button id="modal-cancel">取消</button>
+    </p>
+  </div>
+</div>
+
+
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    // 点击编辑按钮
+    // 1.取出当前行的数据
+    // 2.填写到模态框对应的input框中
+    // 3. 弹出模态框
+
+    // 点击新增按钮
+    // 1. 弹出模态框
+
+    // 删除按钮
+    // 1. 删除当前行
+
+    // 模态框中有取消按钮
+    // 1. 清空模态框中input的值
+    // 2. 关闭模态框
+
+    // 模态框中的提交按钮
+    // 取到用户的输入
+    // 1. 判断是新增操作还是编辑操作
+    // 如果是新增操作
+    // 1. 创建一个新的tr标签，把用户的数据填进去，再添加到tbody最后
+    // 如果是编辑操作
+    // 难点：如何判断之前编辑的是哪一行数据（利用jQuery对象.data()将编辑的那一行保存起来）
+    // 取到编辑的当前行，根据用户的输入数据更新
+
+</script>
+</body>
+</html>

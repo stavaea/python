@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>慧测</title>
+    <link rel="icon" href="/static/img/logo.ico"/>
+{#    <link rel="stylesheet" href="/static/1.css"/>#}
+    <style type="text/css">
+        body{
+            background-color: darkgrey;
+{#            background-image: url("{% static '1.jpg' %}");#}{# 背景图 #}
+        }
+{#        #username{}{# id选择器 #}
+{#        .classname{}{# 类选择器 #}
+
+        p{
+            background-color: aqua;
+            font-family: '微软雅黑';
+            font-size: 20px;
+        }{# 标签选择器 #}
+    </style>
+</head>
+<body>
+    <img src="/static/img/loading.gif"/>
+    <form>
+        <input name="username" type="text">用户名</input>
+{#        <p>慧测</p>#}
+        <input name="password" type="password">密码</input>
+        <input name="submit" type="submit"/>
+    </form>
+
+    {% block context %}
+
+    {% endblock %}
+</body>
+</html>

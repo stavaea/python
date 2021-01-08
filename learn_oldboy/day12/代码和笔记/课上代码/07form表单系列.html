@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>form表单系列</title>
+</head>
+<body>
+
+<form novalidate autocomplete="off" action="http://127.0.0.1:8000/upload/" method="post" enctype="multipart/form-data">
+    <p>
+        <label for="i1">用户名：</label>
+        <input id="i1" disabled name="username" type="text">
+    </p>
+    <p>
+        密码：
+        <input name="password" type="password">
+    </p>
+    <p>邮箱：
+        <input name="email" type="email">
+    </p>
+    <p>日期：
+        <input name="join_date" type="date">
+    </p>
+    <p>
+        <label for="r1">男</label>
+        <input id="r1" name="gender" type="radio" value="1">
+
+        <label>女
+            <input name="gender" type="radio" value="0">
+        </label>
+
+        <input checked name="gender" type="radio" value="2">保密
+    </p>
+    <p>爱好：
+        <input name="hobby" type="checkbox" value="basketball">篮球
+        <input name="hobby" type="checkbox" value="football">足球
+        <input checked name="hobby" type="checkbox" value="doublecolorball">双色球
+    </p>
+    <p>从哪儿来：
+        <select name="addr" multiple>
+            <option value="010">北京</option>
+            <option value="021">上海</option>
+            <option selected value="0631">威海</option>
+        </select>
+        <select name="addr2">
+            <!--select分组形式-->
+            <optgroup label="北京市">
+                <option value="">朝阳区</option>
+                <option value="">海淀区</option>
+                <option value="">昌平区</option>
+            </optgroup>
+            <option value="021">上海</option>
+            <option value="0631">威海</option>
+        </select>
+    </p>
+    
+    <p>上传头像：
+        <input name="head_img" type="file">
+    </p>
+    <p>个人简介：
+        <textarea name="memo" cols="30" rows="10">
+
+        </textarea>
+
+    </p>
+    <p>
+        <input type="submit" value="提交">
+
+        <input type="reset" value="清空">
+        <input type="hidden" value="隐藏的按钮">
+        <input type="button" value="普通按钮">
+        <button>普通按钮</button>
+    </p>
+
+    <!--{"username": "alex", "password": "alexdasgabi", "gender": 1, "hobby": ["basketball", "football"]}-->
+</form>
+</body>
+</html>

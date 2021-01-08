@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>定位属性</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .c1,
+        .c2,
+        .c3,
+        .cc{
+            height: 100px;
+            width: 100px;
+        }
+        .c1 {
+            background-color: red;
+        }
+        .c2 {
+            background-color: blue;
+            /*position: relative; !*相对定位*!*/
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+        .c3 {
+            background-color: green;
+        }
+        .cc {
+            position: relative;  /*光写一个relative 不会改变位置 但是它变成了已经定位的标签*/
+            background-color: deeppink;
+        }
+
+        .sc {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="c1"></div>
+<div class="cc">
+    <div class="c2"></div>
+</div>
+
+<div class="c3"></div>
+
+
+<button class="sc">返回顶部</button>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+create table employee(
+    id int,
+    name char(10),
+    sex enum('male','female','other'),
+    hobbies set('play','eat','music','read')
+);
+
+insert into employee values
+(1,'egon','male','music,read');
+
+insert into employee values
+(2,'alex','xxxx','music,read');

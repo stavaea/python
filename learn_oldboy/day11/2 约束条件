@@ -1,0 +1,109 @@
+#1、not null,default
+create table t4(x char(4) not null);
+create table user(id int,name char(16),sex enum('male','female') not null default 'male');
+
+
+#2、primary key
+    约束字段不为空并且唯一
+    依据：主键是innodb的表组织数据的依据
+    注意：一张表中必须有且只能有一个主键
+
+    create table t5(
+        id int primary key auto_increment,
+        name char(20)
+    );
+    insert into t5(name) values('egon'),('alex');
+
+    select name from t5 where id = 1000;
+
+    了解：联合主键
+    create table t6(
+        id int,
+        name char(20),
+        primary key(id,name)
+    );
+
+#3、unique key
+    create table service(
+        id int primary key auto_increment,
+        name char(20) unique
+    );
+
+    not null+unique:会在没有指定主键的情况下被识别为主键
+    create table service1(
+        id int,
+        name char(20) not null unique
+    );
+
+    create table service2(
+        id int primary key auto_increment,
+        name char(20) unique,
+        ip char(15),
+        port int,
+        unique(ip,port)
+    );
+    insert into service2(name,ip,port) values
+    ('nginx','192.168.1.10',80),
+    ('haproxy','192.168.1.10',8080),
+    ('mysql','192.168.1.10',3306);
+
+    insert into service2(name,ip,port) values
+    ('nginx1','192.168.1.10',80);
+
+
+#4、auto_increment
+    show variables like '%auto%';
+    # 结果
+    auto_increment_increment    | 1 # 步长
+    auto_increment_offset       | 1 # 起始位置
+    #强调：起始位置的值必须<=步长
+
+    set global auto_increment_increment=5;
+    set global auto_increment_offset=3;
+
+    create table t7(id int unique auto_increment);
+    insert into t7 values();
+
+    set global auto_increment_increment=1;
+    set global auto_increment_offset=1;
+
+#5 foregn key
+    创建表：
+        1、先创建被关联的表：部门表
+        #强调：被关联的字段必须唯一
+        create table dep(
+            id int primary key auto_increment,
+            name char(10)
+        );
+        2、再创建关联表：员工表
+        create table emp(
+            id int primary key auto_increment,
+            name char(16),
+            age int,
+            dep_id int,
+            foreign key(dep_id) references dep(id)
+            on delete cascade
+            on update cascade
+        );
+
+    插入记录时：
+        #1、先往被关联表插入：部门表
+        insert into dep(name) values
+        ('外交部'),
+        ('技术哈哈部'),
+        ('销售部');
+
+        #2、再往关联表插入：员工表
+        insert into emp(name,age,dep_id) values
+        ('egon',19,1),
+        ('alex',74,2),
+        ('wxx',38,2),
+        ('yxx',22,3);
+
+        #错误操作
+         insert into emp(name,age,dep_id) values
+        ('lhf',29,4);
+
+
+     delete from dep where id=2;
+     delete from emp where dep_id=2;

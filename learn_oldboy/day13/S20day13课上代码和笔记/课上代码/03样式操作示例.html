@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>样式操作示例</title>
+    <style>
+        .c1 {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .c2 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div id="d1" class="c1 c2" onclick="changeColor(this)"></div>
+<div id="d2" class="c1 c2"></div>
+<script>
+    function changeColor(ths) {
+        ths.classList.toggle("c2");
+    }
+
+    // 找到d2这个标签
+    var d2Ele = document.getElementById("d2");
+    d2Ele.onclick=function () {
+//        alert(123);
+        console.log(this);  // 指的是当前触发事件的标签
+        d2Ele.style.background="blue";
+        d2Ele.innerText="我是d2标签";
+    }
+</script>
+</body>
+</html>

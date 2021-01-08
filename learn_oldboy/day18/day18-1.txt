@@ -1,0 +1,69 @@
+day18
+
+
+
+cookie 
+    (1)获取cookie 
+	request.COOKIE
+	
+	(2)设置cookie
+    response.set_cookie("","",)
+    	
+	
+session
+
+     (3)request.session["user_id"]=user.pk
+     request.session["username"]=user.user
+	 
+	 '''
+                 
+               if request.COOKIE.get("sessionid"):
+                      更新
+                      
+               else:                           
+               
+                       {"user_id":1,"username":"alex"}
+        
+        
+                       第一步: 生成随机字符串: vwerascxh24asdasdasdsd
+                       第二步: 在django-sesion表生成一条记录:
+                            session-key                    session-data
+                       vwerascxh24asdasdasdsd       {"user_id":1,"username":"alex"}
+                       第三步:
+                             
+                             obj.set_cookie("sessionid",vwerascxh24asdasdasdsd) 
+
+        '''
+	 
+	  (4)request.session.get("user_id")
+         '''
+		        1 request.COOKIE.get("sessionid"):vwerascxh24asdasdasdsd
+        
+				2 在django-sesion表查询一条记录:session-key=vwerascxh24asdasdasdsd
+			
+				3 session-data({"user_id":1,"username":"alex"}).get("user_id")
+   	 
+		 '''	  
+	   
+
+
+    	
+	   
+	   
+	   
+用户认证组件
+
+
+
+forms组件
+
+
+
+
+
+
+
+
+
+
+

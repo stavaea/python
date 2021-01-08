@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <title>书列表</title>
+</head>
+<body>
+
+<div class="container">
+
+    <a href="/add_book/" class="btn btn-success">添加新书</a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">书籍管理</div>
+        <div class="panel-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>书名</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for book in book_list %}
+                    <tr data-id="{{ book.id }}">
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ book.title }}</td>
+                        <td>
+                            <a href="/delete_book/?id={{ book.id }}" class="btn btn-danger">删除</a>
+                            <a href="/edit_book/?id={{ book.id }}" class="btn btn-info">编辑</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

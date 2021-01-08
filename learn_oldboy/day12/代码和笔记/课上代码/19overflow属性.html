@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>overflow属性</title>
+    <style>
+        .c1 {
+            width: 100px;
+            height: 200px;
+            border: 1px solid black;
+            /*overflow: auto;*/
+            overflow-y: scroll;
+        }
+        .head-img {
+            width: 128px;
+            height: 128px;
+            border-radius: 64px;
+            border: 3px solid yellow;
+            overflow: hidden;
+        }
+        .head-img img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="c1">
+    海燕啊，你可长点心吧！海燕啊，你可长点心吧！海燕啊，你可长点心吧！海燕啊，你可长点心吧！海燕啊，你可长点心吧！海燕啊，你可长点心吧！海燕啊，你可长点心吧！
+</div>
+
+
+<div class="head-img">
+    <img src="https://q1mi.github.io/Blog/asset/img/head_img.jpg" alt="">
+</div>
+</body>
+</html>

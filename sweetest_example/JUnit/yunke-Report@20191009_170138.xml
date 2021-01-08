@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<testsuites>
+	<testsuite disabled="0" errors="0" errors_detail="H:0 M:0 L:0" failures="1" failures_detail="H:0 M:1 L:0" hostname="yunke" name="yunke" skipped="0" tests="4" time="37.348" timestamp="2019-10-09T17:01:38.300200">
+		<testcase classname="HOME_001" name="打开首页" priority="H" time="5.317"/>
+		<testcase classname="YUNKE_001" name="登陆" priority="H" time="3.958"/>
+		<testcase classname="YUNKE_002" name="进入机构管理" priority="M" time="3.932"/>
+		<testcase classname="YUNKE_003" name="新建课程" priority="M" time="21.721">
+			<failure message="step-18|UPLOAD|通用-button#上传图片: name 'ComboBox' is not defined" type="Failure"/>
+		</testcase>
+	</testsuite>
+</testsuites>

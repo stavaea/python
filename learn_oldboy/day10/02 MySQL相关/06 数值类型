@@ -1,0 +1,32 @@
+#1、整型(默认有符号)
+
+create table t8(n tinyint);
+
+insert into t8 values(-1);
+insert into t8 values(128);
+insert into t8 values(-129);
+
+create table t9(n tinyint unsigned);
+insert into t9 values(-1),(256);
+
+#整型的宽度代表显示宽度
+create table t11(n int(3) unsigned zerofill);
+create table t12(n int unsigned zerofill);
+
+create table t13(
+    id int
+);
+
+
+
+
+#2、浮点型
+create table t13(x float(255,30));
+create table t14(x double(255,30));
+create table t15(x decimal(65,30));
+
+
+insert into t13 values(1.111111111111111111111111111111);
+insert into t14 values(1.111111111111111111111111111111);
+insert into t15 values(1.111111111111111111111111111111);
+
