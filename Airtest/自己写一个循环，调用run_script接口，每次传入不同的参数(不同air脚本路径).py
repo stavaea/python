@@ -1,6 +1,6 @@
 #coding:utf-8
 import os, sys
-import
+#import
 from airtest.cli.runner import run_script
 from airtest.cli.parser import runner_parser
 

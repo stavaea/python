@@ -1,7 +1,7 @@
 # coding:utf-8
 from django.shortcuts import render
 from django.http import JsonResponse,HttpResponseRedirect,HttpResponse
-from  models import *
+from models import *
 import json
 from django.contrib import auth
 # Create your views here.

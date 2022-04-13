@@ -2,6 +2,7 @@
 
 from selenium.webdriver.common.touch_actions import TouchActions
 
+
 def tap_element(locationType, locationExpression):
     try:
         element = getElement(driver, locationType=locationType, locationExpression=locationExpression)#element可根据自己的方式获取

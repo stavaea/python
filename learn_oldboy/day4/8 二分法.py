@@ -1,5 +1,6 @@
+# -*- coding: UTF-8 -*-
 #了解的知识点
-l=[1,2,10,30,33,99,101,200,301,402] #从小到大排列的数字列表
+l=[1, 2, 10, 30, 33, 99, 101, 200, 301, 402] #从小到大排列的数字列表
 
 def binary_search(l,num):
     print(l)
@@ -18,4 +19,4 @@ def binary_search(l,num):
         print('find it')
 
 # binary_search(l,301)
-binary_search(l,302)
+binary_search(l, 302)

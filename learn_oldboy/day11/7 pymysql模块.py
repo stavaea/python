@@ -1,3 +1,4 @@
+# coding=utf-8
 #1、基本使用
 # '''
 # create table user(

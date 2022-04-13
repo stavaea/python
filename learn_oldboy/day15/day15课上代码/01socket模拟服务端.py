@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 使用socket,简单的模拟一下web 服务端
 """

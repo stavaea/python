@@ -3,8 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/learn_huice" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.14 (F:\python2\python2.exe)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7 (python) (4)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

@@ -1,6 +1,6 @@
 #coding:utf-8
 
-import os,subprocess,time
+import os, subprocess, time
 
 class AppiumServer(object):
     '''启动，关闭appium server'''

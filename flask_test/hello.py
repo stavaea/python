@@ -1,5 +1,5 @@
 #coding:utf-8
-from flask import Flask,render_template,request
+from flask import Flask, render_template, request
 import json
 
 app = Flask(__name__)

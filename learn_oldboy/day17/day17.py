@@ -1,8 +1,10 @@
+# coding=utf-8
+
+#上节回顾：
+from learn_oldboy.day17.Ajaxdemo.app01 import models
 
 
-上节回顾：
-
-	class Book(models.Model):
+class Book(models.Model):
 		title=models.CharField(max_length=32)
 		price=models.DecimalField(max_digits=6,decimal_places=2)
 		create_time=models.DateField()
@@ -28,19 +30,19 @@
 		
 		
 
-添加记录：
+#添加记录：
     # 方式1:
-    book_obj=Book.objects.create(title="python",price=122,create_time="2012-12-12",publish_id=2)
-    print(obj.title)
+    # book_obj=Book.objects.create(title="python",price=122,create_time="2012-12-12",publish_id=2)
+    # print(obj.title)
+	#
+	# # 方式2:
+	# publish_obj=Publish.objects.filter(id=2).first()
+	# book_obj=Book.objects.create(title="python",price=122,create_time="2012-12-12",publish=publish_obj)
+    # print(obj.title)
 	
-	# 方式2:
-	publish_obj=Publish.objects.filter(id=2).first()
-	book_obj=Book.objects.create(title="python",price=122,create_time="2012-12-12",publish=publish_obj)
-    print(obj.title)
 	
 	
-	
-	id  book_id    auhtor_id
+'''	id  book_id    auhtor_id
 	 1     1           1
 	 2     1           2
 	 3     1           3
@@ -49,9 +51,9 @@
 	book_obj.author.add(*[1,2,3])
 	book_obj.author.remove(*[1,2])
 	book_obj.author.clear()
+'''
 	
-	
-查询：
+#查询：
     	
 
 	
@@ -68,7 +70,7 @@
 
 
 
-day17
+#day17
 
 
 

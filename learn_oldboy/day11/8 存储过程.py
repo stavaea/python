@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 '''
 delimiter //
 create procedure p1()

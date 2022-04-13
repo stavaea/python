@@ -1,6 +1,6 @@
 class Foo:
-    def __init__(self,name):
-        self.name=name
+    def __init__(self, name):
+        self.name = name
 
     def f1(self):
         print('===>f1')

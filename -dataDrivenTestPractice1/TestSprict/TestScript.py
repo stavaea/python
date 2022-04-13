@@ -20,21 +20,21 @@ driver = webdriver.Chrome(executable_path="C:\\Program Files (x86)\\Google\\Chro
 driver.get('http://mail.126.com')
 pe = parseExcel(r"G:\python\-dataDrivenTestPractice1\TestData\mail.xlsx")
 pe.set_sheet_by_name(u'126帐号')
-print pe.get_default_sheet()
+print (pe.get_default_sheet())
 rows = pe.get_all_rows()[1:]
 
 for id, row in enumerate(rows):
     if row[4].value == 'y':
         username = row[1].value
         password = row[2].value
-        print username, password
+        print (username, password)
 
         try:
             login(driver, username, password)
             pe.set_sheet_by_name(u'联系人')
-            print pe.get_default_sheet()
+            print (pe.get_default_sheet())
             rows1 = pe.get_all_rows()[1:]
-            print 'rows1:', rows1
+            print ('rows1:', rows1)
             test_data_pass_flag=True#结果表示，用于最后写入excel结果
 
             for id1, row in enumerate(rows1):
@@ -49,8 +49,8 @@ for id, row in enumerate(rows):
                         print 'assert word:', row[6].value in driver.page_source
                         print row[6].value
                         pe.write_cell_content(id1+2, 10, 'pass')#assert没有报错，说明断言成功
-                    except Exception, e:
-                        print u'异常信息:', e.message
+                    except Exception as e:
+                        print (u'异常信息:' ,e.message)
                         pe.write_cell_content(id1+2, 10, 'fail')
                         pe.write_cell_content(id1+2, 9, date_time())
                         test_data_pass_flag=False#代码走到这里，说明有异常，测试失败
@@ -65,7 +65,7 @@ for id, row in enumerate(rows):
             else:#说明标识是false
                 pe.set_sheet_by_name(u'126帐号')
                 pe.write_cell_content(id + 2, 5, '失败')
-        except Exception, e:
+        except Exception as e:
             pe.set_sheet_by_name(u'126帐号')
             # print u'异常信息', e
             pe.write_cell_content(id+2, 6, 'fail')

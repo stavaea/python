@@ -22,7 +22,7 @@ json = ‘字典’   拼成json字符串 post正文里
 # print requests.get(url=url,params=para).text
 # # print type(requests.get(url=url,params=para).text)
 
-# post
+#post
 # url = 'http://ws.webxml.com.cn/WebServices/WeatherWS.asmx/getSupportCityString'
 # head = {'Content-Type': 'application/x-www-form-urlencoded'}
 # data = {'theRegionCode': '3117'}

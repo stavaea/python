@@ -1,3 +1,4 @@
+# coding=utf-8
 '''
 1 什么是继承
     是一种新建类的方式，新建的类称为子类，子类会遗传父类的属性，可以减少代码冗余
@@ -44,16 +45,16 @@ class OldboyStudent(OldboyPeople):
     def learn(self):
         print('%s is learning' %self.name)
 
-    def tell_info(self):
-        print('我是学生：',end='')
+    def tell_info(self, ):
+        print('我是学生：', end='')
         print('<名字:%s 年龄:%s 性别:%s>' % (self.name, self.age, self.sex))
 
 class OldboyTeacher(OldboyPeople):
     def teach(self):
         print('%s is teaching' %self.name)
 
-    def tell_info(self):
-        print('我是老师：',end='')
+    def tell_info(self, ):
+        print('我是老师：', end='')
         print('<名字:%s 年龄:%s 性别:%s>' % (self.name, self.age, self.sex))
 
 # stu1=OldboyStudent('牛榴弹',18,'male')
