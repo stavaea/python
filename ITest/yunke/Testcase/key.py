@@ -104,4 +104,4 @@ md5 = hashlib.md5()
 md5.update(encryptStr.encode("utf8"))
 key = md5.hexdigest()
 
-print (key,t)
+print (key, t)

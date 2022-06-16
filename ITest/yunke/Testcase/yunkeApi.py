@@ -73,7 +73,7 @@ class TestApi(unittest.TestCase):
         url = Configuration.HostUrl + "/interface/student/courselist"
         response = requests.post(url=url, json=params, headers=headers)
 
-        res = response.text
+        # res = response.text
         # print res
 
         message = response.json()["message"]
