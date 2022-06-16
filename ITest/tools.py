@@ -40,10 +40,10 @@ def System_spec():
     os_name = os_info.Name.encode('utf-8').split(b'|')[0]
     ram = float(os_info.TotalVisibleMemorySize) / 1048576
 
-    print f'操作系统：{os_name}'
-    print f'cpu：{processor.Name}'
-    print f'内存：{ram}GB'
-    print f'显卡：{gpu.Name}'
+    print '操作系统：{os_name}'
+    print 'cpu：{processor.Name}'
+    print '内存：{ram}GB'
+    print '显卡：{gpu.Name}'
 
     print '\n计算机信息如上⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆'
 
@@ -93,7 +93,7 @@ from pyspectator.processor import Cpu
 cpu = Cpu(monitoring_latency=1)
 with cpu:
     while True:
-        print f'Temp:{cpu.temperature}℃'
+        print 'Temp:{cpu.temperature}℃'
         sleep(2)
 
 # 提取pdf表格
