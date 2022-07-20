@@ -9,7 +9,8 @@
 import os
 import sys
 import pygame
-from ConfigParser import *
+from cfg import *
+import ConfigParser
 from modules import *
 from fractions import Fraction
 
