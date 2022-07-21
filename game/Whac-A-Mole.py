@@ -1,5 +1,5 @@
-# ！/usr/bin/env python
 # -*- coding:utf-8 -*-
+# ！/usr/bin/env python
 # @Time : 2022/7/20 14:45
 # @Author : waxberry
 # @File : Whac-A-Mole.py

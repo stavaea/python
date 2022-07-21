@@ -1,5 +1,5 @@
-# ！/usr/bin/env python
 # -*- coding:utf-8 -*-
+# ！/usr/bin/env python
 # @Time : 2022/7/20 14:51
 # @Author : waxberry
 # @File : balance_beam.py

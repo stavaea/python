@@ -1,5 +1,5 @@
-# ！/usr/bin/env python
 # -*- coding:utf-8 -*-
+# ！/usr/bin/env python
 # @Time : 2022/6/13 9:30
 # @Author : waxberry
 # @File : 批量生成图片.py

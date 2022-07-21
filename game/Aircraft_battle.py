@@ -1,5 +1,5 @@
-# ！/usr/bin/env python
 # -*- coding:utf-8 -*-
+# ！/usr/bin/env python
 # @Time : 2022/7/20 14:44
 # @Author : waxberry
 # @File : Aircraft_battle.py

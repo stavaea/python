@@ -1,5 +1,5 @@
-# ！/usr/bin/env python
 # -*- coding:utf-8 -*-
+# ！/usr/bin/env python
 # @Time : 2022/6/14 9:14
 # @Author : waxberry
 # @File : 测试.py
