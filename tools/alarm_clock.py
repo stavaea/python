@@ -52,8 +52,8 @@ def mail_qq():
         ret = True
         try:
             msg = MIMEText('想睡觉，不干了', 'plain', 'utf-8')  # 填写内容
-            msg['From'] = formataddr(["我是肥学，老子干了", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
-            msg['To'] = formataddr(["肥学", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+            msg['From'] = formataddr(["我是xx,老子不干了", my_sender])  # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+            msg['To'] = formataddr(["xx", my_user])  # 括号里的对应收件人邮箱昵称、收件人邮箱账号
             msg['Subject'] = "辞职报告"  # 邮件的主题，也可以说是标题你也可以写成分手报告
 
             server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器
