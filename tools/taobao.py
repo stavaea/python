@@ -17,7 +17,7 @@ def login(url):
     #打开登录页，并进行扫码登录
     driver.get('http://www.taobao.com')
     time.sleep(3)
-    if driver.find_element_by_link_text('亲，请登录')：
+    if driver.find_element_by_link_text('亲，请登录'):
         driver.find_element_by_link_text('亲，请登录').click()
         print ('请在15s内完成扫码')
         time.sleep(15)
