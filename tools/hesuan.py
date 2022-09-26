@@ -10,7 +10,7 @@ from datetime import datetime
 from turtle import left
 
 my_nucleic = {
-    'date': [datetime.strptime(datetime(2022, 8, i+1), '%Y-%m-%d') for i in range(31)]
+    'date': [datetime.strptime(datetime(2022, 8, i+1), '%Y-%m-%d') for i in range(31)],
     'nucleic': [1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 }
 
@@ -31,7 +31,7 @@ def init_sheet(ws):
 def set_cell_style(ws, r, c, color):
     ws.cell(row=r, column=c).fill = PatternFill('solid', fgColor=color)
     ws.cell(row=r, column=c).font = Font(name='微软雅黑', size=14, bold=True)
-    ws.cell(row=r , column=c).alignment = Alignment(horizontal='right', vertical='center')
+    ws.cell(row=r, column=c).alignment = Alignment(horizontal='right', vertical='center')
     side = Side(style='medium', color='004B3C')
     ws.cell(row=r, column=c).border = Border(top=side, bottom=side, left=side, right=side)
 
@@ -73,7 +73,7 @@ for i in range(len(my_nucleic['date'])):
         ws.cell(row=row, column=col).fill = PatternFill('solid', fgColor='009B3C')
 
 for i in range(1, row + 1):
-    ws.row_dimensions[i].height =30
+    ws.row_dimensions[i].height = 30
 
 wb.save(filename='show_august_nucleic.xlsx')
 wb.close()
