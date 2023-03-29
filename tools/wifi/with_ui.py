@@ -76,7 +76,7 @@ def readPwd():
 # 创建窗口
 root = Tk()
 root.title('WiFi破解')
-root.geometry('500*400')
+root.geometry('500x400')
 # 标签
 label = Label(root, text='请输入要破解的WiFi名称：')
 # 定位
