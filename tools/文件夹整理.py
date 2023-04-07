@@ -14,10 +14,10 @@ path = input("请输入要整理的文件夹路径：")
 
 # 定义一个文件字典，不同的文件类型，属于不同的文件夹，一共9个大类。
 file_dict = {
-    '图片': ['jpg', 'png', 'gif', 'webp'],
-    '视频': ['mp4', 'rmvb', 'wav', 'avi', 'mkv', 'flv'],
-    '音频': ['mp3', 'wave', 'cd', 'aiff', 'mpeg', 'mpeg-4'],
-    '文档': ['xls', 'xlsx', 'doc', 'docx', 'ppt', 'pptx', 'pdf', 'csv', 'txt'],
+    '图片': ['jpg', 'png', 'gif', 'webp', 'bmp', 'jpeg', 'swf', 'svg'],
+    '视频': ['mp4', 'rmvb', 'avi', 'mkv', 'flv', 'wmv', 'mpeg', 'mpeg-4'],
+    '音频': ['mp3', 'wave', 'cd', 'aiff', 'wav', 'mov'],
+    '文档': ['xls', 'xlsx', 'doc', 'docx', 'ppt', 'pptx', 'pdf', 'csv', 'txt', 'ini'],
     '压缩文件': ['7z', 'tar', 'ace', 'bz', 'jar', 'zip', 'gz'],
     '常用格式': ['json', 'xml', 'md', 'xmind'],
     '程序脚本': ['py', 'java', 'html', 'sql', 'php', 'r', 'css', 'cpp', 'c', 'sas', 'js', 'go'],
