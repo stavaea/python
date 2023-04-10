@@ -34,12 +34,12 @@ def buy(buytime):
             try:
                 #点击抢购
                 if driver.find_element_by_id('J_LinkBuy'):
-                    print '点呀！！！'
+                    print ('点呀！！！')
                     driver.find_element_by_id('J_LinkBuy').click()
                     time.sleep(0.09)
                     while now >= buytime:
                         try:
-                            print '买呀！！'
+                            print ('买呀！！')
                             driver.find_element_by_class_name('go-btn').click()
                             driver.find_element_by_link_text('提交订单').click()
                         except:

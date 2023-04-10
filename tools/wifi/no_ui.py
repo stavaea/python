@@ -44,12 +44,12 @@ def wifiConnect(pwd):
         else:
             return False
     else:
-        print '已有WiFi连接'
+        print ('已有WiFi连接')
 
 # 读取密码本
 def readPassword():
     success = False
-    print '**********"正在破解 SSID 为 %s 的 WIFI密码，当前校验的密码为：%s"%("Tr0e",pwd)***********WIFI破解*************************'
+    print ('**********"正在破解 SSID 为 %s 的 WIFI密码，当前校验的密码为：%s"%("Tr0e",pwd)***********WIFI破解*************************')
     # 密码本路径
     path = 'pwd.txt'
     # 打开文件

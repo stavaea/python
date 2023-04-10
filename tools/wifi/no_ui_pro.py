@@ -133,7 +133,7 @@ def main():
             print('-' * 38)
             exit_flag = 1
         except Exception as e:
-            print e
+            print (e)
             raise e
 
 if __name__ == '__main__':

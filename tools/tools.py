@@ -40,12 +40,12 @@ def System_spec():
     os_name = os_info.Name.encode('utf-8').split(b'|')[0]
     ram = float(os_info.TotalVisibleMemorySize) / 1048576
 
-    print '操作系统：{os_name}'
-    print 'cpu：{processor.Name}'
-    print '内存：{ram}GB'
-    print '显卡：{gpu.Name}'
+    print ('操作系统：{os_name}')
+    print ('cpu：{processor.Name}')
+    print ('内存：{ram}GB')
+    print ('显卡：{gpu.Name}')
 
-    print '\n计算机信息如上⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆'
+    print ('\n计算机信息如上⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆')
 
 # 解压文件
 from zipfile import ZipFile
@@ -93,7 +93,7 @@ from pyspectator.processor import Cpu
 cpu = Cpu(monitoring_latency=1)
 with cpu:
     while True:
-        print 'Temp:{cpu.temperature}℃'
+        print ('Temp:{cpu.temperature}℃')
         sleep(2)
 
 # 提取pdf表格
@@ -122,14 +122,14 @@ scr.save('scr.png')
 # 拼写检查器
 import textblob
 text = 'mussage'
-print 'original text:' + str(text)
+print ('original text:' + str(text))
 
 checked = textblob.TextBlob(text)
-print 'corrected text:' + str(checked.correct())
+print ('corrected text:' + str(checked.correct()))
 
 
 import autocorrect
 spell = autocorrect.Speller(lang='en')
-print spell('cmputr')
-print spell('watr')
-print spell('survice')
+print (spell('cmputr'))
+print (spell('watr'))
+print (spell('survice'))

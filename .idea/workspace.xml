@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
+      <change afterPath="$PROJECT_DIR$/tools/随机点名.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/文件夹整理.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/文件夹整理.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Animation_image_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Animation_image_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/Auto_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Auto_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/chat_room/clint_event_driven.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/chat_room/clint_event_driven.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/chat_room/server_event_driven.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/chat_room/server_event_driven.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/taobao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/taobao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/wifi/no_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/wifi/no_ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/wifi/no_ui_pro.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/wifi/no_ui_pro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/wifi/with_ui_pro.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/wifi/with_ui_pro.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +248,7 @@
       <workItem from="1677740148364" duration="2213000" />
       <workItem from="1678690448026" duration="6329000" />
       <workItem from="1680055823731" duration="2203000" />
-      <workItem from="1680831316797" duration="3279000" />
+      <workItem from="1680831316797" duration="11355000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -414,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680833686452</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="&#10;Initial commit">
+      <created>1680835107822</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1680835107822</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,6 +461,11 @@
           <url>file://$PROJECT_DIR$/huice_helloworld/demo1/views.py</url>
           <line>1</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tools/XmindExcel.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

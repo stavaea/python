@@ -36,7 +36,7 @@ class ChatFactory(Factory):
         self.users = {}    #昵称映射到聊天实例,key-->登录成功的链接对象,value：昵称
 
     def buildProtocol(self, addr):  #此方法必须要实现
-        print addr
+        print (addr)
         return Chat(self.users)    #返回一个处理具体业务请求的对象，参数传递了字典，存所有登录成功的连接对象
 
 if __name__ == '__main__':

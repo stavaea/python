@@ -11,7 +11,7 @@ import json, time
 import threading
 import select
 from socket import *
-from client import client_draw
+from client_draw import client_draw
 
 class ChatRoom(object):
     def connect(self):    #配置连接
@@ -56,7 +56,7 @@ class ChatRoom(object):
                             self.txtMsgList.insert(tkinter.END, ''+message + '\n\n', 'Black')
                         self.txtMsgList.see(tkinter.END)    #插入消息时，自动滚动到底部
                 except Exception as e:
-                    print e
+                    print (e)
                     exit()
 
     def register_interface(self):    #进入注册界面
@@ -85,7 +85,7 @@ class ChatRoom(object):
             data = json.dumps(register_data)    #将register_data由dict格式转为json字符串，便于网络传输
             self.s.send(data.encode('utf-8'))
         except Exception as e:
-            print e
+            print (e)
 
     def verify_login(self):    #获取输入框内容，进行登录信息验证
         account = self.input_account.get()
@@ -98,7 +98,7 @@ class ChatRoom(object):
             data = json.dumps(login_data)    #将login_data由dict格式转为json字符串，便于网络传输
             self.s.send(data.encode('utf-8'))
         except Exception as e:
-            print e
+            print (e)
 
     def sendMsg(self):    #获取输入框内容，发送消息
         message = self.txtMsg.get('0.0', tkinter.END)
@@ -113,7 +113,7 @@ class ChatRoom(object):
             data = json.dumps(chat_data)    #将chat_data由dict格式转为json字符串，便于网络传输
             self.s.send(data.encode('utf-8'))
         except Exception as e:
-            print e
+            print (e)
 
     def send_MsgEvent(self, event):    #发送消息事件
         if event.keysym == 'Return':    #如果捕捉到键盘的回车按键，触发消息发送

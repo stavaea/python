@@ -116,11 +116,11 @@ class MY_GUI():
                     self.res = '[*]密码正确！WiFi名：%s，匹配密码：%s' % (self.get_wifissid, self.pwdStr)
                     self.get_wifimm_value.set(self.pwdStr)
                     tkinter.messagebox.showinfo('提示', '破解成功！！！')
-                    print self.res
+                    print (self.res)
                     break
                 else:
                     self.res = '[*]密码错误！WiFi名：%s，匹配密码：%s' % (self.get_wifissid, self.pwdStr)
-                    print self.res
+                    print (self.res)
                 time.sleep(3)
             except:
                 continue
@@ -153,7 +153,7 @@ class MY_GUI():
 def gui_start():
     init_window = Tk()
     ui = MY_GUI(init_window)
-    print ui
+    print (ui)
     ui.set_init_window()
     init_window.mainloop()
 

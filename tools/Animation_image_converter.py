@@ -54,7 +54,7 @@ class CartoonUI(QWidget):
         :return:
         '''
         im_path = QFileDialog.getOpenFileName(self, os.getcwd(), '打开图片',
-                                              'Image File(*.jpg);;Image File(*.png);;Image File(*.jpeg)'))
+                                              'Image File(*.jpg);;Image File(*.png);;Image File(*.jpeg)')
         self.input_image_path.setText(im_path[0])
 
     def generate_btn_click(self):
