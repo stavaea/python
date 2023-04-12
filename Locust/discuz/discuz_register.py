@@ -16,7 +16,7 @@ class RegisterTaskSet(TaskSet):
         try:
             userinfo = self.locust.user_data.get()#获取唯一的用户信息
         except Queue.Empty:
-            print '数据已取完'
+            print ('数据已取完')
             exit(0)
 
         userinfo = userinfo.split(',')

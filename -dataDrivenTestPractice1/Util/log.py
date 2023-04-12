@@ -25,6 +25,6 @@ def warning(message):
 if __name__ == '__main__':
     # 测试代码
     info("hi")
-    print "config file path:",project_path+"\\conf\\Logger.conf"
+    print ("config file path:", project_path+"\\conf\\Logger.conf")
     error("world")
     warning("gloryroad!")

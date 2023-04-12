@@ -18,9 +18,9 @@ def hello():
 def hi():
     None
     json.loads(request.get_data())#转json
-    print request.args.get('name')#get
-    print request.form.get('name')#post
-    print request.get_data()#raw(数组)
+    print (request.args.get('name'))#get
+    print (request.form.get('name'))#post
+    print (request.get_data())#raw(数组)
     peoples = ['zhangsan', 'lisi', '234']
     return render_template('hello.html', peoples=peoples)
 

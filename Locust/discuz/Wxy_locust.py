@@ -16,7 +16,7 @@ class Discuz_Login(TaskSet):
         userinfo = choice(self.locust.userdata)
         userinfo = userinfo.split(",")
 
-        print userinfo
+        print (userinfo)
 
         url = "/member.php?mod=logging&action=login&loginsubmit=yes&infloat=yes&lssubmit=yes&inajax=1"
         headers = {"User-Agent": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)"}

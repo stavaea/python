@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
-      <change afterPath="$PROJECT_DIR$/tools/随机点名.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/降雨天气查询.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/ProjectVar/var.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/ProjectVar/var.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/TestSprict/TestScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/TestSprict/TestScript.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/Excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/Excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/FormatTime.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/FormatTime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/ParsePageObjectRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/ParsePageObjectRepository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/log.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/Animation_image_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Animation_image_converter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/Auto_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/Auto_script.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/chat_room/clint_event_driven.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/chat_room/clint_event_driven.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/chat_room/server_event_driven.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/chat_room/server_event_driven.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/taobao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/taobao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/wifi/no_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/wifi/no_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/wifi/no_ui_pro.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/wifi/no_ui_pro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/wifi/with_ui_pro.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/wifi/with_ui_pro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Locust/discuz/Wxy_locust.py" beforeDir="false" afterPath="$PROJECT_DIR$/Locust/discuz/Wxy_locust.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Locust/discuz/discuz_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/Locust/discuz/discuz_register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_test/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_test/hello.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Whac-A-Mole.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/Whac-A-Mole.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/erweima.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/erweima.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/hesuan.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/hesuan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +250,7 @@
       <workItem from="1677740148364" duration="2213000" />
       <workItem from="1678690448026" duration="6329000" />
       <workItem from="1680055823731" duration="2203000" />
-      <workItem from="1680831316797" duration="11355000" />
+      <workItem from="1680831316797" duration="28167000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -432,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680835107822</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="&#10;Initial commit">
+      <created>1681118595909</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681118595909</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,9 +472,14 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tools/XmindExcel.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/Airtest/自己写一个循环，调用run_script接口，每次传入不同的参数(不同air脚本路径).py</url>
+          <line>1</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/-dataDrivenTestPractice1/PageObject/AddressBook.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -10,7 +10,7 @@ page_object_repository_path = project_path.decode("utf-8")+u"/conf/PageObjectRep
 
 if __name__ == '__main__':
     # 测试代码
-    print "project_path", project_path
-    print "page_object_repository_path", page_object_repository_path
-    print os.path.exists(project_path)
-    print os.path.exists(page_object_repository_path)
+    print ("project_path", project_path)
+    print ("page_object_repository_path", page_object_repository_path)
+    print (os.path.exists(project_path))
+    print (os.path.exists(page_object_repository_path))

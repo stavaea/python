@@ -87,6 +87,12 @@ from pyecharts.charts import Calendar
 import pandas as pd
 
 nucleic_df = pd.DataFrame()
+
+
+def made_data(param, param1):
+    pass
+
+
 for i in range(12):
     mouth_nucleic = made_data(2022, i+1)
     mouth_df = pd.DataFrame(mouth_nucleic)

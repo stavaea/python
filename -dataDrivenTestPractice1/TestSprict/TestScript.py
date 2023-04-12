@@ -42,12 +42,12 @@ for id, row in enumerate(rows):
                     try:
                         # print row[1].value, row[2].value, row[3].value, row[4].value, row[5].value
                         # print 'execute1'
-                        print "log0711", row[1], row[1].value
-                        print "log0711", type(row[1].value)
+                        print ("log0711", row[1], row[1].value)
+                        print ("log0711", type(row[1].value))
                         #进行添加联系人的实际操作
                         add_contact(driver, row[1].value, row[2].value, row[3].value, row[4].value, row[5].value)
-                        print 'assert word:', row[6].value in driver.page_source
-                        print row[6].value
+                        print ('assert word:', row[6].value in driver.page_source)
+                        print (row[6].value)
                         pe.write_cell_content(id1+2, 10, 'pass')#assert没有报错，说明断言成功
                     except Exception as e:
                         print (u'异常信息:' ,e.message)

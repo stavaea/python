@@ -11,7 +11,7 @@ import pygame
 import random
 from modules import *
 
-from game.play_table_tennis import startInterface
+from game.play_table_tennis import startInterface, endInterface
 
 '''游戏初始化'''
 
