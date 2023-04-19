@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
-      <change afterPath="$PROJECT_DIR$/tools/email.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/降雨天气查询.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/ProjectVar/var.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/ProjectVar/var.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/TestSprict/TestScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/TestSprict/TestScript.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/Excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/Excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/FormatTime.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/FormatTime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/ParsePageObjectRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/ParsePageObjectRepository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/log.py" beforeDir="false" afterPath="$PROJECT_DIR$/-dataDrivenTestPractice1/Util/log.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/情人节.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/用Python海龟画图表白.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Locust/discuz/Wxy_locust.py" beforeDir="false" afterPath="$PROJECT_DIR$/Locust/discuz/Wxy_locust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Locust/discuz/discuz_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/Locust/discuz/discuz_register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_test/hello.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_test/hello.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/Whac-A-Mole.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/Whac-A-Mole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/erweima.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/erweima.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/hesuan.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/hesuan.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +62,29 @@
       <recent name="D:\PycharmProjects\python\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pydevd">
+  <component name="RunManager" selected="Python.情人节">
+    <configuration name="情人节" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/情人节.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -89,6 +99,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="用Python海龟画图表白" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/用Python海龟画图表白.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,57 +173,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="with_ui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/wifi" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/wifi/with_ui.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="with_ui_pro" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/wifi" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/wifi/with_ui_pro.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.情人节" />
+        <item itemvalue="Python.用Python海龟画图表白" />
         <item itemvalue="Python.pydevd" />
         <item itemvalue="Python.1" />
         <item itemvalue="Python.erweima" />
-        <item itemvalue="Python.with_ui_pro" />
-        <item itemvalue="Python.with_ui" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +238,9 @@
       <workItem from="1677740148364" duration="2213000" />
       <workItem from="1678690448026" duration="6329000" />
       <workItem from="1680055823731" duration="2203000" />
-      <workItem from="1680831316797" duration="28167000" />
+      <workItem from="1680831316797" duration="29253000" />
+      <workItem from="1681700330892" duration="3763000" />
+      <workItem from="1681786589223" duration="744000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -441,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681118595909</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="&#10;Initial commit">
+      <created>1681285596094</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681285596094</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,6 +487,7 @@
     <SUITE FILE_PATH="coverage/python$client_page.coverage" NAME="client_page Coverage Results" MODIFIED="1660871130702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/chat_room" />
     <SUITE FILE_PATH="coverage/python$with_ui_pro.coverage" NAME="with_ui_pro Coverage Results" MODIFIED="1678691133137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/wifi" />
     <SUITE FILE_PATH="coverage/python$test21.coverage" NAME="test21 Coverage Results" MODIFIED="1649835319182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learn_huice/day1" />
+    <SUITE FILE_PATH="coverage/python$.coverage" NAME="情人节 Coverage Results" MODIFIED="1681786628191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/python$pydevd.coverage" NAME="pydevd Coverage Results" MODIFIED="1680056041226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_HOME_DIR$/plugins/python/helpers/pydev" />
     <SUITE FILE_PATH="coverage/python$8_.coverage" NAME="8 二分法 Coverage Results" MODIFIED="1649835519031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learn_oldboy/day4" />
     <SUITE FILE_PATH="coverage/python$TicTacToe.coverage" NAME="TicTacToe Coverage Results" MODIFIED="1660729019075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
@@ -497,6 +495,7 @@
     <SUITE FILE_PATH="coverage/python$test19.coverage" NAME="test19 Coverage Results" MODIFIED="1649835294153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learn_huice/day1" />
     <SUITE FILE_PATH="coverage/python$test22.coverage" NAME="test22 Coverage Results" MODIFIED="1649835332867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learn_huice/day1" />
     <SUITE FILE_PATH="coverage/python$demo1.coverage" NAME="demo1 Coverage Results" MODIFIED="1649834524536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITest" />
+    <SUITE FILE_PATH="coverage/python$Python.coverage" NAME="用Python海龟画图表白 Coverage Results" MODIFIED="1681702299714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/python$with_ui.coverage" NAME="with_ui Coverage Results" MODIFIED="1664419562153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/wifi" />
     <SUITE FILE_PATH="coverage/python$Unittests_for_demo2_EventTest.coverage" NAME="Unittests for demo2.EventTest Coverage Results" MODIFIED="1649834577529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITest" />
     <SUITE FILE_PATH="coverage/python$test20.coverage" NAME="test20 Coverage Results" MODIFIED="1649835308907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learn_huice/day1" />
