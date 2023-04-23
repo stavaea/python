@@ -6,7 +6,7 @@
 # @Software : PyCharm
 
 import openpyxl
-from ITest import xmindData
+from tools import xmindData
 
 str = '文件已打开，请关闭重试'
 
