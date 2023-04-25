@@ -6,7 +6,7 @@
 # @Software : PyCharm
 
 
-from db import user_db
+from tools.chat_room.server_processing.db import user_db
 import json
 
 def login(self, data_dict):    #登录逻辑

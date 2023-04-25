@@ -5,7 +5,7 @@
 # @File : db.py
 # @Software : PyCharm
 
-from db import handle_mysql
+from tools.chat_room.server_processing.db import handle_mysql
 
 def checkUser(account):    #通过account查询用户信息
     mysql = handle_mysql.MySQL()

@@ -1,9 +1,10 @@
-from stark.service.sites import site,ModelStark
+from learn_oldboy.day24.crm_s20.stark.service.sites import site,ModelStark
 from django.utils.safestring import mark_safe
-from app01 import models
+from learn_oldboy.day24.crm_s20.app01 import models
 from django.conf.urls import url
 from django.shortcuts import HttpResponse,redirect,render
 from django.http import JsonResponse
+
 site.register(models.Department)
 site.register(models.School)
 site.register(models.UserInfo)
