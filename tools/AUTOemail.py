@@ -2,7 +2,7 @@
 # ！/usr/bin/env python
 # @Time : 2023/4/12 9:49
 # @Author : waxberry
-# @File : email.py
+# @File : AUTOemail.py
 # @Software : PyCharm
 
 import cv2

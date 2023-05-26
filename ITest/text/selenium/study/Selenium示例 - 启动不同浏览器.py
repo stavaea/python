@@ -1,6 +1,8 @@
 #coding:utf-8
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 import os
+import time
 
 '''【浏览器驱动】
 1. 下载：
@@ -30,7 +32,7 @@ import os
 #
 # # 2、指定firefox的安装路径启动，代码如下：
 # # firefox 实际安装路径
-# ffdriver = "E:\Fox\\firefox.exe"
+# ffdriver = "C:\Program Files\Mozilla Firefox"
 # os.environ["webdriver.firefox.driver"] = ffdriver
 # driver = webdriver.Firefox(ffdriver)
 # # 注意http不可以省略
@@ -47,13 +49,31 @@ import os
 # googledriver = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe"
 # os.environ["webdriver.chrome.driver"] = googledriver
 # driver = webdriver.Chrome(executable_path="E:\Google\Chrome\Application\chrome.exe")
-driver = webdriver.Chrome(executable_path="E:\Google\Chrome\Application\chromedriver.exe")
+# driver = webdriver.Chrome(executable_path="D:\Python310\chromedriver.exe")
+s = Service(executable_path="D:\Python310\chromedriver.exe")
+driver = webdriver.Chrome(service=s)
 # driver = webdriver.Chrome(r"F:\python3\chromedriver.exe")
 # driver = webdriver.Chrome(googledriver)
 # 注意http不可以省略
 url = 'http://www.baidu.com'
+time.sleep(3)
 driver.get(url)
 # driver.close()
+
+from selenium import webdriver
+
+# chromedriver_path = r"D:\Python310\chromedriver.exe"
+# driver = webdriver.Chrome(executable_path=chromedriver_path)
+# 登陆百度
+def main():
+    global driver
+    chromedriver_path = r"D:\Python310\chromedriver.exe"
+    driver = webdriver.Chrome(executable_path=chromedriver_path)
+    # 打开页面
+    page = driver.get('https://www.baidu.com/')
+
+if __name__ == "__main__":
+    main()
 
 # 三、启动IE浏览器
 # 需要下载相应的驱动，下载地址：

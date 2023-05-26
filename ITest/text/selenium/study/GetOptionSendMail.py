@@ -21,7 +21,7 @@ class GetOption(object):
             # 根据setion和option获取配置文件中的配置信息
             setion = cf.get(setionName, optionName)
             # print "setion:", setion
-        except Exception, e:
+        except Exception as e:
             raise e
         else:
             # 当页面元素被找到后，将该页面元素对象返回给调用者
@@ -29,4 +29,4 @@ class GetOption(object):
 
 if __name__ == '__main__':
     getoption = GetOption
-    print getoption.getOption("mailaccount", "username")
+    print (getoption.getOption("mailaccount", "username"))

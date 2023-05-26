@@ -9,6 +9,8 @@
 from matplotlib import pyplot as plt
 import pandas as pd
 import pynimate as nim
+import matplotlib
+matplotlib.use('qt5agg')
 
 df = pd.DataFrame(
     {

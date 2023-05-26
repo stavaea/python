@@ -19,7 +19,7 @@ def getDevicesInfo():
     serial_nos = []#序列号
     if len(devicesList) > 2:
         for item in devicesList:
-            print item
+            print (item)
             if 'List' in item:
                 continue
             elif 'no permissions' in item:
@@ -43,7 +43,7 @@ def getPid(devices, process):
     cmd = 'adb -s %s shell ps|grep %s ' % (devices, process)
     out = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
     infos = out.stdout.read().splitlines()
-    print infos
+    print (infos)
     pidList = []
     if len(infos) >= 1:
         for i in infos:
