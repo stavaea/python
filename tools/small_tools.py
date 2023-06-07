@@ -2,7 +2,7 @@
 # ！/usr/bin/env python
 # @Time : 2022/6/16 14:25
 # @Author : waxberry
-# @File : tools.py
+# @File : small_tools.py
 # @Software : PyCharm
 
 # 图片格式转换
