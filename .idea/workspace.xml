@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
-      <change afterPath="$PROJECT_DIR$/tools/音乐节奏可视化/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/small_tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/小脚本.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/小脚本.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +58,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\python\tools" />
       <recent name="D:\PycharmProjects\python\tools\音乐节奏可视化" />
       <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\Config" />
       <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\TestScripts" />
       <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\Driver" />
-      <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\Util" />
     </key>
   </component>
   <component name="RunManager" selected="Python.快速实现网页工具">
@@ -248,7 +245,7 @@
       <workItem from="1681700330892" duration="3763000" />
       <workItem from="1681786589223" duration="14312000" />
       <workItem from="1683279420070" duration="7564000" />
-      <workItem from="1684461491715" duration="67455000" />
+      <workItem from="1684461491715" duration="76703000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -509,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685088573263</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="&#10;Initial commit">
+      <created>1686126243606</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1686126243606</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
