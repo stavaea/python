@@ -6,6 +6,7 @@
         <list>
           <option value="str.sendkeys" />
           <option value="str.click" />
+          <option value="str.send_keys" />
         </list>
       </option>
     </inspection_tool>

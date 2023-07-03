@@ -60,20 +60,20 @@ time.sleep(3)
 driver.get(url)
 # driver.close()
 
-from selenium import webdriver
-
-# chromedriver_path = r"D:\Python310\chromedriver.exe"
-# driver = webdriver.Chrome(executable_path=chromedriver_path)
-# 登陆百度
-def main():
-    global driver
-    chromedriver_path = r"D:\Python310\chromedriver.exe"
-    driver = webdriver.Chrome(executable_path=chromedriver_path)
-    # 打开页面
-    page = driver.get('https://www.baidu.com/')
-
-if __name__ == "__main__":
-    main()
+# from selenium import webdriver
+#
+# # chromedriver_path = r"D:\Python310\chromedriver.exe"
+# # driver = webdriver.Chrome(executable_path=chromedriver_path)
+# # 登陆百度
+# def main():
+#     global driver
+#     chromedriver_path = r"D:\Python310\chromedriver.exe"
+#     driver = webdriver.Chrome(executable_path=chromedriver_path)
+#     # 打开页面
+#     page = driver.get('https://www.baidu.com/')
+#
+# if __name__ == "__main__":
+#     main()
 
 # 三、启动IE浏览器
 # 需要下载相应的驱动，下载地址：
