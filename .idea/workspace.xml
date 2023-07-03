@@ -2,6 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
+      <change afterPath="$PROJECT_DIR$/ITest/in_common_use.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/lib/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/log/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/pytransform.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_media/avater512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_media/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_media/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_media/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_navbar.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_sidebar.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/latest/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/测试计划示例/baidu.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/测试计划示例/echo.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/测试计划示例/publish.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/crow1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/crow2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/crow_down1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/crow_down2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/gameover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/ground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/restart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/Rotating_Earth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/autoPiano.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITest/text/selenium/study/Selenium示例 - 启动不同浏览器.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITest/text/selenium/study/Selenium示例 - 启动不同浏览器.py" afterDir="false" />
@@ -63,11 +120,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\python\game\恐龙跑跑" />
       <recent name="D:\PycharmProjects\python\tools" />
       <recent name="D:\PycharmProjects\python\tools\音乐节奏可视化" />
       <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\Config" />
       <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\TestScripts" />
-      <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\Driver" />
     </key>
   </component>
   <component name="RunManager" selected="Python.login">
@@ -253,7 +310,7 @@
       <workItem from="1684461491715" duration="85857000" />
       <workItem from="1686639161245" duration="5776000" />
       <workItem from="1686647285544" duration="38984000" />
-      <workItem from="1688346454569" duration="3041000" />
+      <workItem from="1688346454569" duration="3778000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -528,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686539987025</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="&#10;Initial commit">
+      <created>1688355990198</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1688355990198</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
