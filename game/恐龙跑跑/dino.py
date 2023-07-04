@@ -5,8 +5,8 @@
 # @File : dino.py
 # @Software : PyCharm
 import sys
-
-import best as best
+import os
+# import best as best
 import pygame
 
 # 初始化
@@ -19,6 +19,7 @@ pygame.display.set_caption('恐龙跳跳')
 # 使用系统自带的字体
 my_font = pygame.font.SysFont('arial', 20)
 score = 0
+# best = 0
 # 背景色
 bg_color = (218, 220, 225)
 
@@ -59,7 +60,7 @@ restart_rect.x, restart_rect.y = (900-restart.get_rect().width)/2, (200-restart.
 # 加载 gameover
 gameover =pygame.image.load('dino/gameover.png')
 gameover_rect = gameover.get_rect()
-gameover_rect.x, gameover_rect.y = (900-gameover_rect().width)/2, (200-gameover_rect().height)/2
+gameover_rect.x, gameover_rect.y = (900-gameover.get_rect().width)/2, (200-gameover.get_rect().height)/2
 
 # 地面移动速度与距离
 ground_speed = 10
@@ -90,7 +91,7 @@ while True:
                 y_speed = jumpSpeed
 
     # 碰撞检测
-    if dino_rect.collidedict(cactus_rect):
+    if dino_rect.colliderect(cactus_rect):
         while not is_restart:
             # 事件侦测
             for event in pygame.event.get():
@@ -154,3 +155,13 @@ while True:
 pygame.mixer.music.load('background.mp3')
 pygame.mixer.music.play(-1, 0)
 sound = pygame.mixer.Sound('preview.mp3')
+
+
+
+if not os.path.exists('result.ini'):
+    with open('result.ini', 'a+') as f:
+        f.write('0')
+with open('result.ini', 'r') as f:
+    best = f.read()
+if not best:
+    pass

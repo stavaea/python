@@ -2,69 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
-      <change afterPath="$PROJECT_DIR$/ITest/in_common_use.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/app.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/lib/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/log/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/pytransform.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_media/avater512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_media/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_media/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_media/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_navbar.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/_sidebar.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/report/latest/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/测试计划示例/baidu.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/测试计划示例/echo.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/sweet_example-main/测试计划示例/publish.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cactus9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/crow1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/crow2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/crow_down1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/crow_down2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/dino_run6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/gameover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/ground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/num9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino/restart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/Rotating_Earth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/autoPiano.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITest/text/selenium/study/Selenium示例 - 启动不同浏览器.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITest/text/selenium/study/Selenium示例 - 启动不同浏览器.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITest/text/selenium/study/test/chrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITest/text/selenium/study/test/chrome.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITest/thorGene/UiAuto/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITest/thorGene/UiAuto/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/small_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/small_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/恐龙跑跑/dino.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +66,7 @@
       <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\TestScripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.login">
+  <component name="RunManager" selected="Python.dino">
     <configuration name="快速实现网页工具" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,28 +81,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/快速实现网页工具.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="AudioAnalyzer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\PycharmProjects\python\tools\音乐节奏可视化\AudioAnalyzer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -216,6 +133,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="dino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/game/恐龙跑跑" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game/恐龙跑跑/dino.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="login" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.dino" />
         <item itemvalue="Python.login" />
         <item itemvalue="Python.chrome" />
         <item itemvalue="Python.Selenium示例 - 启动不同浏览器" />
         <item itemvalue="Python.快速实现网页工具" />
-        <item itemvalue="Python.AudioAnalyzer" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +249,7 @@
       <workItem from="1684461491715" duration="85857000" />
       <workItem from="1686639161245" duration="5776000" />
       <workItem from="1686647285544" duration="38984000" />
-      <workItem from="1688346454569" duration="3778000" />
+      <workItem from="1688346454569" duration="6671000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -592,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688355990198</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="&#10;Initial commit">
+      <created>1688374095937</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1688374095937</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,6 +603,7 @@
     <SUITE FILE_PATH="coverage/python$test.coverage" NAME="test Coverage Results" MODIFIED="1685088524184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/python$test20.coverage" NAME="test20 Coverage Results" MODIFIED="1649835308907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learn_huice/day1" />
     <SUITE FILE_PATH="coverage/python$film_selector.coverage" NAME="film_selector Coverage Results" MODIFIED="1685514609788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/电影订票系统" />
+    <SUITE FILE_PATH="coverage/python$dino.coverage" NAME="dino Coverage Results" MODIFIED="1688374997309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/恐龙跑跑" />
     <SUITE FILE_PATH="coverage/python$demo4.coverage" NAME="demo4 Coverage Results" MODIFIED="1649835246378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ITest" />
     <SUITE FILE_PATH="coverage/python$with_ui_pro.coverage" NAME="with_ui_pro Coverage Results" MODIFIED="1678691133137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/wifi" />
     <SUITE FILE_PATH="coverage/python$Greeting_cards.coverage" NAME="Greeting_cards Coverage Results" MODIFIED="1685092871855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
