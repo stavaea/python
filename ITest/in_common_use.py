@@ -42,7 +42,7 @@ d_list
 
 # 保存数据到csv
 import os
-from pathlib import path
+# from pathlib import path
 import secrets
 def save_data(data, date):
     if not os.path.exists(r'2023_data_%s.csv' % date, 'a+', encoding='utf-8') as f:

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
+      <change afterPath="$PROJECT_DIR$/tools/gif/gif.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/gif/gif.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/gif/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game/恐龙跑跑/dino.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/恐龙跑跑/dino.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITest/in_common_use.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITest/in_common_use.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,16 +57,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../APITest" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Python310/Lib/site-packages/PySide6" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\python\tools\gif" />
       <recent name="D:\PycharmProjects\python\game\恐龙跑跑" />
       <recent name="D:\PycharmProjects\python\tools" />
       <recent name="D:\PycharmProjects\python\tools\音乐节奏可视化" />
       <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\Config" />
-      <recent name="D:\PycharmProjects\python\tools\快速冒烟测试小工具\TestScripts" />
     </key>
   </component>
   <component name="RunManager" selected="Python.dino">
@@ -249,7 +252,8 @@
       <workItem from="1684461491715" duration="85857000" />
       <workItem from="1686639161245" duration="5776000" />
       <workItem from="1686647285544" duration="38984000" />
-      <workItem from="1688346454569" duration="6671000" />
+      <workItem from="1688346454569" duration="11268000" />
+      <workItem from="1689064925242" duration="2733000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -538,7 +542,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688374095937</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="&#10;Initial commit">
+      <created>1688458389800</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1688458389800</updated>
+    </task>
+    <task id="LOCAL-00043" summary="&#10;Initial commit">
+      <created>1688458402645</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1688458402645</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
