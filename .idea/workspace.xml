@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
-      <change afterPath="$PROJECT_DIR$/tools/gif/gif.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/gif/gif.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/gif/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITest/in_common_use.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITest/in_common_use.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/小脚本.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/小脚本.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +54,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Python310/Lib/site-packages/PySide6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WanAndroidTest/testDatas" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\python\WanAndroidTest\testDatas" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\python\tools\gif" />
       <recent name="D:\PycharmProjects\python\game\恐龙跑跑" />
@@ -253,7 +253,8 @@
       <workItem from="1686639161245" duration="5776000" />
       <workItem from="1686647285544" duration="38984000" />
       <workItem from="1688346454569" duration="11268000" />
-      <workItem from="1689064925242" duration="2733000" />
+      <workItem from="1689064925242" duration="3458000" />
+      <workItem from="1690333937758" duration="19047000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -556,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688458402645</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="&#10;Initial commit">
+      <created>1689215617993</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1689215617993</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
