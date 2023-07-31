@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/小脚本.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/小脚本.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +53,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WanAndroidTest/testDatas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tools/Python办公自动化" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\python\tools\Python办公自动化" />
       <recent name="D:\PycharmProjects\python\WanAndroidTest\testDatas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -254,7 +254,8 @@
       <workItem from="1686647285544" duration="38984000" />
       <workItem from="1688346454569" duration="11268000" />
       <workItem from="1689064925242" duration="3458000" />
-      <workItem from="1690333937758" duration="19047000" />
+      <workItem from="1690333937758" duration="32694000" />
+      <workItem from="1690771021552" duration="6571000" />
     </task>
     <task id="LOCAL-00001" summary="没什么用">
       <created>1649836673655</created>
@@ -564,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689215617993</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="&#10;Initial commit">
+      <created>1690524212182</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1690524212182</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
