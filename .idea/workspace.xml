@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/10行代码.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/10行代码.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,14 +263,9 @@
       <workItem from="1693204016969" duration="6667000" />
       <workItem from="1693795020116" duration="5028000" />
       <workItem from="1694481522381" duration="5411000" />
-      <workItem from="1695087006118" duration="3048000" />
-    </task>
-    <task id="LOCAL-00002" summary="&#10;Initial commit">
-      <created>1655364839497</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1655364839497</updated>
+      <workItem from="1695087006118" duration="4636000" />
+      <workItem from="1695624092603" duration="3604000" />
+      <workItem from="1696662712465" duration="1159000" />
     </task>
     <task id="LOCAL-00003" summary="&#10;Initial commit">
       <created>1655364882838</created>
@@ -607,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693204045282</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="&#10;Initial commit">
+      <created>1695090366036</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1695090366036</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

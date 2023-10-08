@@ -7,6 +7,146 @@
 
 # 百度飞桨
 
+
+# 一、生成二维码
+# pip install qrcode
+import qrcode
+
+text = input('输入文字或URL：')
+# 设置URL必须添加http://
+img =qrcode.make(text)
+img.save()
+#保存图片至本地目录，可以设定路径
+img.show()
+import myqr
+# pip install  myqr
+def gakki_code():
+    version, level, qr_name = myqr.run(
+        words='https://520mg.com/it/#/main/2',
+        # 可以是字符串，也可以是网址(前面要加http(s)://)
+        version=1,  # 设置容错率为最高
+        level='H',
+        # 控制纠错水平，范围是L、M、Q、H，从左到右依次升高
+        picture='gakki.gif',
+        # 将二维码和图片合成
+        colorized=True,  # 彩色二维码
+        contrast=1.0,
+        # 用以调节图片的对比度，1.0 表示原始图片，更小的值表示更低对比度，更大反之。默认为1.0
+        brightness=1.0,
+        # 用来调节图片的亮度，其余用法和取值同上
+        save_name=gakki_code.gif,
+        # 保存文件的名字，格式可以是jpg,png,bmp,gif
+        save_dir=os.getcwd()  # 控制位置
+
+    )
+gakki_code()
+
+# 二、生成词云
+# pip install wordcloud
+# pip install jieba
+# pip install matplotlib
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+import jieba
+
+text_from_file_with_apath = open('/Users/hecom/23tips.txt').read()
+
+wordlist_after_jieba = jieba.cut(text_from_file_with_apath, cut_all = True)
+wl_space_split =  .join(wordlist_after_jieba)
+
+my_wordcloud = WordCloud().generate(wl_space_split)
+
+plt.imshow(my_wordcloud)
+plt.axis(off)
+plt.show()
+
+# 三、批量抠图
+'''我们需要安装两个模块就可以很快的实现批量抠图了，第一个是PaddlePaddle：
+python -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
+还有一个是paddlehub模型库：
+pip install -i https://mirror.baidu.com/pypi/simple paddlehub'''
+# 接下来我们只需要5行代码就能实现批量抠图：
+import os, paddlehub as hub
+humanseg = hub.Module(name='deeplabv3p_xception65_humanseg')        # 加载模型
+path = 'D:/CodeField/Workplace/PythonWorkplace/GrapImage/'    # 文件目录
+files = [path + i for i in os.listdir(path)]    # 获取文件列表
+results = humanseg.segmentation(data={'image':files})    # 抠图
+
+# 四、文字情绪识别
+import paddlehub as hub
+senta = hub.Module(name='senta_lstm')        # 加载模型
+sentence = [    # 准备要识别的语句
+    '你真美', '你真丑', '我好难过', '我不开心', '这个游戏好好玩', '什么垃圾游戏',
+]
+results = senta.sentiment_classify(data={text:sentence})    # 情绪识别
+# 输出识别结果
+for result in results:
+    print(result)
+
+# 五、识别是否带了口罩
+import paddlehub as hub
+# 加载模型
+module = hub.Module(name='pyramidbox_lite_mobile_mask')
+# 图片列表
+image_list = ['face.jpg']
+# 获取图片字典
+input_dict = {'image':image_list}
+# 检测是否带了口罩
+module.face_detection(data=input_dict)
+
+# 六、简易信息轰炸
+# pip install -i https://pypi.tuna.tsinghua.edu.cn/simple/ pynput
+# 在写代码之前我们需要手动获取输入框的坐标：
+from pynput import mouse
+# 创建一个鼠标
+m_mouse = mouse.Controller()
+# 输出鼠标位置
+print(m_mouse.position)
+# 获取后我们就可以记录这个坐标，消息窗口不要移动。然后我们执行下列代码并将窗口切换至消息页面：
+import time
+from pynput import mouse, keyboard
+time.sleep(5)
+m_mouse = mouse.Controller()    # 创建一个鼠标
+m_keyboard = keyboard.Controller()  # 创建一个键盘
+m_mouse.position = (850, 670)       # 将鼠标移动到指定位置
+m_mouse.click(mouse.Button.left) # 点击鼠标左键
+while(True):
+    m_keyboard.type('你好')        # 打字
+    m_keyboard.press(keyboard.Key.enter)    # 按下enter
+    m_keyboard.release(keyboard.Key.enter)    # 松开enter
+    time.sleep(0.5)    # 等待 0.5秒
+
+# 七、识别图片中的文字
+import pytesseract
+from PIL import Image
+img = Image.open('text.jpg')
+text = pytesseract.image_to_string(img)
+print(text)
+
+# 八、简单的小游戏
+import random
+print('1-100数字猜谜游戏！')
+num = random.randint(1,100)
+guess =guess
+
+i = 0
+while guess != num:
+    i += 1
+    guess = int(input('请输入你猜的数字：'))
+
+    if guess == num:
+        print('恭喜，你猜对了！')
+    elif guess < num:
+        print('你猜的数小了...')
+    else:
+        print('你猜的数大了...')
+
+print('你总共猜了%d %i + 次')
+
+
+
+
+
 # 批量抠图
 import os
 import paddlehub as hub
