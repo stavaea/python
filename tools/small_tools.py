@@ -496,4 +496,4 @@ def compress_pdf(input_folder, output_folder):
 
             with open(os.path.join(output_folder, filename), 'wb') as out:
                 pdf_writer.write(out)
-compress_pdf('/path/to/pdf/folder', '/path/to/output/folder')# 使用示例
+compress_pdf('/path/to/pdf/folder', '/path/to/output/folder')# 使用示例1
