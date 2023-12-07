@@ -1,0 +1,55 @@
+应答流式RPC：
+rpc ListFeatures(Rectangle) returns (stream Feature) {}
+
+请求流式RPC：
+rpc RecordRoute(stream Point) returns (RouteSummary) {}
+
+双向流式RPC：
+rpc RouteChat(stream RouteNote) returns (stream RouteNote) {}
+
+可以看到，请求和响应参数中流式内容的前面会有一个stream标识，代表这是一个流式的内容。
+应答流式RPC只有返回是流式的，请求流式RPC只有请求是流式的，而双向流式RPC请求和返回都是流式的。
+
+一个包含接口的完整proto协议文件（route_guide.proto）内容如下：
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.routeguide";
+option java_outer_classname = "RouteGuideProto";
+option objc_class_prefix = "RTG";
+
+package routeguide;
+
+service RouteGuide {
+  rpc ListFeatures(Rectangle) returns (stream Feature) {}
+  rpc RecordRoute(stream Point) returns (RouteSummary) {}
+  rpc RouteChat(stream RouteNote) returns (stream RouteNote) {}
+}
+
+message Point {
+  int32 latitude = 1;
+  int32 longitude = 2;
+}
+
+message Rectangle {
+  Point lo = 1;
+  Point hi = 2;
+}
+message Feature {
+  string name = 1;
+  Point location = 2;
+}
+
+message RouteNote {
+  Point location = 1;
+  string message = 2;
+}
+
+message RouteSummary {
+  int32 point_count = 1;
+  int32 feature_count = 2;
+  int32 distance = 3;
+  int32 elapsed_time = 4;
+}
+
+根据协议文件生成route_guide_pb2.py、route_guide_pb2_grpc.py两个必要的模块文件，然后就可以根据他们来创建客户端了。

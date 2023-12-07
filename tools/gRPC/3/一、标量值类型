@@ -1,0 +1,26 @@
+
+
+
+使用举例：
+
+message Student {
+  string name = 1;
+  int32 age = 2;
+  // true: male, false:female
+  bool sex = 3;
+}
+
+
+Python实现代码：
+name="小王"
+age=15
+sex=True
+
+#方式1
+student=Student(name=name,age=age,sex=sex)
+
+#方式2
+student=Student()
+student.name=name
+student.age=age
+student.sex=sex

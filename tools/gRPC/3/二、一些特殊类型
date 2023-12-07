@@ -1,0 +1,138 @@
+1、message
+message，根据映射表我们可以看到，它类似于我们在编程语言中所使用的类的对象（object）。
+在一个类中，我们可以添加各种其他类型的数据，也包括类本身。
+通过类比，message也有类似的概念，我们可以在里面添加各种proto类型的数据，也包括message。
+其实正如message的名字一样——消息，它是protobuf中的核心类型，在grpc接口中，我们正是通过发送和接收消息来完成数据交互，来实现对应的功能。
+
+简单的message：
+message Person {
+   int32 id = 1;
+   string name = 2;
+   string email = 3;
+}
+
+含其他message的message：
+message Point {
+    int32 latitude = 1;
+    int32 longitude = 2;
+}
+
+message Feature {
+    string name = 1;
+    Point location = 2;
+}
+
+在Python中的使用：
+location=Point(latitude=5,longitude=10)
+Feature=Feature(name="我是个名字",location=location)
+
+
+
+2、Timestamp、Duration
+这两种类型都是关于时间的，Timestamp是时间戳，Duration表示的时间长度。
+
+在AI平台账号服务的测试中，某Account类型的message定义如下：
+location=Point(latitude=5,longitude=10)
+Feature=Feature(name="我是个名字",location=location)
+
+在Python中的使用：
+update_at=Timestamp()
+#从字符串获取
+update_at.FromJsonString("1970-01-01T00:00:00Z")
+#获取当前时间
+update_at.GetCurrentTime()
+
+time_limit=Duration()
+#从纳秒转换
+time_limit.FromNanoseconds(1999999999)
+#从秒转换
+time_limit.FromSeconds(100)
+account=Account(account_id="account1",update_at=update_at,time_limit=time_limit)
+
+
+
+3、Any
+Any类型比较特殊，它可以包含不同的message，结合pack和unpack，只需声明一个Any，即可传递各种类型的message而不用声明多个字段。
+
+在大会同传项目中，某个请求的message中需要传递两种信息——图片和音频，于是通过Any类型来实现同一字段的复用：
+message ImageData {
+    string index = 1;
+    bytes  image = 2;
+}
+
+message Data {
+    string appid = 1;
+    bytes payload = 2;
+    string extra = 3;
+}
+
+message Request {
+    google.protobuf.Any body = 1;
+}
+
+
+在Python中的使用：
+imageData=msg_pb2.ImageData(index="001",image=open("1.jpg","rb").read())
+req1=msg_pb2.Request()
+req1.body.Pack(imageData)
+
+data=msg_pb2.Data(name="no.1",payload=open("1.wav","rb").read(),extra="no use")
+req=msg_pb2.Request()
+req.body.Pack(data)
+
+
+
+4、enum
+enum枚举类型和其他大多数编程语言的枚举类型概念相同，主要是通过提前设定好一些固定的值来限定可以传递的内容。
+
+在AI平台实名认证服务的测试中，需要一个认证人类型的字段，由于认证人类型收敛，于是使用enum类型来定义：
+enum PersonType {
+  PERSONTYPE_UNSPECIFIED = 0;
+  INDIVIDUAL = 1;
+  LEGAL = 2;
+  AUTHORIZE = 3;
+}
+
+message Person {
+  string real_name = 1;
+  PersonType person_type = 2;
+}
+
+在Python中的应用：
+person_type=PersonType.Value("INDIVIDUAL")
+Person(real_name="小王",person_type=person_type)
+
+
+
+5、map
+map相当于json中的键值对，在Python中类似于字典（dict），我们可以利用Python的dict类型数据来对map进行设置。map在proto中声明时一般会带有尖括号，来指定key和value的具体类型，如map就表示键值对的key、value都为string类型。
+
+在AI平台鉴权相关的测试中，需要为用户创建的应用绑定若干个不同的特殊属性，每个特殊属性对应着一个属性值，此处采用了map类型：
+message App {
+  string appid = 1;
+  map<string, string> extra_informations = 2;
+}
+
+在Python中的应用：
+extra_informations={"name":"app1","expired":"no"}
+app=App(appid="1234567", extra_informations=extra_informations)
+
+
+
+6、repeated
+repeated相当于json中的list，在Python中类似于列表（list），我们可以利用Python的list类型数据来对repeated进行设置。
+
+在AI平台账号服务的测试中，需要为账号添加各种不同的能力，每个能力有多个属性，而每个能力属性的种类和数据类型一致。此处采用了repeated类型：
+message Audience {
+  string name = 1;
+  string tier = 2;
+}
+
+message Account {
+  string account_id = 1;
+  repeated Audience audience = 2;
+}
+
+在Python中的应用：
+audience=[{"name":"ASR","tier":"stand"},{"name":"TTS","tier":"free"},{"name":"MT","tier":"stand"}]
+account=Account(account_id="account1",audience=audience)

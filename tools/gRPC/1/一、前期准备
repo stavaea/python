@@ -1,0 +1,21 @@
+gRPC 默认使用 protocol buffers，这是 Google 开源的一套成熟的结构数据序列化机制。在开始编写客户端之前，我们首先要安装一些必要的模块和工具。
+
+pip install grpcio
+pip install grpcio-tools
+安装好了必要的模块和工具（编译器）之后，我们就可以根据proto协议文件生成所需的模块和方法。比如我们要测试的接口协议文档为helloword.proto，文档内容为：
+
+// helloworld.proto
+syntax = "proto3";
+service Greeter {
+    rpc SayHello(HelloRequest) returns (HelloReply) {}
+}
+message HelloRequest {
+    string name = 1;
+}
+message HelloReply {
+    string message = 1;
+}
+
+就可以执行以下命令来快速获取：
+python -m grpc_tools.protoc --python_out=. --grpc_python_out=. -I. helloworld.proto
+生成的模块、方法会保存在两个文件之中，分别为helloworld_pb2.py、helloworld_pb2_grpc.py。这两个文件是实现客户端时不可缺少的。
