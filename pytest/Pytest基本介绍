@@ -1,0 +1,42 @@
+单元测试框架
+
+我们首先需要知道测试一般分为四个方面的测试：
+    单元测试：称模块测试，针对软件设计中的最小单位——程序模块，进行正确性检查的测试工作
+    集成测试：称组装测试，通常在单元测试的基础上，将所有程序模块进行有序的、递增测试，重点测试不同模块的接口部分
+    系统测试：将整个软件系统看成一个整体进行测试，包括对功能、性能以及软件所运行的软硬件环境进行测试
+    验收测试：指按照项目任务书或合同、供需双方约定的验收依据文档进行的对整个系统的测试与评审，决定是否接收或拒收系统
+
+而我们这篇文章主要针对的是单元测试：
+    Python：通常使用UnitTest和Pytest来进行单元测试自动化，但Pytest已经成为主流
+    Java：通常使用Testng和Junit来进行单元测试自动化，但Testng已经成为主流
+
+最后我们需要明白单元测试框架的主要功能：
+    发现测试用例
+    执行测试用例
+    判断测试结果
+    生成测试报告
+
+
+框架基本介绍
+下面我们来简单介绍Pytest框架：
+    pytest是一个非常成熟的单元测试框架，经过多版本的迭代，主要优点在于灵活和简单
+    pytest具有极强的兼容性和生态环境，它可以结合selenium，requests，appium完成各种不同的自动化
+    pytest具有更好的页面展示效果，它可以生成自定义allure报告以及和Jenkins持续集成
+
+下面我们给出一些和Pytest框架可以很好聚合的框架类型：
+    pytestpytest-html：主要用来生成html报告的插件
+    pytest-xdist：主要用来进行多线程运行的插件
+    pytest-ordering：主要用来改变用例的执行顺序的插件
+    pytest-rerunfailres：主要用来失败用例重跑的插件
+    allure-pytest：主要用来生成美观自定义的allure报告
+
+我们可以采用一种比较简便的方式来一次性下载这些框架：
+# 首先我们需要将这些名称全部放入一个txt文件中，假设我们放在requestment.txt文件中
+# requestment.txt文件
+pytest-html
+pytest-xdist
+pytest-ordering
+pytest-rerunfailures
+
+# 我们只需要在pycharm的console中输入指令下载该文件夹中全部内容即可
+pip install -r requirements.txt
