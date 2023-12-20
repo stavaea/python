@@ -497,3 +497,248 @@ def compress_pdf(input_folder, output_folder):
             with open(os.path.join(output_folder, filename), 'wb') as out:
                 pdf_writer.write(out)
 compress_pdf('/path/to/pdf/folder', '/path/to/output/folder')# 使用示例
+
+
+
+# 01、解析和提取 HTML
+
+# Parse and Extract HTML
+# pip install gazpacho
+import gazpacho
+# Extract HTML from URL
+url = 'https://www.example.com/'
+html = gazpacho.get(url)
+print(html)
+# Extract HTML with Headers
+headers = {'User-Agent': 'Mozilla/5.0'}
+html = gazpacho.get(url, headers=headers)
+print(html)
+# Parse HTML
+parse = gazpacho.Soup(html)
+# Find single tags
+tag1 = parse.find('h1')
+tag2 = parse.find('span')
+# Find multiple tags
+tags1 = parse.find_all('p')
+tags2 = parse.find_all('a')
+# Find tags by class
+tag = parse.find('.class')
+# Find tags by Attribute
+tag = parse.find("div", attrs={"class": "test"})
+# Extract text from tags
+text = parse.find('h1').text
+text = parse.find_all('p')[0].text
+# 02、二维码扫描仪
+
+# Qrcode Scanner
+# pip install qrtools
+from qrtools import Qr
+def Scan_Qr(qr_img):
+    qr = Qr()
+    qr.decode(qr_img)
+    print(qr.data)
+    return qr.data
+print("Your Qr Code is: ", Scan_Qr("qr.png"))
+# 03、截图
+
+# Grab Screenshot
+# pip install pyautogui
+# pip install Pillow
+from pyautogui import screenshot
+import time
+from PIL import ImageGrab
+# Grab Screenshot of Screen
+def grab_screenshot():
+    shot = screenshot()
+    shot.save('my_screenshot.png')
+# Grab Screenshot of Specific Area
+def grab_screenshot_area():
+    area = (0, 0, 500, 500)
+    shot = ImageGrab.grab(area)
+    shot.save('my_screenshot_area.png')
+# Grab Screenshot with Delay
+def grab_screenshot_delay():
+    time.sleep(5)
+    shot = screenshot()
+    shot.save('my_screenshot_delay.png')
+# 04、创建有声读物
+
+# Create Audiobooks
+# pip install gTTS
+# pip install PyPDF2
+from PyPDF2 import PdfFileReader as reader
+from gtts import gTTS
+def create_audio(pdf_file):
+    read_Pdf = reader(open(pdf_file, 'rb'))
+    for page in range(read_Pdf.numPages):
+        text = read_Pdf.getPage(page).extractText()
+        tts = gTTS(text, lang='en')
+        tts.save('page' + str(page) + '.mp3')
+create_audio('book.pdf')
+# 05、PDF 编辑器
+
+# PDF Editor
+# pip install PyPDf4
+import PyPDF4
+# Parse the Text from PDF
+def parse_text(pdf_file):
+    reader = PyPDF4.PdfFileReader(pdf_file)
+    for page in reader.pages:
+        print(page.extractText())
+# Remove Page from PDF
+def remove_page(pdf_file, page_numbers):
+    filer = PyPDF4.PdfReader('source.pdf', 'rb')
+    out = PyPDF4.PdfWriter()
+    for index in page_numbers:
+        page = filer.pages[index]
+        out.add_page(page)
+with open('rm.pdf', 'wb') as f:
+        out.write(f)
+# Add Blank Page to PDF
+def add_page(pdf_file, page_number):
+    reader = PyPDF4.PdfFileReader(pdf_file)
+    writer = PyPDF4.PdfWriter()
+    writer.addPage()
+    with open('add.pdf', 'wb') as f:
+        writer.write(f)
+# Rotate Pages
+def rotate_page(pdf_file):
+    reader = PyPDF4.PdfFileReader(pdf_file)
+    writer = PyPDF4.PdfWriter()
+    for page in reader.pages:
+        page.rotateClockwise(90)
+        writer.addPage(page)
+    with open('rotate.pdf', 'wb') as f:
+        writer.write(f)
+# Merge PDFs
+def merge_pdfs(pdf_file1, pdf_file2):
+    pdf1 = PyPDF4.PdfFileReader(pdf_file1)
+    pdf2 = PyPDF4.PdfFileReader(pdf_file2)
+    writer = PyPDF4.PdfWriter()
+    for page in pdf1.pages:
+        writer.addPage(page)
+    for page in pdf2.pages:
+        writer.addPage(page)
+    with open('merge.pdf', 'wb') as f:
+        writer.write(f)
+# 06、迷你 Stackoverflow
+
+# Automate Stackoverflow
+# pip install howdoi
+# Get Answers in CMD
+#example 1
+> howdoi how do i install python3
+# example 2
+> howdoi selenium Enter keys
+# example 3
+> howdoi how to install modules
+# example 4
+> howdoi Parse html with python
+# example 5
+> howdoi int not iterable error
+# example 6
+> howdoi how to parse pdf with python
+# example 7
+> howdoi Sort list in python
+# example 8
+> howdoi merge two lists in python
+# example 9
+>howdoi get last element in list python
+# example 10
+> howdoi fast way to sort list
+# 07、自动化手机
+
+# Automate Mobile Phones
+# pip install opencv-python
+import subprocess
+def main_adb(cm):
+    p = subprocess.Popen(cm.split(' '), stdout=subprocess.PIPE, shell=True)
+    (output, _) = p.communicate()
+    return output.decode('utf-8')
+# Swipe
+def swipe(x1, y1, x2, y2, duration):
+    cmd = 'adb shell input swipe {} {} {} {} {}'.format(x1, y1, x2, y2, duration)
+    return main_adb(cmd)
+# Tap or Clicking
+def tap(x, y):
+    cmd = 'adb shell input tap {} {}'.format(x, y)
+    return main_adb(cmd)
+# Make a Call
+def make_call(number):
+    cmd = f"adb shell am start -a android.intent.action.CALL -d tel:{number}"
+    return main_adb(cmd)
+# Send SMS
+def send_sms(number, message):
+    cmd = 'adb shell am start -a android.intent.action.SENDTO -d  sms:{} --es sms_body "{}"'.format(number, message)
+    return main_adb(cmd)
+# Download File From Mobile to PC
+def download_file(file_name):
+    cmd = 'adb pull /sdcard/{}'.format(file_name)
+    return main_adb(cmd)
+# Take a screenshot
+def screenshot():
+    cmd = 'adb shell screencap -p'
+    return main_adb(cmd)
+# Power On and Off
+def power_off():
+    cmd = '"adb shell input keyevent 26"'
+    return main_adb(cmd)
+# 08、监控 CPU/GPU 温度
+
+# Get CPU/GPU Temperature
+# pip install pythonnet
+import clr
+clr.AddReference("OpenHardwareMonitorLib")
+from OpenHardwareMonitorLib import *
+spec = Computer()
+spec.GPUEnabled = True
+spec.CPUEnabled = True
+spec.Open()
+# Get CPU Temp
+def Cpu_Temp():
+    while True:
+        for cpu in range(0, len(spec.Hardware[0].Sensors)):
+            if "/temperature" in str(spec.Hardware[0].Sensors[cpu].Identifier):
+                print(str(spec.Hardware[0].Sensors[cpu].Value))
+# Get GPU Temp
+def Gpu_Temp()
+    while True:
+        for gpu in range(0, len(spec.Hardware[0].Sensors)):
+            if "/temperature" in str(spec.Hardware[0].Sensors[gpu].Identifier):
+                print(str(spec.Hardware[0].Sensors[gpu].Value))
+# 09、Instagram 上传机器人
+
+# Upload Photos and Video on Insta
+# pip install instabot
+from instabot import Bot
+def Upload_Photo(img):
+    robot = Bot()
+    robot.login(username="user", password="pass")
+    robot.upload_photo(img, caption="Medium Article")
+    print("Photo Uploaded")
+def Upload_Video(video):
+    robot = Bot()
+    robot.login(username="user", password="pass")
+    robot.upload_video(video, caption="Medium Article")
+    print("Video Uploaded")
+def Upload_Story(img):
+    robot = Bot()
+    robot.login(username="user", password="pass")
+    robot.upload_story(img, caption="Medium Article")
+    print("Story Photos Uploaded")
+Upload_Photo("img.jpg")
+Upload_Video("video.mp4")
+
+# 10、视频水印
+# Video Watermark with Python
+# pip install moviepy
+from moviepy.editor import *
+
+clip = VideoFileClip("myvideo.mp4", audio=True)
+width,height = clip.size
+text = TextClip("WaterMark", font='Arial', color='white', fontsize=28)
+set_color = text.on_color(size=(clip.w + text.w, text.h-10), color=(0,0,0), pos=(6,'center'), col_opacity=0.6)
+set_textPos = set_color.set_pos( lambda pos: (max(width/30,int(width-0.5* width* pos)),max(5*height/6,int(100* pos))) )
+Output = CompositeVideoClip([clip, set_textPos])
+Output.duration = clip.duration
+Output.write_videofile("output.mp4", fps=30, codec='libx264')

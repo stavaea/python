@@ -10,8 +10,8 @@
 
 from pdf2docx import parse
 
-pdf_file = '/path/to/sample.pdf'
-docx_file = 'path/to/sample.docx'
+pdf_file = 'D:/work/测试用例/19v.pdf'
+docx_file = 'D:/work/测试用例/19v.docx'
 
 # convert pdf to docx
 parse(pdf_file, docx_file)
