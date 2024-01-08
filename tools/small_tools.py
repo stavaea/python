@@ -742,3 +742,211 @@ set_textPos = set_color.set_pos( lambda pos: (max(width/30,int(width-0.5* width*
 Output = CompositeVideoClip([clip, set_textPos])
 Output.duration = clip.duration
 Output.write_videofile("output.mp4", fps=30, codec='libx264')
+
+
+# 自动化文件管理
+# 整理目录中的文件
+import os
+from shutil import move
+def sort_files(directory_path):
+    for filename in os.listdir(directory_path):
+        if os.path.isfile(os.path.join(directory_path, filename)):
+            # 获取文件扩展名
+            file_extension = filename.split('.')[-1]
+            # 创建目标目录
+            destination_directory = os.path.join(directory_path, file_extension)
+            if not os.path.exists(destination_directory):
+                os.makedirs(destination_directory)
+            # 移动文件
+            move(os.path.join(directory_path, filename),
+                 os.path.join(destination_directory, filename))
+# 调用函数，替换路径
+sort_files('your_directory_path')
+
+# 移除空白的文档
+import os
+def remove_empty_folders(directory_path):
+    # 遍历目录树
+    for root, dirs, files in os.walk(directory_path, topdown=False):
+        for folder in dirs:
+            folder_path = os.path.join(root, folder)
+            # 如果目录为空，则删除
+            if not os.listdir(folder_path):
+                os.rmdir(folder_path)
+
+# 替换下面的路径为自己想清理的目录的路径
+remove_empty_folders('your_directory_path')
+
+# 多个文件的重命名
+import os
+def rename_files(directory_path, old_name, new_name):
+    # 遍历目录中的所有文件
+    for filename in os.listdir(directory_path):
+        # 检查文件名中是否包含旧名称
+        if old_name in filename:
+            # 生成新的文件名
+            new_filename = filename.replace(old_name, new_name)
+            # 重命名文件
+            os.rename(os.path.join(directory_path, filename),
+                      os.path.join(directory_path, new_filename))
+
+
+# 替换下面的路径和名称
+# 例如 directory_path: 您要重命名文件的目录路径
+rename_files('your_directory_path', 'old_name', 'new_name')
+
+
+
+# Excel办公自动化软件
+# 读取和写入
+import pandas as pd
+def read_excel(file_path):
+    # 读取Excel文件
+    df = pd.read_excel(file_path)
+    return df
+def write_to_excel(data, file_path):
+    # 将数据写入Excel文件
+    df = pd.DataFrame(data)
+    df.to_excel(file_path, index=False)
+# 读取Excel文件
+dataframe = read_excel('path_to_your_input_file.xlsx')
+# 将修改后的数据写入新的Excel文件
+write_to_excel(dataframe, 'path_to_your_output_file.xlsx')
+
+# 合并多个工作表
+import pandas as pd
+def merge_sheets(file_path, output_file_path):
+    # 打开Excel文件
+    xls = pd.ExcelFile(file_path)
+    # 创建一个空的DataFrame
+    df = pd.DataFrame()
+
+    # 遍历所有工作表
+    for sheet_name in xls.sheet_names:
+        # 读取每个工作表
+        sheet_df = pd.read_excel(xls, sheet_name)
+        # 将每个工作表的数据追加到df中
+        df = df.append(sheet_df, ignore_index=True)
+
+    # 将合并后的数据写入新的Excel文件
+    df.to_excel(output_file_path, index=False)
+# 替换为自己的文件路径
+merge_sheets('path_to_your_excel_file.xlsx', 'path_to_your_output_file.xlsx')
+
+
+
+# 图片处理
+# 图片的修剪
+from PIL import Image
+def resize_image(input_path, output_path, width, height):
+    # 打开图片
+    image = Image.open(input_path)
+    # 调整图片大小
+    resized_image = image.resize((width, height), Image.ANTIALIAS)
+    # 保存调整后的图片
+    resized_image.save(output_path)
+def crop_image(input_path, output_path, left, top, right, bottom):
+    # 打开图片
+    image = Image.open(input_path)
+    # 裁剪图片
+    cropped_image = image.crop((left, top, right, bottom))
+    # 保存裁剪后的图片
+    cropped_image.save(output_path)
+# 替换为自己的文件路径和参数
+resize_image('path_to_input_image.jpg', 'path_to_resized_image.jpg', 800, 600)
+crop_image('path_to_input_image.jpg', 'path_to_cropped_image.jpg', 100, 100, 400, 400)
+
+# 添加水印
+from PIL import Image, ImageDraw, ImageFont
+def add_watermark(input_path, output_path, watermark_text):
+    # 打开图片
+    image = Image.open(input_path)
+    # 准备绘制对象
+    draw = ImageDraw.Draw(image)
+    # 设置字体（这里使用Arial，大小为36）
+    font = ImageFont.truetype('arial.ttf', 36)
+    # 在图片上添加水印文字
+    draw.text((10, 10), watermark_text, fill=(255, 255, 255, 128), font=font)
+    # 保存带有水印的图片
+    image.save(output_path)
+# 替换为自己的文件路径和水印文本
+add_watermark('path_to_input_image.jpg', 'path_to_watermarked_image.jpg', 'Your Watermark Text')
+
+# 创建缩略图
+from PIL import Image
+def create_thumbnail(input_path, output_path, size=(128, 128)):
+    # 打开图片
+    image = Image.open(input_path)
+    # 创建缩略图
+    image.thumbnail(size)
+    # 保存缩略图
+    image.save(output_path)
+# 替换为自己的文件路径
+create_thumbnail('path_to_input_image.jpg', 'path_to_thumbnail_image.jpg')
+
+
+
+# 系统任务
+# 系统进程管理
+import psutil
+def get_running_processes():
+    # 获取当前运行的进程信息
+    return [p.info for p in psutil.process_iter(['pid', 'name', 'username'])]
+
+def kill_process_by_name(process_name):
+    # 遍历当前运行的进程
+    for p in psutil.process_iter(['pid', 'name', 'username']):
+        # 如果进程名匹配，则终止进程
+        if p.info['name'] == process_name:
+            p.kill()
+# 获取运行中的进程列表
+running_processes = get_running_processes()
+# 杀死指定名称的进程（请谨慎使用）
+# kill_process_by_name('process_name_here')
+
+
+
+# PDF文件操作
+# 多个PDF文件合并
+import PyPDF2
+def merge_pdfs(input_paths, output_path):
+    # 创建PDF合并器对象
+    pdf_merger = PyPDF2.PdfMerger()
+
+    # 遍历所有输入路径并添加到合并器
+    for path in input_paths:
+        with open(path, 'rb') as f:
+            pdf_merger.append(f)
+
+    # 将合并后的PDF写入输出文件
+    with open(output_path, 'wb') as f:
+        pdf_merger.write(f)
+# 替换为自己的PDF文件路径
+input_pdf_paths = ['pdf1.pdf', 'pdf2.pdf', 'pdf3.pdf']
+output_pdf_path = 'merged.pdf'
+merge_pdfs(input_pdf_paths, output_pdf_path)
+
+# PDF文件密码保护
+import PyPDF2
+def add_password_protection(input_path, output_path, password):
+    # 打开要加密的PDF文件
+    with open(input_path, 'rb') as f:
+        pdf_reader = PyPDF2.PdfFileReader(f)
+        pdf_writer = PyPDF2.PdfFileWriter()
+
+        # 复制所有页面到写入器对象
+        for page_num in range(pdf_reader.numPages):
+            page = pdf_reader.getPage(page_num)
+            pdf_writer.addPage(page)
+
+        # 为PDF文件设置密码
+        pdf_writer.encrypt(password)
+
+        # 写入加密后的PDF到输出文件
+        with open(output_path, 'wb') as output_file:
+            pdf_writer.write(output_file)
+# 请替换为自己的文件路径和密码
+input_pdf_path = 'input.pdf'
+output_pdf_path = 'protected.pdf'
+password = 'your_password'
+add_password_protection(input_pdf_path, output_pdf_path, password)
