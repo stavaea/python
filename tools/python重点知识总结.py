@@ -447,9 +447,16 @@ def application(environ, start_response):
 # Mysql
 # 失效场景：
 # 例如：
-'''select id from t where substring(name,1,3) = 'abc' – name;
-以abc开头的，应改成：
+'''select id from t where substring(name,1,3) = 'abc' - name;
+# 以abc开头的，应改成：
 select id from t where name like 'abc%' 
-例如：
-select id from t where datediff(day, createdate, '2005-11-30') = 0 – '2005-11-30';
+# 例如：
+select id from t where datediff(day, createdate, '2005-11-30') = 0 - '2005-11-30';
 应改为:'''
+
+# 不要在 where 子句中的 “=” 左边进行函数、算术运算或其他表达式运算，否则系统将可能无法正确使用索引
+# 应尽量避免在 where 子句中对字段进行表达式操作，这将导致引擎放弃使用索引而进行全表扫描
+# 如：
+'''select id from t where num/2 = 100 
+应改为:
+select id from t where num = 100*2；'''
