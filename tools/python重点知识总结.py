@@ -459,4 +459,372 @@ select id from t where datediff(day, createdate, '2005-11-30') = 0 - '2005-11-30
 # 如：
 '''select id from t where num/2 = 100 
 应改为:
-select id from t where num = 100*2；'''
+select id from t where num = 100*2 '''
+
+
+
+
+
+
+# Redis 命令总结
+'''
+为什么这么快？
+    因为Redis是基于内存的操作，CPU不是Redis的瓶颈，Redis的瓶颈最有可能是机器内存的大小或者网络带宽。既然单线程容易实现，而且CPU不会成为瓶颈，那就顺理成章地采用单线程的方案了（毕竟采用多线程会有很多麻烦！）。
+    基于内存，由 C 语言编写
+    使用多路I/O复用模型，非阻塞 IO
+    使用单线程减少线程间切换
+    数据结构简单
+    自己构建了 VM 机制，减少调用系统函数的时间
+优势
+    性能高 – Redis 能读的速度是110000次/s,写的速度是81000次/s
+    丰富的数据类型
+    原子 – Redis 的所有操作都是原子性的，同时 Redis 还支持对几个操作全并后的原子性执行
+    丰富的特性 – Redis 还支持 publish/subscribe（发布/订阅）, 通知, key 过期等等特性
+什么是 redis 事务？
+    将多个请求打包，一次性、按序执行多个命令的机制
+    通过 multi,exec,watch 等命令实现事务功能
+    Python redis-py pipeline=conn.pipeline(transaction=True)
+持久化方式
+    save(同步，可以保证数据一致性)
+    bgsave(异步，shutdown时，无AOF则默认使用)
+    RDB(快照)
+    AOF(追加日志)
+怎么实现队列
+    push
+    rpop
+常用的数据类型(Bitmaps,Hyperloglogs,范围查询等不常用)
+    skiplist(跳跃表)
+    intset或hashtable
+    ziplist(连续内存块，每个entry节点头部保存前后节点长度信息实现双向链表功能)或double linked list
+    整数或sds(Simple Dynamic String)
+    String(字符串):计数器
+    List(列表)：用户的关注，粉丝列表
+    Hash(哈希)：
+    Set(集合)：用户的关注者
+    Zset(有序集合)：实时信息排行榜
+与 Memcached 区别
+    Memcached只能存储字符串键
+    Memcached用户只能通过APPEND的方式将数据添加到已有的字符串的末尾，并将这个字符串当做列表来使用。
+      但是在删除这些元素的时候，Memcached采用的是通过黑名单的方式来隐藏列表里的元素，从而避免了对元素的读取、更新、删除等操作
+    Redis和Memcached都是将数据存放在内存中，都是内存数据库。不过Memcached还可用于缓存其他东西，例如图片、视频等等
+    虚拟内存–Redis当物理内存用完时，可以将一些很久没用到的Value 交换到磁盘
+    存储数据安全–Memcached挂掉后，数据没了；Redis可以定期保存到磁盘（持久化）
+    应用场景不一样：Redis出来作为NoSQL数据库使用外，还能用做消息队列、数据堆栈和数据缓存等；
+      Memcached适合于缓存SQL语句、数据集、用户临时性数据、延迟查询数据和Session等
+Redis实现分布式锁
+    使用setnx实现加锁，可以同时通过expire添加超时时间
+    锁的value值可以是一个随机的uuid或者特定的命名
+    释放锁的时候，通过uuid判断是否是该锁，是则执行delete释放锁
+常见问题
+    当访问量剧增、服务出现问题（如响应时间慢或不响应）或非核心服务影响到核心流程的性能时，仍然需要保证服务还是可用的，即使是有损服务。
+      系统可以根据一些关键数据进行自动降级，也可以配置开关实现人工降级
+    数据过期，进行更新缓存数据
+    初始化项目，将部分常用数据加入缓存
+    请求访问数据时，查询缓存中不存在，数据库中也不存在
+    短时间内缓存数据过期，大量请求访问数据库
+    缓存雪崩
+    缓存穿透
+    缓存预热
+    缓存更新
+    缓存降级
+一致性Hash算法
+    使用集群的时候保证数据的一致性
+基于redis实现一个分布式锁，要求一个超时的参数
+    setnx
+虚拟内存
+
+内存抖动
+'''
+
+
+
+
+
+# Linux
+'''
+Unix五种i/o模型
+    select
+    poll
+    epoll
+    并发不高，连接数很活跃的情况下
+    比select提高的并不多
+    适用于连接数量较多，但活动链接数少的情况
+    阻塞io
+    非阻塞io
+    多路复用io(Python下使用selectot实现io多路复用)
+    信号驱动io
+    异步io(Gevent/Asyncio实现异步)
+比 man 更好使用的命令手册
+    tldr:一个有命令示例的手册
+kill -9和-15的区别
+    -15：程序立刻停止/当程序释放相应资源后再停止/程序可能仍然继续运行
+    -9：由于-15的不确定性，所以直接使用-9立即杀死进程
+分页机制（逻辑地址和物理地址分离的内存分配管理方案）：
+    操作系统为了高效管理内存，减少碎片
+    程序的逻辑地址划分为固定大小的页
+    物理地址划分为同样大小的帧
+    通过页表对应逻辑地址和物理地址
+分段机制
+    为了满足代码的一些逻辑需求
+    数据共享/数据保护/动态链接
+    每个段内部连续内存分配，段和段之间是离散分配的
+查看 cpu 内存使用情况？
+    top
+    free 查看可用内存，排查内存泄漏问题
+
+'''
+
+
+
+
+
+# 设计模式
+# 单例模式
+# 方式一
+def Single(cls,*args,**kwargs):
+    instances = {}
+    def get_instance (*args, **kwargs):
+        if cls not in instances:
+            instances[cls] = cls(*args, **kwargs)
+        return instances[cls]
+    return get_instance
+@Single
+class B:
+    pass
+# 方式二
+class Single:
+    def __init__(self):
+        print("单例模式实现方式二。。。")
+
+single = Single()
+del Single  # 每次调用single就可以了
+# 方式三(最常用的方式)
+class Single:
+    def __new__(cls,*args,**kwargs):
+        if not hasattr(cls,'_instance'):
+            cls._instance = super().__new__(cls,*args,**kwargs)
+        return cls._instance
+
+# 工厂模式
+class Dog:
+    def __init__(self):
+        print("Wang Wang Wang")
+class Cat:
+    def __init__(self):
+        print("Miao Miao Miao")
+
+
+def fac(animal):
+    if animal.lower() == "dog":
+        return Dog()
+    if animal.lower() == "cat":
+        return Cat()
+    print("对不起，必须是：dog,cat")
+
+# 构造模式
+class Computer:
+    def __init__(self,serial_number):
+        self.serial_number = serial_number
+        self.memory = None
+        self.hadd = None
+        self.gpu = None
+    def __str__(self):
+        info = (f'Memory:{self.memoryGB}',
+        'Hard Disk:{self.hadd}GB',
+        'Graphics Card:{self.gpu}')
+        return ''.join(info)
+class ComputerBuilder:
+    def __init__(self):
+        self.computer = Computer('Jim1996')
+    def configure_memory(self,amount):
+        self.computer.memory = amount
+        return self #为了方便链式调用
+    def configure_hdd(self,amount):
+        pass
+    def configure_gpu(self,gpu_model):
+        pass
+class HardwareEngineer:
+    def __init__(self):
+        self.builder = None
+    def construct_computer(self,memory,hdd,gpu):
+        self.builder = ComputerBuilder()
+        self.builder.configure_memory(memory).configure_hdd(hdd).configure_gpu(gpu)
+    @property
+    def computer(self):
+        return self.builder.computer
+
+
+
+
+
+# 数据结构和算法
+# 快速排序
+def quick_sort(_list):
+    if len(_list) < 2:
+        return _list
+    pivot_index = 0
+    pivot = _list(pivot_index)
+    left_list = [i for i in _list[:pivot_index] if i < pivot]
+    right_list = [i for i in _list[pivot_index:] if i > pivot]
+    return quick_sort(left_list) + [pivot] + quick_sort(right_list)
+
+# 选择排序
+def select_sort(seq):
+    n = len(seq)
+    for i in range(n-1):
+    min_idx = i
+        for j in range(i+1,n):
+            if seq[j] < seq[min_idx]:
+                min_idx = j
+        if min_idx != i:
+            seq[i], seq[min_idx] = seq[min_idx],seq[i]
+
+# 插入排序
+def insertion_sort(_list):
+    n = len(_list)
+    for i in range(1,n):
+        value = _list[i]
+        pos = i
+        while pos > 0 and value < _list[pos - 1]:
+            _list[pos] = _list[pos - 1]
+            pos -= 1
+        _list[pos] = value
+        print(sql)
+
+# 归并排序
+def merge_sorted_list(_list1,_list2):   #合并有序列表
+    len_a, len_b = len(_list1),len(_list2)
+    a = b = 0
+    sort = []
+    while len_a > a and len_b > b:
+        if _list1[a] > _list2[b]:
+            sort.append(_list2[b])
+            b += 1
+        else:
+            sort.append(_list1[a])
+            a += 1
+    if len_a > a:
+        sort.append(_list1[a:])
+    if len_b > b:
+        sort.append(_list2[b:])
+    return sort
+
+def merge_sort(_list):
+    if len(list1)<2:
+        return list1
+    else:
+        mid = int(len(list1)/2)
+        left = mergesort(list1[:mid])
+        right = mergesort(list1[mid:])
+        return merge_sorted_list(left,right)
+
+# 堆排序heapq模块
+from heapq import nsmallest
+def heap_sort(_list):
+    return nsmallest(len(_list),_list)
+
+# 栈
+from collections import deque
+class Stack:
+    def __init__(self):
+        self.s = deque()
+    def peek(self):
+        p = self.pop()
+        self.push(p)
+        return p
+    def push(self, el):
+        self.s.append(el)
+    def pop(self):
+        return self.pop()
+
+# 队列
+from collections import deque
+class Queue:
+    def __init__(self):
+        self.s = deque()
+    def push(self, el):
+        self.s.append(el)
+    def pop(self):
+        return self.popleft()
+
+# 二分查找
+def binary_search(_list,num):
+    mid = len(_list)//2
+    if len(_list) < 1:
+        return False
+    if num > _list[mid]:
+        BinarySearch(_list[mid:],num)
+    elif num < _list[mid]:
+        BinarySearch(_list[:mid],num)
+    else:
+        return _list.index(num)
+
+
+
+
+# 面试加强题
+'''
+关于数据库优化及设计
+    使用hash一致算法
+    setnx
+    setnx + expire
+    使用redis
+    如果InnoDB表的数据写入顺序能和B+树索引的叶子节点顺序一致的话，这时候存取效率是最高的。为了存储和查询性能应该使用自增长id做主键。
+    对于InnoDB的主索引，数据会按照主键进行排序，由于UUID的无序性，InnoDB会产生巨大的IO压力，此时不适合使用UUID做物理主键，
+      可以把它作为逻辑主键，物理主键依然使用自增ID。为了全局的唯一性，应该用uuid做索引关联其他表或做外键
+    https://segmentfault.com/a/1190000018426586
+    如何使用两个栈实现一个队列
+    反转链表
+    合并两个有序链表
+    删除链表节点
+    反转二叉树
+    设计短网址服务？62进制实现
+    设计一个秒杀系统(feed流)？
+    https://www.jianshu.com/p/ea0259d109f9
+    为什么mysql数据库的主键使用自增的整数比较好？使用uuid可以吗？为什么？
+    如果是分布式系统下我们怎么生成数据库的自增id呢？
+    基于redis实现一个分布式锁，要求一个超时的参数
+    如果redis单个节点宕机了，如何处理？还有其他业界的方案实现分布式锁码?
+
+'''
+
+
+
+
+
+# 缓存算法
+'''
+LRU(least-recently-used):替换最近最少使用的对象
+
+LFU(Least frequently used):最不经常使用，如果一个数据在最近一段时间内使用次数很少，那么在将来一段时间内被使用的可能性也很小
+'''
+
+
+
+
+# 服务端性能优化方向
+'''
+使用数据结构和算法
+
+数据库
+    slow_query_log_file开启并且查询慢查询日志
+    通过explain排查索引问题
+    调整数据修改索引
+    索引优化
+    慢查询消除
+    批量操作，从而减少io操作
+    使用NoSQL:比如Redis
+网络io
+    批量操作
+    pipeline
+缓存
+    Redis
+异步
+    Asyncio实现异步操作
+    使用Celery减少io阻塞
+并发
+
+多线程
+
+Gevent
+'''
