@@ -1,0 +1,39 @@
+function [fre_meas, amp_meas, amp_meas1, spurious,trace] = spurious_data(N9020A,point,att,freq)
+len = 1;
+amp_meas = zeros(1,len);
+fre_meas = zeros(1,len);
+amp_meas1 = zeros(1,len);
+spurious = zeros(1,len);
+% figure('Name','频谱图','NumberTitle','off','Color',[1 1 1],'Position',[-1919 1 1920 1002]);
+figure('Name','频谱图','NumberTitle','off','Color',[1 1 1]);
+trace = zeros(len,point);
+
+for i = 1:len
+    fprintf(N9020A,'BAND %f KHZ',30);
+    pause(15);
+    fprintf(N9020A,':TRAC? TRACE1');
+    trace(i,:) = str2num(fscanf(N9020A));
+    pause(0.5);
+    fprintf(N9020A,'CALC:MARK1:MAX');
+    fprintf(N9020A,'CALC:MARK1:X?');fre_meas(1,i)=str2double(fscanf(N9020A));
+    fprintf(N9020A,'CALC:MARK1:Y?');amp_meas(1,i)=str2double(fscanf(N9020A));
+
+    temp = trace(i,:);
+    [~, col]= max(temp);
+    temp(col) = -100;
+    temp = [temp(1:col-10) temp(col+10:end)];
+    [amp_meas1(1,i),col1] = max(temp);
+    spurious(1,i) = amp_meas1(1,i) - amp_meas(1,i) + att;
+
+    x  = linspace(freq-5000,freq+5000,1001);
+    p = plot  (x,trace(i,:),'LineWidth',1);
+    axis  ([min(x) max(x) min(trace(i,:) ) max(trace(i,:) )]);
+    xlabel('频率/MHz',FontSize=20);ylabel('功率/dB',FontSize=20);
+    title (sprintf('当前杂散为：%.3f dB',spurious(1,i)),FontSize=20);
+    grid minor
+    t = find(trace == temp(col1));
+    datatip(p,x(col ),trace(col ));
+    datatip(p,x(t   ),trace(t   ));
+    fprintf('固定频综Lo_Out1杂散为%3.3fdBc。\n',spurious(1,i));
+    fprintf('可变频综Lo_Out1杂散为%3.3fdBc。\n',spurious(1,i));
+end
