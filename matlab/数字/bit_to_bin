@@ -1,0 +1,23 @@
+vivado执行
+
+
+write_cfgmem -format mcs -size 64 -interface SPIx4 -loadbit {up 0x00000000 D:/x_bit_to_mcs/ad_da.bit } -checksum -force -disablebitswap -file D:/x_bit_to_mcs/ad_da.mcs
+
+write_cfgmem -format mcs -size 64 -interface SPIx4 -loadbit {up 0x00000000 D:/x_bit_to_mcs/test/ad_da.bit } -checksum -force -disablebitswap -file D:/x_bit_to_mcs/test/ad_da.mcs
+
+write_cfgmem  -format mcs -size 16 -interface SPIx1 -loadbit {up 0x00000000 "D:/x_bit_to_mcs/test/bsd0716.bit" } -checksum -force -disablebitswap -file "D:/x_bit_to_mcs/test/bsd0716.mcs"
+
+数字  write_cfgmem  -format bin -size 64 -interface SMAPx16 -loadbit {up 0x00000000 "D:/x_bit_to_mcs/test/ad_da.bit" } -file "D:/x_bit_to_mcs/test/ad_da.bin"
+
+write_cfgmem  -format bin -size 64 -interface SPIx4 -loadbit {up 0x00000000 "D:/x_bit_to_mcs/test/ad_da.bit" } -file "D:/x_bit_to_mcs/test/ad_da.bin"
+
+write_cfgmem  -format bin -size 64 -interface SPIx4 -loadbit {up 0x00000000 "D:/x_bit_to_mcs/test/top.bit" } -file "D:/x_bit_to_mcs/test/top.bin"
+
+
+
+
+
+
+
+
+set_property PARAM.FREQUENCY 12000000 [get_hw_targets localhost:3121/xilinx_tcf/Xilinx/2224e500d91a81]
