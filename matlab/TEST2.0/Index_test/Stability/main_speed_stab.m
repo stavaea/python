@@ -82,7 +82,7 @@ fre_meas = zeros(1,test);
 time     = zeros(1,test);
 tic;
 
-for i = 1:len_speed
+for i = 1:len_speed  %1min,24h需将len_speed替换为test
     if i <= 61
         pause(1)
     else
