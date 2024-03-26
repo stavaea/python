@@ -15,15 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="fre_judge.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/acceptance_test/sur/fre_judge.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main_sur.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/acceptance_test/sur/main_sur.m">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,9 +87,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="10 个 Python 自动化脚本.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="10 个 Python 自动化脚本.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/10 个 Python 自动化脚本.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="220" column="21" lean-forward="true" selection-start-line="220" selection-start-column="21" selection-end-line="220" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_speed_stab.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_speed_stab.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -167,7 +171,6 @@
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/client_sever.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/Creat_File.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_rcs_distance_stab.m" />
-        <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_speed_stab.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Vha_Trace/main_vha_trace.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/acceptance_test/Flatness_Gain/coll_flatness_gain.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/acceptance_test/Flatness_Gain/coll_flatness_gain_up.m" />
@@ -187,6 +190,7 @@
         <option value="$PROJECT_DIR$/matlab/数字/bit_to_bin" />
         <option value="$PROJECT_DIR$/matlab/数字/AD_DA.py" />
         <option value="$PROJECT_DIR$/tools/10 个 Python 自动化脚本.py" />
+        <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_speed_stab.m" />
       </list>
     </option>
   </component>
@@ -221,6 +225,32 @@
             <path>
               <item name="python" type="b2602c69:ProjectViewProjectNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="matlab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="matlab" type="462c0819:PsiDirectoryNode" />
+              <item name="TEST2.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="matlab" type="462c0819:PsiDirectoryNode" />
+              <item name="TEST2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="Index_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="matlab" type="462c0819:PsiDirectoryNode" />
+              <item name="TEST2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="Index_test" type="462c0819:PsiDirectoryNode" />
+              <item name="Stability" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python" type="b2602c69:ProjectViewProjectNode" />
@@ -485,20 +515,6 @@
       <workItem from="1695087006118" duration="4636000" />
       <workItem from="1695624092603" duration="3604000" />
       <workItem from="1696662712465" duration="1159000" />
-    </task>
-    <task id="LOCAL-00005" summary="&#10;Initial commit">
-      <created>1655365065489</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1655365065489</updated>
-    </task>
-    <task id="LOCAL-00006" summary="&#10;Initial commit">
-      <created>1658301243718</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1658301243718</updated>
     </task>
     <task id="LOCAL-00007" summary="&#10;Initial commit">
       <created>1658301362519</created>
@@ -829,7 +845,21 @@
       <option name="project" value="LOCAL" />
       <updated>1711005565730</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="&#10;Initial commit">
+      <created>1711007149342</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1711007149342</updated>
+    </task>
+    <task id="LOCAL-00055" summary="&#10;Initial commit">
+      <created>1711008678528</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1711008678528</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1136,13 +1166,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_speed_stab.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Vha_Trace/main_vha_trace.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1577">
@@ -1287,7 +1310,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tools/10 个 Python 自动化脚本.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="220" column="21" lean-forward="true" selection-start-line="220" selection-start-column="21" selection-end-line="220" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_speed_stab.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
