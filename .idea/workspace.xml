@@ -15,42 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_sur.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/acceptance_test/sur/main_sur.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/acceptance_test/sur/test.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="debug.log" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/acceptance_test/sur/debug.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matlab/数字/自定义目标_轨迹文件/test.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="1178" selection-start-line="1178" selection-end-line="1178" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test2.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matlab/数字/自定义目标_轨迹文件/test2.m">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,11 +60,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_speed_stab.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_speed_stab.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_speed_stab.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
               <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ana_speed_stab.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_speed_stab.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ana_rcs_distance_stab.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_rcs_distance_stab.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cq.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matlab/cq.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="17个自动化.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/17个自动化.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="93" column="12" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -140,9 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Flatness/load_am_freq_table.m" />
-        <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Flatness/read_return.m" />
-        <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Flatness/start_simulation.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Flatness/uint_int.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/att_control.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/client_sever.m" />
@@ -191,6 +188,9 @@
         <option value="$PROJECT_DIR$/matlab/数字/AD_DA.py" />
         <option value="$PROJECT_DIR$/tools/10 个 Python 自动化脚本.py" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_speed_stab.m" />
+        <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_speed_stab.m" />
+        <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_rcs_distance_stab.m" />
+        <option value="$PROJECT_DIR$/tools/17个自动化.py" />
       </list>
     </option>
   </component>
@@ -243,6 +243,14 @@
               <item name="matlab" type="462c0819:PsiDirectoryNode" />
               <item name="TEST2.0" type="462c0819:PsiDirectoryNode" />
               <item name="Index_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="matlab" type="462c0819:PsiDirectoryNode" />
+              <item name="TEST2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="Index_test" type="462c0819:PsiDirectoryNode" />
+              <item name="Analyzer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python" type="b2602c69:ProjectViewProjectNode" />
@@ -515,13 +523,6 @@
       <workItem from="1695087006118" duration="4636000" />
       <workItem from="1695624092603" duration="3604000" />
       <workItem from="1696662712465" duration="1159000" />
-    </task>
-    <task id="LOCAL-00007" summary="&#10;Initial commit">
-      <created>1658301362519</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1658301362519</updated>
     </task>
     <task id="LOCAL-00008" summary="&#10;Initial commit">
       <created>1658302325121</created>
@@ -859,7 +860,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711008678528</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="&#10;Initial commit">
+      <created>1711434339332</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1711434339333</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -982,27 +990,6 @@
     <SUITE FILE_PATH="coverage/python$1.coverage" NAME="1 Coverage Results" MODIFIED="1680056034251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/Creat_File.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/down_sim_para.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/down_sys_para.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/main_rcs.m">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1292,13 +1279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matlab/cq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tools/MoviePy.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1320,6 +1300,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_speed_stab.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_rcs_distance_stab.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matlab/cq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/17个自动化.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="93" column="12" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
         </state>
       </provider>
     </entry>
