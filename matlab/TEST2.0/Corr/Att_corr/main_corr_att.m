@@ -16,9 +16,9 @@ size_data       = 256*22*4 ;
 temperature     = -10:4:74 ;
 %% 基础参数生成
 freq            = start_freq:step_freq:stop_freq ;
-att             = (0:0.5:127.5)'           ;
-file_dca_err    = 'corr_table\dca_err.dat' ;
-file_dca_cont   = 'corr_table\dca_cont.dat';
+att             = (0:0.5:100)'           ;%0:0.5:100
+file_dca_err    = '5\corr_table\dca_err.dat' ;
+file_dca_cont   = '5\corr_table\dca_cont.dat';
 
 len_freq        = length(freq)             ;
 len_temperature = length(temperature)      ;
@@ -26,20 +26,28 @@ len             = length(att)              ;
 
 per             = 0.5                      ;
 counter         = len_freq  ;
+len_interp1     = 0:0.5:127.5;
 %% 数据处理
 for m = 1:len_temperature
-    Filename = strcat('data\corr_data\dca_coll_',sprintf('%d.mat',temperature(m)));
+    Filename = strcat('5\data\corr_data\dca_coll_',sprintf('%d.mat',temperature(m)));
     load(Filename);
-
+    x1 = Att;
+    interp_len = length(fre_set);
     % 数据归一化
     amp_meas_gyh = amp_meas - amp_meas(:,1);
     % 精度计算 向下取整
-    amp_meas_ceil =floor(amp_meas_gyh / per );
+    interp_data= amp_meas_gyh;
+    for interp_i = 1:interp_len
+        interpdata(interp_i,:)= interp1(x1,interp_data(interp_i,:),att,'linear','extrap');
+    end
+
+    amp_meas_ceil =floor(interpdata / per );
+%     amp_meas_ceil =floor(amp_meas_gyh / per );
     % 精度恢复
     amp_meas_ceil = amp_meas_ceil * per;
     amp_meas_ceil_ne = -1*amp_meas_ceil;
     % 误差计算 误差为负代表多衰减，误差为正代表少衰减
-    amp_error    = amp_meas_gyh - amp_meas_ceil;
+    amp_error    = interpdata - amp_meas_ceil;
     % 查表
     att_code = 0:0.5:100;
 
@@ -48,9 +56,16 @@ for m = 1:len_temperature
     [len_row,len_col] = size(amp_meas);
 
     amp_meas_contrast = zeros(counter,256);
-    code_contrast     = zeros(counter,256);
 
+    code_contrast     = zeros(counter,256);
     error_out         = zeros(counter,256);
+
+%     error_out_new = zeros(counter,256);
+%     code_contrast_new = zeros(counter,256);
+%     for k = 1:1:counter
+%         error_out_new(k,:) = interp1(amp_meas(k,:),error_out(k,:),len_interp1,'linear','extrap');
+%         code_contrast_new(k,:) = interp1(amp_meas(k,:),code_contrast(k,:),len_interp1,'linear','extrap');
+%     end
 
     for i = 1:len_row
         t = 0;
@@ -93,9 +108,19 @@ for m = 1:len_temperature
         code_contrast(:,r)  = code_contrast(:,len_x) ;
         mmmm = mmmm + 1;
     end
+
+%     error_out_new = zeros(counter,256);
+%     code_contrast_new = zeros(counter,256);
+%     for k = 1:1:counter
+%         error_out_new(k,:) = interp1(amp_meas_contrast(k,:),error_out(k,:),len_interp1,'linear','extrap');
+%         code_contrast_new(k,:) = interp1(amp_meas_contrast(k,:),code_contrast(k,:),len_interp1,'linear','extrap');
+%     end
+%     error(:,:,m) = error_out_new;
+%     code (:,:,m)  = code_contrast_new;
     error(:,:,m) = error_out;
     code (:,:,m)  = code_contrast;
 end
+
 %% Dat
 error = error / 0.125;
 error = round(error);
