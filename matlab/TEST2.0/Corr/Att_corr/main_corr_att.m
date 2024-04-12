@@ -47,6 +47,7 @@ for m = 1:len_temperature
     amp_meas_ceil = amp_meas_ceil * per;
     amp_meas_ceil_ne = -1*amp_meas_ceil;
     % 误差计算 误差为负代表多衰减，误差为正代表少衰减
+    %     amp_error    = amp_meas_gyh - amp_meas_ceil;
     amp_error    = interpdata - amp_meas_ceil;
     % 查表
     att_code = 0:0.5:100;
