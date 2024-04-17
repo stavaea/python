@@ -15,15 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="10 个 Python 自动化脚本.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tools/10 个 Python 自动化脚本.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4180">
-              <caret line="220" column="21" selection-start-line="220" selection-start-column="21" selection-end-line="220" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main_speed_stab.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_speed_stab.m">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,17 +54,26 @@
       <file leaf-file-name="17个自动化.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tools/17个自动化.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="1083">
               <caret line="99" column="45" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_corr_att.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="14个Python自动化实战脚本.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/14个Python自动化实战脚本.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="277" lean-forward="true" selection-start-line="277" selection-end-line="277" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_corr_att.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Corr/Att_corr/main_corr_att.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2375">
-              <caret line="155" column="12" selection-start-line="155" selection-start-column="12" selection-end-line="155" selection-end-column="12" />
+            <state relative-caret-position="361">
+              <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -82,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Corr/Att_corr/ana_ver.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
-              <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -100,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Corr/am_freq_corr/data/ana_am_freq.m">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -140,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/down_sim_para.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/down_sys_para.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/read_return.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/RCS/start_simulation.m" />
@@ -187,10 +186,11 @@
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_speed_stab.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_rcs_distance_stab.m" />
         <option value="$PROJECT_DIR$/tools/17个自动化.py" />
-        <option value="$PROJECT_DIR$/matlab/TEST2.0/Corr/Att_corr/main_corr_att.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Corr/Att_corr/ana_ver.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Corr/Att_corr/text.m" />
         <option value="$PROJECT_DIR$/matlab/TEST2.0/Corr/am_freq_corr/data/ana_am_freq.m" />
+        <option value="$PROJECT_DIR$/matlab/TEST2.0/Corr/Att_corr/main_corr_att.m" />
+        <option value="$PROJECT_DIR$/tools/14个Python自动化实战脚本.py" />
       </list>
     </option>
   </component>
@@ -207,7 +207,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="111" />
+    <option name="x" value="110" />
     <option name="y" value="40" />
     <option name="width" value="1750" />
     <option name="height" value="985" />
@@ -507,13 +507,6 @@
       <workItem from="1695087006118" duration="4636000" />
       <workItem from="1695624092603" duration="3604000" />
       <workItem from="1696662712465" duration="1159000" />
-    </task>
-    <task id="LOCAL-00010" summary="&#10;Initial commit">
-      <created>1658733193154</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1658733193154</updated>
     </task>
     <task id="LOCAL-00011" summary="&#10;Initial commit">
       <created>1658743016343</created>
@@ -851,11 +844,18 @@
       <option name="project" value="LOCAL" />
       <updated>1712906371984</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="&#10;Initial commit">
+      <created>1712906528582</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1712906528582</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="32" width="1400" height="788" extended-state="0" />
+    <frame x="88" y="32" width="1400" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -865,7 +865,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533532" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25707898" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -974,13 +974,6 @@
     <SUITE FILE_PATH="coverage/python$1.coverage" NAME="1 Coverage Results" MODIFIED="1680056034251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_flatness.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1577">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Speed/client_sever.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1284,17 +1277,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tools/17个自动化.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="99" column="45" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Corr/Att_corr/ana_ver.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1308,14 +1294,28 @@
     <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Corr/am_freq_corr/data/ana_am_freq.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Corr/Att_corr/main_corr_att.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="155" column="12" selection-start-line="155" selection-start-column="12" selection-end-line="155" selection-end-column="12" />
+        <state relative-caret-position="361">
+          <caret line="49" column="54" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/17个自动化.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="99" column="45" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/14个Python自动化实战脚本.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="277" lean-forward="true" selection-start-line="277" selection-end-line="277" />
         </state>
       </provider>
     </entry>
