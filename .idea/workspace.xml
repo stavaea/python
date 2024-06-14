@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
-      <change afterPath="$PROJECT_DIR$/tools/python_LaTeX.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/update_local_file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_rcs_distance_stab.m" beforeDir="false" afterPath="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_rcs_distance_stab.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_rcs_distance_stab.m" beforeDir="false" afterPath="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Stability/main_rcs_distance_stab.m" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +280,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Py/python/tools/自动批改作业系统/fonts",
+    "last_opened_file_path": "D:/Py/python/matlab/TEST2.0/Corr/am_freq_corr_theta_err",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -292,10 +292,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Py\python\matlab\TEST2.0\Corr\am_freq_corr_theta_err" />
+      <recent name="D:\Py\python\matlab\TEST2.0\Corr" />
+      <recent name="D:\Py\python\matlab\TEST2.0\Index_test\Distance" />
       <recent name="D:\Py\python\tools\自动批改作业系统\fonts" />
       <recent name="D:\PycharmProjects\python\tools\Python脚本实现对Linux服务器的监控\一、" />
-      <recent name="D:\PycharmProjects\python\tools\Python办公自动化" />
-      <recent name="D:\PycharmProjects\python\WanAndroidTest\testDatas" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\python\tools\gif" />
@@ -547,7 +548,9 @@
       <workItem from="1695624092603" duration="3604000" />
       <workItem from="1696662712465" duration="1159000" />
       <workItem from="1715330498361" duration="2072000" />
-      <workItem from="1716445511517" duration="6594000" />
+      <workItem from="1716445511517" duration="7548000" />
+      <workItem from="1717558172885" duration="924000" />
+      <workItem from="1718336241991" duration="1863000" />
     </task>
     <task id="LOCAL-00011" summary="&#10;Initial commit">
       <created>1658743016343</created>
@@ -892,7 +895,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712906528582</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
