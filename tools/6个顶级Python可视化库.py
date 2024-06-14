@@ -8,6 +8,8 @@
 
 # 为了探索每幅图表，将使用GitHub用户的数据：
 import pandas as pd
+import sns
+
 # 强烈推荐关注@公众号：数据STUDIO，更多优质内容等你～
 new_profile = pd.read_csv('https://gist.githubusercontent.com/khuyentran1401/98658198f0ef0cb12abb34b4f2361fd8/raw/ece16eb32e1b41f5f20c894fb72a4c198e86a5ea/github_users.csv')
 new_profile
