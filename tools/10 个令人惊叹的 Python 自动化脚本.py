@@ -225,6 +225,7 @@ except Exception as e:
 # /06/ 端口扫描程序
 import socket
 from prettytable import PrettyTable
+import sys
 
 # Dictionary mapping common ports to vulnerabilities (Top 15)
 vulnerabilities = {
