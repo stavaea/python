@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/10 个令人惊叹的 Python 自动化脚本.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/10 个令人惊叹的 Python 自动化脚本.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/6个顶级Python可视化库.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/6个顶级Python可视化库.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -548,7 +547,7 @@
       <workItem from="1715330498361" duration="2072000" />
       <workItem from="1716445511517" duration="7548000" />
       <workItem from="1717558172885" duration="924000" />
-      <workItem from="1718336241991" duration="6912000" />
+      <workItem from="1718336241991" duration="7402000" />
     </task>
     <task id="LOCAL-00011" summary="&#10;Initial commit">
       <created>1658743016343</created>
@@ -893,7 +892,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712906528582</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="ToolWindowManager">
