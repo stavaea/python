@@ -1,15 +1,23 @@
 % 程序用于分析RTS平坦度指标测试数据
 clc ; clear ; close all;
 %% 文件路径
-DataFile_path = '..\Data\RTS7681FS_50\SN_bk24013\20240318_175648_平坦度指标测试';
+DataFile_path1 = '..\Data\RTS7681D_50\SN_bk24055\20240805_150222_平坦度指标测试';
+DataFile_path2 = '..\Data\RTS7681D_50\SN_bk24055\20240805_150222_平坦度指标测试';
+% DataFile_path = '..\Data\RTS7681D_50\SN_241901\20240709_115737_平坦度指标测试';
+% DataFile_path = '..\Data\RTS7681D_50\SN_242405\20240731_154344_平坦度指标测试';
+% DataFile_path = '..\Data\RTS7681D_50\SN_bk24060\RTS7681D_50_SN_bk24060_幅频修正数据';
+% DataFile_path = '..\Data\RTS2325D_20\SN_bk24061\20240607_111635_平坦度指标测试';
+% DataFile_path = 'Y:\数字\06\06-417\20240417_180113_平坦度指标测试+均衡器';
+% DataFile_path = 'D:\work\脚本\Test2.0_47dr\Index_test\Data\RTS7681D_50\SN_bk24056-rts\20240604_143928_平坦度指标测试';
 %% 加载数据
-data = load(DataFile_path);
-fs_trace = data.trace(1:4:end);
-data.trace = data.trace(:,1:10:end);
-
+data1 = load(DataFile_path1);
+data1.trace = data1.trace(:,1:10:end);
+data2 = load(DataFile_path2);
+data2.trace = data2.trace(:,1:10:end);
+% trace = data.trace_corr(:,1:10:end);
 %% 数据加载及处理
 % 模拟器瞬时带宽 单位：MHz
-rts_work_band = 5000;
+rts_work_band = 4000;
 % 模拟器工作带宽 单位：MHz
 rts_band      = 5000;
 % 模拟器波段
@@ -20,26 +28,31 @@ if rts_band ==  rts_work_band
     switch rts_mode
         case 0
             x = linspace(23000,25000,rts_band+1);
-            y = data.trace(1,:);
+            y = data1.trace(1,:);
         case 1
             x = linspace(76000,81000,rts_band+1);
-            y = fs_trace(1,:);
+            y = data1.trace(1,:);
     end
 elseif rts_band == 5000 && rts_work_band == 2000
     start_freq = 76000;
     stop_freq  = 81000;
     x = linspace(start_freq,stop_freq,rts_band+1);
-    y = [data.trace(1,:) data.trace(2,2:end) data.trace(3,1002:end)];
+    y = [data1.trace(1,:) data1.trace(2,2:end) data1.trace(3,1002:end)];
 elseif rts_band == 8000 && rts_work_band == 2000
     start_freq = 58000;
     stop_freq  = 66000;
     x = linspace(start_freq,stop_freq,rts_band+1);
-    y = [data.trace(1,:) data.trace(2,2:end) data.trace(3,2:end) data.trace(4,2:end)];
+    y = [data1.trace(1,:) data1.trace(2,2:end) data1.trace(3,2:end) data1.trace(4,2:end)];
 elseif rts_band == 8000 && rts_work_band == 5000
     start_freq = 58000;
     stop_freq  = 66000;
     x = linspace(start_freq,stop_freq,rts_band+1);
-    y = [data.trace(1,:) data.trace(2,2002:end)];
+    y = [data1.trace(1,:) data1.trace(2,2002:end)];
+elseif rts_band == 5000 && rts_work_band == 4000
+    start_freq = 76000;
+    stop_freq  = 81000;
+    x = linspace(start_freq,stop_freq,rts_band+1);
+    y = [data1.trace(1,:) data2.trace(2,3002:end)];
 end
 Flatness_plot(x,y,0,1);
 %% 画图函数

@@ -1,0 +1,31 @@
+1.双击启动Xilinx Vitis 2022.2
+2.创建D:\work\bit\47dr\vitis-->launch
+3.create application project    create new platfrom hardware xsa  本地xsa文件  命名xx  next   iwip ECHO SERVER   选择对应的xsa文件
+4.替换src至D:\work\bit\47dr\vitis\xx   命名的文件夹
+5.design_1_wrapper-->platfrom.spr 双击
+6.design_1_wrapper-->psu_cortexa53_0-->zynqmp_fsbl-->Board Support Package  -->modify BSP Settongs --> xilflash,xilfpga勾选
+6-1.修改对应value，如图
+7.选择创建的工程  vitis IDE -->project -->build project
+8.右键xx_system -->program flash -->image file选择生成的 boot.bin 文件-->flash type-->qspi-x8-dual_parallel
+
+47dr--MTS
+烧写程序结束后，type-c连接设备serial端口，打开串口调试助手，串口号为com11，波特率115200
+查看串口返回信息
+	=== Run DAC Sync ===
+	ERROR : DAC Multi-Tile-Sync did not complete successfully. Error code is 16
+	MTS Test failed
+src-->main.c下注释掉
+	DAC_Sync_Config.Target_Latency = 448
+	ADC_Sync_Config.Target_Latency = 168;
+build main.c
+右键xx_system -->run as-->1 launch hardware
+查看串口返回信息
+	=== Multi-Tile Sync Report Board2===
+	DAC0: Latency(T1) =448, Adjusted DelayOffset(T2) =  0
+	ADC0: Latency(T1) =168, Adjusted DelayOffset(T2) =  0
+	ADC2: Latency(T1) =168, Adjusted DelayOffset(T2) =  0
+	ADC3: Latency(T1) =168, Adjusted DelayOffset(T2) =  0
+修改对应
+	DAC_Sync_Config.Target_Latency = 448
+	ADC_Sync_Config.Target_Latency = 168;
+打开注释后重新编译

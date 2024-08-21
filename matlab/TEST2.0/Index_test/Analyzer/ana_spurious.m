@@ -1,12 +1,14 @@
 % 程序用于分析RTS杂散指标测试数据
 clc ; clear ; close all;
 %% 文件路径
-DataFile_path = '..\Data\RTS7681D_50\SN_wz\20240319_170027_杂散指标测试';
+DataFile_path = '..\Data\RTS7681FS_50\SN_bk24013\20240718_142619_杂散指标测试';
+% DataFile_path = '..\Data\RTS7681FS_50\SN241102\20240718_105405_杂散指标测试';
 %% 加载数据
 data = load(DataFile_path);
+% data1 = load(DataFile_path1);
 %% 数据加载及处理
 % 模拟器瞬时带宽 单位：MHz
-rts_work_band = 2000;
+rts_work_band = 5000;
 % 模拟器工作带宽 单位：MHz
 rts_band      = 5000;
 % 模拟器波段
@@ -25,8 +27,8 @@ if rts_band ==  rts_work_band
             x = linspace(start_freq,stop_freq,point);
             y = data.spurious(1,:);
         case 1
-            start_freq = data.fre_set(1)-spec_freq_span;
-            stop_freq  = data.fre_set(end)+spec_freq_span;
+            start_freq = 76000 - spec_freq_span;
+            stop_freq  = 81000 + spec_freq_span;
             point = stop_freq -  start_freq + 1;
             x = linspace(start_freq,stop_freq,point);
             y = data.spurious(1,:);
