@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_flatness.m" beforeDir="false" afterPath="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_flatness.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_spurious.m" beforeDir="false" afterPath="$PROJECT_DIR$/matlab/TEST2.0/Index_test/Analyzer/ana_spurious.m" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +277,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Py/python/matlab/数字/47dr烧写",
+    "last_opened_file_path": "D:/Py/python/matlab/TEST2.0/report",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -291,11 +289,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Py\python\matlab\TEST2.0\report" />
+      <recent name="D:\Py\python\matlab\单模块入库测试\RCS" />
       <recent name="D:\Py\python\matlab\数字\47dr烧写" />
       <recent name="D:\Py\python\matlab\TEST2.0\Corr\am_freq_corr_theta_err" />
       <recent name="D:\Py\python\matlab\TEST2.0\Corr" />
-      <recent name="D:\Py\python\matlab\TEST2.0\Index_test\Distance" />
-      <recent name="D:\Py\python\tools\自动批改作业系统\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\python\tools\gif" />
@@ -894,7 +892,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712906528582</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
