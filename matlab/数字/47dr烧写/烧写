@@ -4,7 +4,7 @@
 4.替换src至D:\work\bit\47dr\vitis\xx   命名的文件夹
 5.design_1_wrapper-->platfrom.spr 双击
 6.design_1_wrapper-->psu_cortexa53_0-->zynqmp_fsbl-->Board Support Package  -->modify BSP Settongs --> xilflash,xilfpga勾选
-6-1.修改对应value，如图
+6-1.修改对应value，如图；文件导入zynqmp_fsbl-->load BSP settings from file-->对应的fsbl文件,另一个同理
 7.选择创建的工程  vitis IDE -->project -->build project
 8.右键xx_system -->program flash -->image file选择生成的 boot.bin 文件-->flash type-->qspi-x8-dual_parallel
 
