@@ -276,28 +276,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.a.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Py/python/matlab/单模块入库测试&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.a.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Py/python/matlab/TEST2.0/Corr/DisPower_fc/data/colldata",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "fileTemplates",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Py\python\matlab\TEST2.0\Corr\DisPower_fc\data\colldata" />
+      <recent name="D:\Py\python\matlab\TEST2.0\Corr\DisPower_fc" />
+      <recent name="D:\Py\python\matlab\数字\47dr烧写" />
       <recent name="D:\Py\python\matlab\单模块入库测试" />
       <recent name="D:\Py\python\matlab\单模块入库测试\PA\data" />
-      <recent name="D:\Py\python\matlab\数字\TimeFreqFigRead_v2" />
-      <recent name="D:\Py\python\matlab\TEST2.0\report" />
-      <recent name="D:\Py\python\matlab\单模块入库测试\RCS" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PycharmProjects\python\tools\gif" />
@@ -446,11 +446,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.用Python的Seaborn库，绘制了15个超好看图表！" />
-      <item itemvalue="Python.五彩气球" />
       <item itemvalue="Python.a" />
       <item itemvalue="Python.dino" />
       <item itemvalue="Python.inifile" />
+      <item itemvalue="Python.五彩气球" />
+      <item itemvalue="Python.用Python的Seaborn库，绘制了15个超好看图表！" />
     </list>
     <recent_temporary>
       <list>
@@ -553,6 +553,7 @@
       <workItem from="1717558172885" duration="924000" />
       <workItem from="1718336241991" duration="7402000" />
       <workItem from="1724635050272" duration="626000" />
+      <workItem from="1724738373021" duration="5179000" />
     </task>
     <task id="LOCAL-00011" summary="&#10;Initial commit">
       <created>1658743016343</created>
@@ -897,7 +898,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712906528582</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
