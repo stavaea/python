@@ -98,16 +98,25 @@ power_35 = max(rcs_35) - power(1)
 power_36 = max(rcs_36) - power(1)
 power = [avg_34,avg_36,18.5713,18.0951,17.6817,17.2644,];
 power = [power_34,power_36,18.5713,18.0951,17.6817,17.2644,];
+%28~44
 
 % temp = data.temp;
 temp = power;
 % temp = [1,2,3,4,5,6];
-temp = [temp(1),temp(1),temp(1),temp(1),temp(1),temp(1),temp(1),temp(1)...
-    temp(1),temp(1),temp(1),temp(1),temp(1),temp(1)...
-    temp(1),temp(1),temp(1),temp(1),temp(1),temp(1),temp(1),temp(1)...
+
+%temp需要是一个正值
+temp = [
+    temp(1),temp(1),temp(1),temp(1),temp(1),
+    temp(1),temp(1),temp(1),temp(1),temp(1),
+    temp(1),temp(1),temp(1),temp(1),temp(1),
+    temp(1),temp(1),temp(1),temp(1),temp(1),
+    temp(1),temp(1)...
     temp...
-    temp(end),temp(end),temp(end),temp(end),temp(end),temp(end)...
-    temp(end),temp(end),temp(end),temp(end),temp(end),temp(end),temp(end),temp(end),temp(end)];
+    temp(end),temp(end),temp(end),temp(end),
+    temp(end),temp(end),temp(end),temp(end),
+    temp(end),temp(end),temp(end),temp(end),
+    temp(end),temp(end),temp(end)
+    ];
 %% 数据处理
 for m = 1:len_temperature
     Filename = strcat('data\corr_data\dca_coll_',sprintf('%d.mat',temperature(m)));
@@ -115,7 +124,7 @@ for m = 1:len_temperature
     x1 = Att;
     interp_len = length(fre_set);
     % 数据归一化
-    amp_meas = amp_meas + temp(m);
+    % amp_meas = amp_meas + temp(m);
     amp_meas_gyh = amp_meas - amp_meas(:,1);
     % 精度计算 向下取整
     interp_data= amp_meas_gyh;
@@ -200,7 +209,8 @@ for m = 1:len_temperature
 %     end
 %     error(:,:,m) = error_out_new;
 %     code (:,:,m)  = code_contrast_new;
-    error(:,:,m) = error_out;
+    %error(:,:,m) = error_out;
+    error(:,:,m) = error_out + temp(m);
     code (:,:,m)  = code_contrast;
 end
 
