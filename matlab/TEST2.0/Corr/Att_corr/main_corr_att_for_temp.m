@@ -16,7 +16,8 @@ start_freq_rf   = 76000;
 % 下载数据大小
 size_data       = 256*22*4 ;
 % 温度步进
-temperature     = -10:2:74 ;
+%temperature     = -10:2:74 ;
+temperature     = 20:2:62 ;
 %% 基础参数生成
 freq            = start_freq:step_freq:stop_freq ;
 att             = (0:0.5:127.5)'           ;%0:0.5:100
@@ -99,6 +100,8 @@ power_36 = max(rcs_36) - power(1)
 power = [avg_34,avg_36,18.5713,18.0951,17.6817,17.2644,];
 power = [power_34,power_36,18.5713,18.0951,17.6817,17.2644,];
 %28~44
+power = [3,2.5,2,1.5,1,0.5,0,-0.5,-1]
+tem = [28,30,32,34,36,38,40,42,44]
 
 % temp = data.temp;
 temp = power;
@@ -106,16 +109,10 @@ temp = power;
 
 %temp需要是一个正值
 temp = [
-    temp(1),temp(1),temp(1),temp(1),temp(1),
-    temp(1),temp(1),temp(1),temp(1),temp(1),
-    temp(1),temp(1),temp(1),temp(1),temp(1),
-    temp(1),temp(1),temp(1),temp(1),temp(1),
-    temp(1),temp(1)...
+    temp(1),temp(1),temp(1),temp(1)...
     temp...
-    temp(end),temp(end),temp(end),temp(end),
-    temp(end),temp(end),temp(end),temp(end),
-    temp(end),temp(end),temp(end),temp(end),
-    temp(end),temp(end),temp(end)
+    temp(end),temp(end),temp(end),temp(end),temp(end)...
+    temp(end),temp(end),temp(end),temp(end)
     ];
 %% 数据处理
 for m = 1:len_temperature
