@@ -1,0 +1,52 @@
+clc ; clear ; close all
+
+%% 参数配置
+% RTS IP 地址
+RTS_ip   = '192.168.1.10';
+% RTS IP 端口号
+RTS_port = 7;
+%% 连接网络
+rts = client_sever(RTS_ip,RTS_port);
+%% 采集温度
+return_data = sim_para(rts);
+len = 2e3;
+up_temperature   = zeros(1,1);
+down_temperature = zeros(1,1);
+time             = zeros(1,1);
+tar_cnt = 1;
+tar_change = 20;
+tic
+for i = 1:len
+    if mod(i,tar_change) == 0
+        switch mod(tar_cnt,5)
+            case 0
+                tar = bin2dec('0000');
+            case 1
+                tar = bin2dec('0001');
+            case 2
+                tar = bin2dec('0010');
+            case 3
+                tar = bin2dec('0100');
+            case 4
+                tar = bin2dec('1000');
+            otherwise
+                tar = bin2dec('0000');
+        end
+        tar_cnt = tar_cnt + 1;
+        down_sim_para_fs(rts,tar,0);
+        fprintf('tar = %d , tar_cnt = %d\n',tar , tar_cnt);
+    end
+    return_data = sim_para(rts);
+    up_temperature(i)      = return_data(2);
+    down_temperature(i)    = return_data(3);
+    time(i)                = toc;
+    plot(time,up_temperature,'Color','r','LineStyle','-','Marker','*','LineWidth',2);
+    hold on;
+    plot(time,down_temperature,'Color','b','LineStyle','-','Marker','x','LineWidth',2);
+    hold off
+    xlabel('时间(s)','FontSize',15);
+    ylabel('温度(℃)','FontSize',15);
+    grid minor
+    legend('up_temperature','down_temperature')
+    pause(0.5);
+end
