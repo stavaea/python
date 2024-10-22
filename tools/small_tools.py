@@ -307,7 +307,7 @@ print(tags)
 import pytesseract
 from PIL import Image
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  #必须从 Github 下载 tesseract.exe
-t=Image.open("img.png")
+t=Image.open("E_4G_fcrm.png")
 text = pytesseract.image_to_string(t, config='')
 print(text)
 
