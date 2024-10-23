@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/small_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/small_tools.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -548,7 +547,7 @@
       <workItem from="1728463739540" duration="1444000" />
       <workItem from="1728613650552" duration="3453000" />
       <workItem from="1728870393722" duration="3915000" />
-      <workItem from="1729562179910" duration="2072000" />
+      <workItem from="1729562179910" duration="4050000" />
     </task>
     <task id="LOCAL-00011" summary="&#10;Initial commit">
       <created>1658743016343</created>
@@ -893,7 +892,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712906528582</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
