@@ -1,0 +1,71 @@
+K波段(Loc = 9213MHz)
+		输出端口	输出频率(MHz)	输出功率(dB)			数字型	光纤
+固定输出		Lo_out1	Loc	5.01		9213	63878	36852
+		Lo_out2	Loc	5.04		11910	80060	47640
+可变输出		Lo_out1	Loc	4.64		12783	85298	51132
+		Lo_out2	Loc	4.13		13033	86798	52132
+	输出端口	Doppler(Hz)	输出频率(MHz)	是否成功		13283	88298	53132
+Doppler设置	Lo_out1	0.1	Loc+0.1Hz	√		13533	89798	54132
+	Lo_out1	-0.1	Loc-0.1Hz	√
+	Lo_out2	0.1	Loc+0.1Hz	√
+	Lo_out2	-0.1	Loc-0.1Hz	√
+
+E波段(Loc = 11910MHz)
+		输出端口	输出频率(MHz)	输出功率(dB)
+固定输出		Lo_out1	Loc	7.16
+		Lo_out2	Loc	2.7
+可变输出		Lo_out1	Loc	6.43
+		Lo_out2	Loc	2.61
+	输出端口	Doppler(Hz)	输出频率(MHz)	是否成功
+Doppler设置	Lo_out1	0.1	Loc+0.1Hz	√
+	Lo_out1	1.0	Loc+1Hz	√
+	Lo_out2	0.1	Loc+0.1Hz	√
+	Lo_out2	1.0	Loc+1Hz	√
+
+V波段(Loc = 12783MHz)
+		输出端口	输出频率(MHz)	输出功率(dB)
+固定输出		Lo_out1	Loc	7.33
+		Lo_out2	Loc	0.21
+可变输出		Lo_out1	Loc	7.12
+		Lo_out2	Loc	0.99
+	输出端口	Doppler(Hz)	输出频率(MHz)	是否成功
+Doppler设置	Lo_out1	0.1	Loc+0.1Hz	√
+	Lo_out1	1.0	Loc+1Hz	√
+	Lo_out2	0.1	Loc+0.1Hz	√
+	Lo_out2	1.0	Loc+1Hz	√
+
+V波段(Loc = 13033MHz)
+		输出端口	输出频率(MHz)	输出功率(dB)
+固定输出		Lo_out1	Loc	5.49
+		Lo_out2	Loc	-0.43
+可变输出		Lo_out1	Loc	5.21
+		Lo_out2	Loc	0.66
+	输出端口	Doppler(Hz)	输出频率(MHz)	是否成功
+Doppler设置	Lo_out1	0.1	Loc+0.1Hz	√
+	Lo_out1	1.0	Loc+1Hz	√
+	Lo_out2	0.1	Loc+0.1Hz	√
+	Lo_out2	1.0	Loc+1Hz	√
+
+V波段(Loc = 13283MHz)
+		输出端口	输出频率(MHz)	输出功率(dB)
+固定输出		Lo_out1	Loc	5.09
+		Lo_out2	Loc	1.17
+可变输出		Lo_out1	Loc	4.71
+		Lo_out2	Loc	1.85
+	输出端口	Doppler(Hz)	输出频率(MHz)	是否成功
+Doppler设置	Lo_out1	0.1	Loc+0.1Hz	√
+	Lo_out1	1.0	Loc+1Hz	√
+	Lo_out2	0.1	Loc+0.1Hz	√
+	Lo_out2	1.0	Loc+1Hz	√
+
+V波段(Loc = 13533MHz)
+		输出端口	输出频率(MHz)	输出功率(dB)
+固定输出		Lo_out1	Loc	1.62
+		Lo_out2	Loc	-0.62
+可变输出		Lo_out1	Loc	1.58
+		Lo_out2	Loc	0.31
+	输出端口	Doppler(Hz)	输出频率(MHz)	是否成功
+Doppler设置	Lo_out1	0.1	Loc+0.1Hz	√
+	Lo_out1	1.0	Loc+1Hz	√
+	Lo_out2	0.1	Loc+0.1Hz	√
+	Lo_out2	1.0	Loc+1Hz	√
