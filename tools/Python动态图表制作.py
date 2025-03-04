@@ -4,8 +4,7 @@
 # @Author : waxberry
 # @File : Python动态图表制作.py
 # @Software : PyCharm
-
-
+import fig
 # 如何使用 FuncAnimation？
 # 这个过程始于以下两行代码：
 
@@ -48,7 +47,8 @@ plt.show()
 
 # 动态饼状图
 import numpy as np
-import matplotlib.pyplot as pltfig,ax = plt.subplots()
+import matplotlib.pyplot as pltfig
+ax = plt.subplots()
 explode=[0.01,0.01,0.01,0.01] #pop out each slice from the piedef getmepie(i):
     def absolute_value(val): #turn % back to a number
         a  = np.round(val/100.*df1.head(i).max().sum(), 0)
@@ -64,7 +64,8 @@ df1.head(i).max()
 
 # 动态条形图
 fig = plt.figure()
-bar = ''def buildmebarchart(i=int):
+bar = ''
+def buildmebarchart(i=int):
     iv = min(i, len(df1.index)-1) #the loop iterates an extra one time, which causes the dataframes to go out of bounds. This was the easiest (most lazy) way to solve this :)
     objects = df1.max().index
     y_pos = np.arange(len(objects))
@@ -79,7 +80,9 @@ bar = ''def buildmebarchart(i=int):
         plt.barh(y_pos, performance, align='center', color=['red', 'green', 'blue', 'orange'])
         plt.yticks(y_pos, objects)
         plt.xlabel('Deaths')
-        plt.ylabel('Countries')animator = ani.FuncAnimation(fig, buildmebarchart, interval=100)plt.show()
+        plt.ylabel('Countries')
+        animator = ani.FuncAnimation(fig, buildmebarchart, interval=100)
+        plt.show()
 
 # 保存动画图
 # 在制作完成后，存储这些动态图就非常简单了，可直接使用以下代码：

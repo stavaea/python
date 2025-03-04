@@ -5,6 +5,7 @@
 # @File : 10 个图像处理的Python库.py
 # @Software : PyCharm
 
+import cv2
 
 
 # 1、PIL/Pillow

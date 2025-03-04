@@ -14,7 +14,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import threading
 import time
 import random
-import json
+import json,os
 
 #保存以及调用cookie的线程
 class UtilFunc():
