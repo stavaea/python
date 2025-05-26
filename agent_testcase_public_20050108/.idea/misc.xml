@@ -3,4 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.11 (agent_testcase_public_20250102)" />
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="deepseek" project-jdk-type="Python SDK" />
 </project>

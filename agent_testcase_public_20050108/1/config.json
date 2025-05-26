@@ -1,0 +1,68 @@
+{
+    "settings": {
+        "safe_word": "红玫瑰",
+        "sound_enabled": true,
+        "default_background": "浪漫之夜"
+    },
+
+    "tasks": {
+        "intimate": [
+            {
+                "description": "为对方脱下任意一件衣物",
+                "level": 2,
+                "desire_effect": 20,
+                "toy_drop_chance": 0.3
+            },
+            {
+                "description": "使用一件情趣道具进行互动",
+                "level": 3,
+                "desire_effect": 30,
+                "toy_drop_chance": 0.5
+            }
+        ],
+        "roleplay": [
+            {
+                "scenario": "医生检查",
+                "roles": ["医生", "患者"],
+                "duration": 5
+            }
+        ]
+    },
+
+    "toys": [
+        {
+            "name": "丝绸眼罩",
+            "type": "束缚",
+            "effect": "感官敏感度+20%",
+            "description": "用柔软的丝绸剥夺视觉，增强其他感官体验"
+        },
+        {
+            "name": "情趣骰子",
+            "type": "互动",
+            "effect": "随机触发一个亲密动作",
+            "description": "掷出欲望的数字，探索未知的亲密"
+        }
+    ],
+
+    "roleplays": [
+        {
+            "scenario": "医生检查",
+            "roles": ["医生", "患者"],
+            "duration": 5
+        },
+        {
+            "scenario": "老师提问",
+            "roles": ["老师", "学生"],
+            "duration": 10
+        }
+    ],
+
+    "sounds": [
+        {"name": "dice", "file": "dice.wav"},
+        {"name": "accept", "file": "accept.wav"}
+    ],
+
+    "backgrounds": [
+        {"name": "浪漫之夜", "file": "bg1.jpg"}
+    ]
+}
