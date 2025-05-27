@@ -580,7 +580,7 @@
       <workItem from="1740634967972" duration="3364000" />
       <workItem from="1740986209175" duration="1127000" />
       <workItem from="1741079862354" duration="1058000" />
-      <workItem from="1748230095789" duration="2724000" />
+      <workItem from="1748230095789" duration="4526000" />
     </task>
     <task id="LOCAL-00011" summary="&#10;Initial commit">
       <created>1658743016343</created>
@@ -925,7 +925,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712906528582</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="ToolWindowManager">

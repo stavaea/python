@@ -64,7 +64,7 @@ def update_info():
     #               1.2.1 显示原来的信息再修改
     #         2.因为并不是所有的信息都需要修改，万一不需要修改的怎么办？如何简化使用操作？
     #           2.1判断修改时输入的是不是惟恐，为空就保持不变，不为空则说明修改了
-    employ_id = input("请输入你要修改的员工的工号")
+    employ_id = input("请输入你要修改的员工的工号：")
     all_id = list(employee_dict.keys())
     if employ_id not in all_id:
         print("该员工工号不存在，不能进行修改!!!")
@@ -87,7 +87,7 @@ def delete_info():
     # 实现步骤：1.输入要删除员工的工号
     #         2.判断工号是否存在，不存在就给出提示信息，终止函数执行
     #         3.如果存在，则直接删除
-    employ_id = input("请输入你要删除的员工的工号")
+    employ_id = input("请输入你要删除的员工的工号：")
     all_id = list(employee_dict.keys())
     if employ_id not in all_id:
         print("该员工工号不存在，不能进行删除!!!")
@@ -113,7 +113,7 @@ def show_all_info():
         return
     # 打印表头
     print("-" * 40)
-    for people in["工号","姓名","性别","工资"]:
+    for people in["工号", "姓名", "性别", "工资"]:
         print(people, end="\t\t")
     # 打印分割线
     # 增加换行
