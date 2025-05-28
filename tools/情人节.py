@@ -67,6 +67,7 @@ surf = ax.plot_surface(r * np.cos(t), r * np.sin(t), h, rstride=1, cstride=1, cm
 plt.show()
 '''
 # 玫瑰花盛开! 祝你表白成功!
+# ax = plt.subplots(subplot_kw={'projection': '3d'})
 fig = plt.figure(figsize=(12, 10))
 ax = fig.gca(projection='3d')
 
