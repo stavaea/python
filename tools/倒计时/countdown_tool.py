@@ -10,34 +10,141 @@ import tkinter as tk
 from tkinter import messagebox
 from datetime import datetime, timedelta
 import calendar
+import json
+import os
 
 
 class CountdownTimer:
+    CONFIG_FILE = 'countdown_config.json'
     def __init__(self, root):
         self.root = root
         self.root.title("自动倒计时工具")
-        self.root.geometry("500x400")
+        self.root.geometry("500x500")
 
         # 状态变量
         self.running = False
         self.paused = False
         self.target_time = None # 存储最初设定的目标时间
         self.pause_remaining = None # 暂停时的剩余时间
-        # self.total_paused_duration = None # 累计暂停时间
-        # self.last_update_time = None # 上次更新时间
         self.update_job = None  # 用于存储定时任务
+        self.auto_start_var = tk.BooleanVar(value=False) #初始化自动开始变量
 
         # 初始化UI
         self.setup_ui()
 
+        # 加载上次保存的设置
+        self.load_setting()
+
         # 启动时钟更新
         self.update_clock()
+
+        # 窗口关闭时保存设置
+        self.root.protocol('WM_DELETE_WINDOW', self.on_close)
+
+    def load_setting(self):
+        '''加载上次保存的设置'''
+        if os.path.exists(self.CONFIG_FILE):
+            try:
+                with open(self.CONFIG_FILE, 'r', encoding='utf-8') as f:
+                    config = json.load(f)
+
+                    # 设置时间控件值
+                    if 'year' in config:
+                        self.year_var.set(config['year'])
+                    if 'month' in config:
+                        self.month_var.set(config['month'])
+                    if 'day' in config:
+                        self.day_var.set(config['day'])
+                    if 'hour' in config:
+                        self.hour_var.set(config['hour'])
+                    if 'minute' in config:
+                        self.minute_var.set(config['minute'])
+                    if 'second' in config:
+                        self.second_var.set(config['second'])
+                    if 'auto_start' in config:
+                        self.auto_start_var.set(config['auto_start'])
+
+                    # 验证日期有效性
+                    self.validate_date()
+
+                    # 如果有设置且启用了自动开始
+                    if self.auto_start_var.get() and self.has_valid_time_set():
+                        # 使用after延迟启动，确保UI完全加载
+                        self.root.after(100, self.auto_start_timer)
+
+            except Exception as e:
+                print(f'加载设置失败:{e}')
+
+    def auto_start_timer(self):
+        '''自动开始倒计时'''
+        if not self.running and self.has_valid_time_set():
+            self.start_timer()
+
+    def has_valid_time_set(self):
+        '''检查是否有有效时间设置'''
+        try:
+            year = int(self.year_var.get())
+            month = int(self.month_var.get())
+            day = int(self.day_var.get())
+            hour = int(self.hour_var.get())
+            minute = int(self.minute_var.get())
+            second = int(self.second_var.get())
+
+            # 验证日期有效性
+            _, max_days = calendar.monthrange(year, month)
+            if day > max_days:
+                return False
+
+            # 创建目标时间
+            target_time = datetime(year, month, day, hour, minute, second)
+            if target_time <= datetime.now():
+                return False
+
+            return True
+        except:
+            return False
+
+    def save_settings(self):
+        '''保存到当前设置文件'''
+        try:
+            config = {'year': self.year_var.get(),
+                      'month': self.month_var.get(),
+                      'day': self.day_var.get(),
+                      'hour': self.hour_var.get(),
+                      'minute': self.minute_var.get(),
+                      'second': self.second_var.get(),
+                      'auto_start': self.auto_start_var.get()
+                      }
+            with open(self.CONFIG_FILE, 'w', encoding='utf-8') as f:
+                json.dump(config, f)
+        except Exception as e:
+            print(f'保存设置失败：{e}')
+
+    def on_close(self):
+        '''窗口关闭事件处理'''
+        self.save_settings()
+        if self.update_job:
+            self.root.after_cancel(self.update_job)
+        self.root.destroy()
 
     def setup_ui(self):
         """初始化用户界面"""
         # 当前时间显示
         self.current_time_label = tk.Label(self.root, text="", font=("Arial", 12))
         self.current_time_label.pack(pady=10)
+
+        # 配置选项区域
+        config_frame = tk.LabelFrame(self.root, text='配置选项', padx=10, pady=10)
+        config_frame.pack(fill='x', padx=20, pady=5)
+
+        # 自动开始复选框
+        self.auto_start_check = tk.Checkbutton(
+            config_frame,
+            text='自动开始倒计时',
+            variable=self.auto_start_var,
+            command=self.save_settings()
+        )
+        self.auto_start_check.pack(anchor='w')
 
         # 目标时间设置区域
         setting_frame = tk.LabelFrame(self.root, text="设置目标时间", padx=10, pady=10)
