@@ -7,15 +7,48 @@
 
 
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import ttk, messagebox, filedialog
 from datetime import datetime, timedelta
 import calendar
 import json
 import os
+from PIL import Image, ImageTk
 
 
 class CountdownTimer:
     CONFIG_FILE = 'countdown_config.json'
+    THEMES = {
+        '默认': {
+            'bg': '#f0f0f0',
+            'fg': '#000000',
+            'button_bg': '#e0e0e0',
+            'display_fg': ['blue', 'green', 'orange', 'red'],
+            'entry_bg': 'white',
+            'entry_fg': 'black',
+            'frame_bg': '#f0f0f0',
+            'label_frame_bg': '#f0f0f0',
+        },
+        '深色': {
+            'bg': '#2d2d2d',
+            'fg': '#ffffff',
+            'button_bg': '#3d3d3d',
+            'display_fg': ['#5b9bd5', '#70ad47', '#ffc000', '#ff0000'],
+            'entry_bg': '#4d4d4d',
+            'entry_fg': '#ffffff',
+            'frame_bg': '#2d2d2d',
+            'label_frame_bg': '#3d3d3d',
+        },
+        '蓝色': {
+            'bg': '#e6f2ff',
+            'fg': '#003366',
+            'button_bg': '#cce0ff',
+            'display_fg': ['#0033cc', '#0066cc', '#0099cc', '#00cccc'],
+            'entry_bg': 'white',
+            'entry_fg': 'black',
+            'frame_bg': '#e6f2ff',
+            'label_frame_bg': '#d6e9ff',
+        }
+    }
     def __init__(self, root):
         self.root = root
         self.root.title("自动倒计时工具")
@@ -28,12 +61,19 @@ class CountdownTimer:
         self.pause_remaining = None # 暂停时的剩余时间
         self.update_job = None  # 用于存储定时任务
         self.auto_start_var = tk.BooleanVar(value=False) #初始化自动开始变量
+        self.event_name_var = tk.StringVar(value='目标事件')
+        self.current_theme = '默认'
+        self.custom_bg_image = None
+        self.bg_image_label = None
+
+        # 存储所有需要换肤的控件
+        self.themeable_widgets = []
 
         # 初始化UI
         self.setup_ui()
 
         # 加载上次保存的设置
-        self.load_setting()
+        self.load_settings()
 
         # 启动时钟更新
         self.update_clock()
@@ -41,7 +81,7 @@ class CountdownTimer:
         # 窗口关闭时保存设置
         self.root.protocol('WM_DELETE_WINDOW', self.on_close)
 
-    def load_setting(self):
+    def load_settings(self):
         '''加载上次保存的设置'''
         if os.path.exists(self.CONFIG_FILE):
             try:
@@ -63,6 +103,13 @@ class CountdownTimer:
                         self.second_var.set(config['second'])
                     if 'auto_start' in config:
                         self.auto_start_var.set(config['auto_start'])
+                    if 'event_name' in config:
+                        self.event_name_var.set(config['event_name'])
+                    if 'theme' in config:
+                        self.current_theme = config['theme']
+                        self.apply_theme()
+                    if 'bg_image' in config and os.path.exists(config['bg_image']):
+                        self.load_bg_image(config['bg_image'])
 
                     # 验证日期有效性
                     self.validate_date()
@@ -113,7 +160,10 @@ class CountdownTimer:
                       'hour': self.hour_var.get(),
                       'minute': self.minute_var.get(),
                       'second': self.second_var.get(),
-                      'auto_start': self.auto_start_var.get()
+                      'auto_start': self.auto_start_var.get(),
+                      'event_name': self.event_name_var.get(),
+                      'theme': self.current_theme,
+                      'bg_image': self.custom_bg_image if self.custom_bg_image else ''
                       }
             with open(self.CONFIG_FILE, 'w', encoding='utf-8') as f:
                 json.dump(config, f)
@@ -129,30 +179,76 @@ class CountdownTimer:
 
     def setup_ui(self):
         """初始化用户界面"""
+        # 主容器
+        self.main_frame = tk.Frame(self.root)
+        self.main_frame.pack(fill='both', expand=True)
+        self.themeable_widgets.append(self.main_frame)
+
         # 当前时间显示
         self.current_time_label = tk.Label(self.root, text="", font=("Arial", 12))
         self.current_time_label.pack(pady=10)
 
+        # 背景图片标签（先创建但不显示）
+        self.bg_image_label = tk.Label(self.main_frame)
+        self.bg_image_label.place(x=0, y=0, relwidth=1, relheight=1)
+        self.bg_image_label.lower()
+
         # 配置选项区域
         config_frame = tk.LabelFrame(self.root, text='配置选项', padx=10, pady=10)
         config_frame.pack(fill='x', padx=20, pady=5)
+        self.themeable_widgets.append(config_frame)
+
+        # 事件名称设置
+        event_frame = tk.Frame(config_frame)
+        event_frame.pack(fill='x', pady=5)
+        self.themeable_widgets.append(event_frame)
+
+        tk.Label(event_frame, text='距离：').pack(side='left')
+        self.event_entry = tk.Entry(event_frame, textvariable=self.event_name_var)
+        self.event_entry.pack(side='left', fill='x', expand=True, padx=5)
+        self.themeable_widgets.append(self.event_entry)
 
         # 自动开始复选框
+        auto_start_frame = tk.Frame(config_frame)
+        auto_start_frame.pack(fill='x', pady=5)
+        self.themeable_widgets.append(auto_start_frame)
+
         self.auto_start_check = tk.Checkbutton(
             config_frame,
             text='自动开始倒计时',
             variable=self.auto_start_var,
             command=self.save_settings()
         )
-        self.auto_start_check.pack(anchor='w')
+        self.auto_start_check.pack(side='left')
+        self.themeable_widgets.append(self.auto_start_check)
+
+        # 主题选择
+        theme_frame = tk.Frame(config_frame)
+        theme_frame.pack(fill='x', pady=5)
+        self.themeable_widgets.append(theme_frame)
+
+        tk.Label(theme_frame, text='主题：').pack(side='left')
+
+        self.theme_var = tk.StringVar(value=self.current_theme)
+        self.theme_menu = ttk.Combobox(
+            theme_frame,
+            textvariable=self.theme_var,
+            values=list(self.THEMES.keys()) + ['自定义背景'],
+            state='readonly'
+        )
+        self.theme_menu.pack(side='left', padx=5)
+        self.theme_menu.bind('<<ComboboxSelected>>', self.change_theme)
 
         # 目标时间设置区域
         setting_frame = tk.LabelFrame(self.root, text="设置目标时间", padx=10, pady=10)
         setting_frame.pack(fill="x", padx=20, pady=10)
+        self.themeable_widgets.append(setting_frame)
 
         # 日期设置
         date_frame = tk.Frame(setting_frame)
         date_frame.pack(fill="x", pady=5)
+        self.themeable_widgets.append(date_frame)
+
         tk.Label(date_frame, text="日期:").pack(side="left")
 
         now = datetime.now()
@@ -178,6 +274,8 @@ class CountdownTimer:
         # 时间设置
         time_frame = tk.Frame(setting_frame)
         time_frame.pack(fill="x", pady=5)
+        self.themeable_widgets.append(time_frame)
+
         tk.Label(time_frame, text="时间:").pack(side="left")
 
         self.hour_var = tk.StringVar(value=str(now.hour))
@@ -199,39 +297,161 @@ class CountdownTimer:
         # 倒计时显示
         display_frame = tk.Frame(self.root)
         display_frame.pack(pady=20)
+        self.themeable_widgets.append(display_frame)
 
-        self.days_label = tk.Label(display_frame, text="00", font=("Arial", 24), fg="blue")
+        self.event_label = tk.Label(display_frame, text='剩余', font=('Arial', 18))
+        self.event_label.pack()
+        self.themeable_widgets.append(self.event_label)
+
+        time_display_frame = tk.Frame(display_frame)
+        time_display_frame.pack()
+        self.themeable_widgets.append(time_display_frame)
+
+        self.days_label = tk.Label(time_display_frame, text="00", font=("Arial", 24), fg="blue")
         self.days_label.grid(row=0, column=0, padx=5)
-        tk.Label(display_frame, text="天", font=("Arial", 12)).grid(row=1, column=0)
+        tk.Label(time_display_frame, text="天", font=("Arial", 12)).grid(row=1, column=0)
 
-        self.hours_label = tk.Label(display_frame, text="00", font=("Arial", 24), fg="green")
+        self.hours_label = tk.Label(time_display_frame, text="00", font=("Arial", 24), fg="green")
         self.hours_label.grid(row=0, column=1, padx=5)
-        tk.Label(display_frame, text="小时", font=("Arial", 12)).grid(row=1, column=1)
+        tk.Label(time_display_frame, text="小时", font=("Arial", 12)).grid(row=1, column=1)
 
-        self.minutes_label = tk.Label(display_frame, text="00", font=("Arial", 24), fg="orange")
+        self.minutes_label = tk.Label(time_display_frame, text="00", font=("Arial", 24), fg="orange")
         self.minutes_label.grid(row=0, column=2, padx=5)
-        tk.Label(display_frame, text="分钟", font=("Arial", 12)).grid(row=1, column=2)
+        tk.Label(time_display_frame, text="分钟", font=("Arial", 12)).grid(row=1, column=2)
 
-        self.seconds_label = tk.Label(display_frame, text="00", font=("Arial", 24), fg="red")
+        self.seconds_label = tk.Label(time_display_frame, text="00", font=("Arial", 24), fg="red")
         self.seconds_label.grid(row=0, column=3, padx=5)
-        tk.Label(display_frame, text="秒", font=("Arial", 12)).grid(row=1, column=3)
+        tk.Label(time_display_frame, text="秒", font=("Arial", 12)).grid(row=1, column=3)
 
         # 目标时间显示
         self.target_display = tk.Label(self.root, text="目标时间: 未设置", font=("Arial", 12))
         self.target_display.pack(pady=10)
+        self.themeable_widgets.append(self.target_display)
 
         # 控制按钮
-        button_frame = tk.Frame(self.root)
+        button_frame = tk.Frame(self.main_frame)
         button_frame.pack(pady=10)
+        self.themeable_widgets.append(button_frame)
 
         self.start_button = tk.Button(button_frame, text="开始", command=self.start_timer)
         self.start_button.grid(row=0, column=0, padx=10)
+        self.themeable_widgets.append(self.start_button)
 
         self.pause_button = tk.Button(button_frame, text="暂停", command=self.pause_timer, state=tk.DISABLED)
         self.pause_button.grid(row=0, column=1, padx=10)
+        self.themeable_widgets.append(self.pause_button)
 
         self.reset_button = tk.Button(button_frame, text="重置", command=self.reset_timer)
         self.reset_button.grid(row=0, column=2, padx=10)
+        self.themeable_widgets.append(self.reset_button)
+
+        # 将所有标签添加到可换肤控件列表
+        for child in self.main_frame.winfo_children():
+            self.collect_labels(child)
+
+        # 应用初始主题
+        self.apply_theme()
+
+    def collect_labels(self, parent):
+        '''递归收集所有标签'''
+        for child in parent.winfo_children():
+            if isinstance(child, tk.Label):
+                self.themeable_widgets.append(child)
+            if isinstance(child, (tk.Frame, ttk.Frame, tk.LabelFrame)):
+                self.collect_labels(child)
+
+    def change_theme(self, event=None):
+        '''更换主题'''
+        selected = self.theme_var.get()
+        if selected == "自定义背景":
+            self.choose_custom_bg()
+        else:
+            self.current_theme = selected
+            self.custom_bg_image = None
+            self.apply_theme()
+            self.save_settings()
+
+    def choose_custom_bg(self):
+        '''选择自定义背景图片'''
+        file_path = filedialog.askopenfilename(
+            title='选择背景图片',
+            filetypes=[('图片文件', '*.jpg *.jpeg *.png *.bmp *.gif')],
+        )
+        if file_path:
+            self.load_bg_image(file_path)
+            self.current_theme = '自定义背景'
+            self.theme_var.set('自定义背景')
+            self.save_settings()
+
+    def load_bg_image(self, image_path):
+        '''加载背景图片'''
+        try:
+            self.custom_bg_image = image_path
+            img = Image.open(image_path)
+            img = img.resize((self.root.winfo_width(), self.root.winfo_height()), Image.Resampling.LANCZOS)
+            self.bg_photo = ImageTk.PhotoImage(img)
+            self.bg_image_label.config(image=self.bg_photo)
+            self.bg_image_label.lift()
+        except Exception as e:
+            messagebox.showerror('错误', f'加载背景图片失败{str(e)}')
+            self.custom_bg_image = None
+            self.bg_image_label.config(image='')
+            self.current_theme = '默认'
+            self.theme_var.set('默认')
+            self.apply_theme()
+
+    def apply_theme(self):
+        '''应用当前主题'''
+        theme = self.THEMES.get(self.current_theme, self.THEMES['默认'])
+
+        # 设置主窗口背景
+        self.root.config(bg=theme['bg'])
+        self.main_frame.config(bg=theme['bg'])
+
+        # 隐藏或显示背景图片
+        if self.current_theme == '自定义背景' and self.custom_bg_image:
+            self.bg_image_label.lift()
+        else:
+            self.bg_image_label.lower()
+
+        # 应用颜色主题
+        for widget in self.themeable_widgets:
+            if isinstance(widget, tk.Label):
+                widget.config(bg=theme['bg'], fg=theme['fg'])
+            elif isinstance(widget, tk.Button):
+                widget.config(bg=theme['button_bg'], fg=theme['fg'], activebackground=theme['button_bg'])
+            elif isinstance(widget, tk.Entry):
+                widget.config(bg=theme['entry_bg'], fg=theme['entry_fg'], insertbackground=theme['fg'])
+            elif isinstance(widget, tk.Frame):
+                widget.config(bg=theme['frame_bg'])
+            elif isinstance(widget, tk.LabelFrame):
+                widget.config(bg=theme['label_frame_bg'], fg=theme['fg'])
+            elif isinstance(widget, tk.Spinbox):
+                widget.config(bg=theme['entry_bg'], fg=theme['entry_fg'], buttonbackground=theme['button_bg'])
+
+        # 更新倒计时显示颜色
+        self.days_label.config(fg=theme['display_fg'][0])
+        self.hours_label.config(fg=theme['display_fg'][1])
+        self.minutes_label.config(fg=theme['display_fg'][2])
+        self.seconds_label.config(fg=theme['display_fg'][3])
+
+        # 更新组合框样式
+        style = ttk.Style()
+        style.theme_use('clam')
+        style.configure('TCombobox',
+                        fieldbackground=theme['entry_bg'],
+                        background=theme['button_bg'],
+                        foreground=theme['fg'],
+                        selectbackground=theme['entry_bg'],
+                        selecforeground=['fg']
+                        )
+
+        # 更新复选框样式
+        self.auto_start_check.config(bg=theme['bg'], fg=theme['fg'], selectcolor=theme['button_bg'])
+
+        # 更新事件名称显示
+        self.event_label.config(bg=theme['bg'], fg=theme['fg'])
+        self.target_display.config(bg=theme['bg'], fg=theme['fg'])
 
     def validate_date(self):
         """验证日期有效性（特别是2月份）"""
