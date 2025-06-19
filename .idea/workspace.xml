@@ -280,50 +280,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.1.executor": "Run",
-    "Python.Christmas hat.executor": "Run",
-    "Python.Christmas tree1.executor": "Run",
-    "Python.Christmas tree5.executor": "Run",
-    "Python.TicTacToe.executor": "Run",
-    "Python.a.executor": "Run",
-    "Python.countdown_tool (1).executor": "Run",
-    "Python.countdown_tool.executor": "Run",
-    "Python.dino.executor": "Run",
-    "Python.employee_main.executor": "Run",
-    "Python.inifile (1).executor": "Run",
-    "Python.inifile.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.movie_watcher.executor": "Run",
-    "Python.spider_xiaohuar.executor": "Run",
-    "Python.window.executor": "Run",
-    "Python.五彩气球.executor": "Run",
-    "Python.倒计时.executor": "Run",
-    "Python.情人节.executor": "Run",
-    "Python.智能乒乓球.executor": "Run",
-    "Python.月饼.executor": "Run",
-    "Python.水果忍者.executor": "Run",
-    "Python.生成身份证号.executor": "Run",
-    "Python.用Python海龟画图表白.executor": "Run",
-    "Python.降雨天气查询.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/python/tools/flappy_bird/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Christmas hat.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Christmas tree1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Christmas tree5.executor&quot;: &quot;Run&quot;,
+    &quot;Python.TicTacToe.executor&quot;: &quot;Run&quot;,
+    &quot;Python.a.executor&quot;: &quot;Run&quot;,
+    &quot;Python.countdown_tool (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.countdown_tool.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dino.executor&quot;: &quot;Run&quot;,
+    &quot;Python.employee_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.inifile (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.inifile.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.movie_watcher.executor&quot;: &quot;Run&quot;,
+    &quot;Python.spider_xiaohuar.executor&quot;: &quot;Run&quot;,
+    &quot;Python.window.executor&quot;: &quot;Run&quot;,
+    &quot;Python.五彩气球.executor&quot;: &quot;Run&quot;,
+    &quot;Python.倒计时.executor&quot;: &quot;Run&quot;,
+    &quot;Python.情人节.executor&quot;: &quot;Run&quot;,
+    &quot;Python.智能乒乓球.executor&quot;: &quot;Run&quot;,
+    &quot;Python.月饼.executor&quot;: &quot;Run&quot;,
+    &quot;Python.水果忍者.executor&quot;: &quot;Run&quot;,
+    &quot;Python.生成身份证号.executor&quot;: &quot;Run&quot;,
+    &quot;Python.用Python海龟画图表白.executor&quot;: &quot;Run&quot;,
+    &quot;Python.降雨天气查询.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/python/tools/flappy_bird/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="python" is-module-sdk="true">
@@ -693,7 +693,8 @@
       <workItem from="1748230095789" duration="39901000" />
       <workItem from="1748506256324" duration="4579000" />
       <workItem from="1749191498654" duration="4828000" />
-      <workItem from="1749432048124" duration="3811000" />
+      <workItem from="1749432048124" duration="11150000" />
+      <workItem from="1750236763568" duration="7655000" />
     </task>
     <task id="LOCAL-00011" summary="&#10;Initial commit">
       <created>1658743016343</created>
@@ -1038,7 +1039,7 @@
       <option name="project" value="LOCAL" />
       <updated>1712906528582</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1165,7 +1166,7 @@
     <SUITE FILE_PATH="coverage/python$test21.coverage" NAME="test21 Coverage Results" MODIFIED="1649835319182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learn_huice/day1" />
     <SUITE FILE_PATH="coverage/python$film_selector.coverage" NAME="film_selector Coverage Results" MODIFIED="1685514609788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/电影订票系统" />
     <SUITE FILE_PATH="coverage/python$Christmas_hat.coverage" NAME="Christmas hat Coverage Results" MODIFIED="1727424150892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Christmas" />
-    <SUITE FILE_PATH="coverage/python$main.coverage" NAME="main Coverage Results" MODIFIED="1749437244383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/flappy_bird" />
+    <SUITE FILE_PATH="coverage/python$main.coverage" NAME="main Coverage Results" MODIFIED="1749463142389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools/flappy_bird" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/matlab/TEST2.0/Index_test/Speed/client_sever.m">
