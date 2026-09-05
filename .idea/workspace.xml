@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2448b406-d954-4994-b725-50c2bb85037a" name="Changes" comment="&#10;Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,12 +144,12 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:stavaea/python.git&quot;,
-    &quot;accountId&quot;: &quot;498bfee1-763e-47c5-bf76-8fa20122fd9c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:stavaea/python.git",
+    "accountId": "7134e22e-af60-47e6-98a9-f8e7eea89488"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/matlab/单模块入库测试/RCS/ana_RCS_shake.m" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -280,50 +282,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Christmas hat.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Christmas tree1.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Christmas tree5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TicTacToe.executor&quot;: &quot;Run&quot;,
-    &quot;Python.a.executor&quot;: &quot;Run&quot;,
-    &quot;Python.countdown_tool (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.countdown_tool.executor&quot;: &quot;Run&quot;,
-    &quot;Python.dino.executor&quot;: &quot;Run&quot;,
-    &quot;Python.employee_main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.inifile (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.inifile.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.movie_watcher.executor&quot;: &quot;Run&quot;,
-    &quot;Python.spider_xiaohuar.executor&quot;: &quot;Run&quot;,
-    &quot;Python.window.executor&quot;: &quot;Run&quot;,
-    &quot;Python.五彩气球.executor&quot;: &quot;Run&quot;,
-    &quot;Python.倒计时.executor&quot;: &quot;Run&quot;,
-    &quot;Python.情人节.executor&quot;: &quot;Run&quot;,
-    &quot;Python.智能乒乓球.executor&quot;: &quot;Run&quot;,
-    &quot;Python.月饼.executor&quot;: &quot;Run&quot;,
-    &quot;Python.水果忍者.executor&quot;: &quot;Run&quot;,
-    &quot;Python.生成身份证号.executor&quot;: &quot;Run&quot;,
-    &quot;Python.用Python海龟画图表白.executor&quot;: &quot;Run&quot;,
-    &quot;Python.降雨天气查询.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/python/tools/flappy_bird/assets&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.1.executor": "Run",
+    "Python.Christmas hat.executor": "Run",
+    "Python.Christmas tree1.executor": "Run",
+    "Python.Christmas tree5.executor": "Run",
+    "Python.RandomlyGenerateArithmeticProblems.executor": "Run",
+    "Python.TicTacToe.executor": "Run",
+    "Python.a.executor": "Run",
+    "Python.countdown_tool (1).executor": "Run",
+    "Python.countdown_tool.executor": "Run",
+    "Python.dino.executor": "Run",
+    "Python.employee_main.executor": "Run",
+    "Python.inifile (1).executor": "Run",
+    "Python.inifile.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.math_gen.executor": "Run",
+    "Python.movie_watcher.executor": "Run",
+    "Python.spider_xiaohuar.executor": "Run",
+    "Python.window.executor": "Run",
+    "Python.五彩气球.executor": "Run",
+    "Python.倒计时.executor": "Run",
+    "Python.情人节.executor": "Run",
+    "Python.智能乒乓球.executor": "Run",
+    "Python.月饼.executor": "Run",
+    "Python.水果忍者.executor": "Run",
+    "Python.生成身份证号.executor": "Run",
+    "Python.用Python海龟画图表白.executor": "Run",
+    "Python.降雨天气查询.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/project/python",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="python" is-module-sdk="true">
@@ -348,8 +354,8 @@
       <recent name="D:\PycharmProjects\python\tools" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="月饼" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.math_gen">
+    <configuration name="RandomlyGenerateArithmeticProblems" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -358,35 +364,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools/节日" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/enhe/gradeOne" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/节日/月饼.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="用Python海龟画图表白" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="python" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/用Python海龟画图表白.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhe/gradeOne/RandomlyGenerateArithmeticProblems.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -533,6 +515,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="math_gen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/enhe/gradeOne" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/enhe/gradeOne/math_gen.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="window" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="ENV_FILES" value="" />
@@ -557,27 +561,26 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.RandomlyGenerateArithmeticProblems" />
+      <item itemvalue="Python.math_gen" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.window" />
-      <item itemvalue="Python.用Python海龟画图表白" />
-      <item itemvalue="Python.月饼" />
       <item itemvalue="Python.countdown_tool" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.math_gen" />
+        <item itemvalue="Python.RandomlyGenerateArithmeticProblems" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.window" />
         <item itemvalue="Python.countdown_tool" />
-        <item itemvalue="Python.用Python海龟画图表白" />
-        <item itemvalue="Python.月饼" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
-        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+        <option value="bundled-python-sdk-b3ae9b5d7125-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.439" />
       </set>
     </attachedChunks>
   </component>
